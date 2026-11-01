@@ -377,8 +377,8 @@ function initNavigation() {
       toggleBtn.setAttribute('aria-expanded', String(isOpen));
     });
 
-    // Close when clicking any link/button inside the drawer
-    drawer.querySelectorAll('a, button').forEach(link => {
+    // Close only when clicking a navigation link inside the drawer (preserve theme toggle)
+    drawer.querySelectorAll('a.nav-link, a.nav-link-cta').forEach(link => {
       link.addEventListener('click', () => {
         closeDrawer();
       });
@@ -408,7 +408,7 @@ function initNavigation() {
     });
   }
 
-  // Smooth scroll with precise sticky header offset
+  // Smooth scroll with precise dynamic header offset and immediate active state
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const targetId = anchor.getAttribute('href');
@@ -416,19 +416,34 @@ function initNavigation() {
       const targetEl = document.querySelector(targetId);
       if (targetEl) {
         e.preventDefault();
+
+        // Close mobile drawer if currently open
+        closeDrawer();
+
         if (targetId === '#home') {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         } else {
-          const headerOffset = 80;
-          const elementPosition = targetEl.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          const header = document.querySelector('.site-header');
+          const headerHeight = header ? header.offsetHeight : 64;
+          const targetRect = targetEl.getBoundingClientRect();
+          const targetPosition = targetRect.top + window.pageYOffset - (headerHeight + 12);
           window.scrollTo({
-            top: Math.max(0, offsetPosition),
+            top: Math.max(0, targetPosition),
             behavior: 'smooth'
           });
         }
+
+        // Immediately update active nav state for crisp feedback
+        document.querySelectorAll('.site-nav .nav-link, .mobile-nav-drawer .nav-link').forEach(link => {
+          if (link.getAttribute('href') === targetId) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+
         if (window.history && window.history.replaceState) {
-          window.history.replaceState(null, '', window.location.pathname);
+          window.history.replaceState(null, '', targetId);
         }
       }
     });
@@ -1020,14 +1035,19 @@ function initScrollSpy() {
   function updateActiveLink() {
     let currentId = '';
     const scrollPos = window.scrollY + 120;
+    const isAtBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 60;
 
-    sections.forEach(section => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      if (scrollPos >= top && scrollPos < top + height) {
-        currentId = section.getAttribute('id') || '';
-      }
-    });
+    if (isAtBottom) {
+      currentId = 'contact';
+    } else if (window.scrollY > 160) {
+      sections.forEach(section => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        if (scrollPos >= top && scrollPos < top + height) {
+          currentId = section.getAttribute('id') || '';
+        }
+      });
+    }
 
     navLinks.forEach(link => {
       const href = link.getAttribute('href');
@@ -1130,14 +1150,12 @@ function initThemeToggle() {
     }
   }
 
-  // Determine initial theme: check saved preference or system preference
+  // Determine initial theme: strictly default to light mode unless 'dark' was chosen
   const savedTheme = localStorage.getItem(storageKey);
-  if (savedTheme) {
-    applyTheme(savedTheme);
-  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    applyTheme('light');
-  } else {
+  if (savedTheme === 'dark') {
     applyTheme('dark');
+  } else {
+    applyTheme('light');
   }
 
   function toggle() {
