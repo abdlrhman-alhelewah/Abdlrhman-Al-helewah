@@ -1,0 +1,548 @@
+{
+  "meta": {
+    "purpose": "Structured source data for the user's portfolio website",
+    "prepared_on": "2026-10-27",
+    "source_types": [
+      "Publicly indexed LinkedIn profile information",
+      "Details shared by the user in previous conversations"
+    ],
+    "publication_note": "Items marked needs_verification should be confirmed before publishing. Get client/employer approval before making non-public account data, campaign spend, or performance metrics public."
+  },
+  "profile": {
+    "name": "Abdlrhman Al Helewah",
+    "arabic_name": "عبدالرحمن الحليوه",
+    "headline": "Digital Marketing Specialist | Performance Marketing, Paid Social & Content Strategy",
+    "location": "Cairo, Egypt",
+    "linkedin_url": "https://www.linkedin.com/in/abdlrhman-al-helewah/",
+    "website_positioning": "A digital marketer focused on performance campaigns, social media strategy, campaign reporting, and data-informed optimization.",
+    "about_draft": "I'm a Digital Marketing Specialist with hands-on experience supporting social media and performance marketing across multiple client accounts. My work combines campaign execution, content planning, KPI monitoring, reporting, and practical optimization. I’m also exploring AI-assisted workflows and marketing tools that can make campaign planning and analysis more efficient.",
+    "key_strengths": [
+      "Performance marketing and paid social campaign management",
+      "Meta Ads campaign setup, monitoring, and optimization",
+      "Social media and content strategy",
+      "Campaign reporting and KPI analysis",
+      "Lead-generation campaign planning",
+      "AI-assisted marketing workflow exploration"
+    ],
+    "linkedin_public_snapshot": {
+      "followers_approx": "4,000+",
+      "connections": "500+",
+      "note": "Dynamic LinkedIn figures observed in the public search result; do not hard-code into the website unless freshly verified."
+    }
+  },
+  "experience": [
+    {
+      "company": "eMarketing Egypt",
+      "title": "Digital Marketing Specialist",
+      "employment_type": "Full-time",
+      "start": "2026-08 (month-level date from user context; exact start date to confirm)",
+      "end": "Present (as of 2026-10-27)",
+      "status": "needs_verification",
+      "location": "Dokki, Giza, Egypt",
+      "description_draft": "Manage and support digital marketing activities across client accounts, with a focus on Meta Ads, performance monitoring, reporting, and campaign optimization.",
+      "responsibilities_supported_by_user_context": [
+        "Manage or support campaigns for multiple client accounts; user reported working across three accounts, including one handled independently.",
+        "Monitor campaign KPIs and prepare performance reports.",
+        "Contribute to campaign strategy, ad copy, audience direction, and optimization recommendations.",
+        "Explore AI-enabled ideas and internal marketing workflows."
+      ],
+      "achievement_to_validate": "On one account, lead volume reportedly increased from 2 to 25 within three weeks while cost per lead decreased. Confirm account, dates, exact KPI definitions, and whether the figures can be shared publicly before publishing.",
+      "date_warning": "User noted that an offer letter had an apparently inconsistent July 2025 start date, while the real hiring decision followed a 2026 evaluation. Do not publish July 2025 without checking the original employment records."
+    },
+    {
+      "company": "eMarketing Egypt",
+      "title": "Digital Marketing Intern",
+      "employment_type": "Internship",
+      "start": "2026-04 (approximate; exact start date to confirm)",
+      "end": "2026-07 (approximate; exact end date to confirm)",
+      "status": "needs_verification",
+      "location": "Dokki, Giza, Egypt",
+      "description_draft": "Supported digital marketing execution and campaign monitoring, developed practical experience across client accounts, and contributed to reporting and optimization work.",
+      "responsibilities_supported_by_user_context": [
+        "Worked on social media and paid campaign tasks across several client accounts.",
+        "Reviewed campaign performance and tracked lead-generation results.",
+        "Supported reporting, account follow-up, and marketing ideas."
+      ]
+    },
+    {
+      "company": "Adham Hossam",
+      "title": "Digital Marketing Instructor",
+      "employment_type": "Instructor; previous mentor role",
+      "start": "Current role; exact start date to confirm",
+      "end": "Present (as of 2026-10-27)",
+      "status": "current role confirmed by user; exact title/date details to verify",
+      "location": "Egypt / online",
+      "description_draft": "Currently works as a Digital Marketing Instructor. Previously worked with the team as a Digital Marketing Mentor, supporting trainees through follow-ups, assignment feedback, session coordination, learning materials, and group communication.",
+      "responsibilities_supported_by_user_context": [
+        "Currently works as an instructor delivering digital marketing learning support.",
+        "Previously followed up with trainees and provided feedback on assignments as a mentor.",
+        "Supported session links, materials, recordings, recap timing, and trainee-group communication.",
+        "Supported trainee-group administration and onboarding."
+      ],
+      "note": "User confirmed instructor is the current role and mentor was a previous role. Confirm official title spelling and exact dates before publishing.",
+      "previous_title": "Digital Marketing Mentor / Group Mentor"
+    },
+    {
+      "company": "Freelance",
+      "title": "Freelance Digital Marketing Specialist",
+      "employment_type": "Freelance / independent projects",
+      "start": "Current; exact start date to confirm",
+      "end": "Present (as of 2026-10-27)",
+      "status": "current role confirmed by user; dates and client details to confirm",
+      "description_draft": "Works independently on freelance digital marketing projects, supporting client needs across campaign planning, paid social, content and ad copy, performance monitoring, reporting, and optimization depending on project scope.",
+      "responsibilities_supported_by_user_context": [
+        "Freelance digital marketing work alongside other professional roles.",
+        "Project scope may include paid social, campaign planning, content/ad copy, reporting, and optimization; list only services actually delivered for each project."
+      ],
+      "publication_note": "Add client names, dates, deliverables, and verified results only when accurate and approved for public disclosure."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Zagazig University",
+      "qualification": "Bachelor's degree in Marketing Technology & E-Commerce (user-reported; confirm official English degree title)",
+      "start": "2020",
+      "end": "2024",
+      "status": "degree and dates supported; exact official degree title should be checked",
+      "linkedin_gpa_displayed": "3.040",
+      "publication_note": "GPA is optional; include only if desired and consistent with official records."
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Artificial Intelligence Ambassadors Program",
+      "provider": "National Telecommunication Institute (NTI), in collaboration with Engineers for a Sustainable Egypt (ESE)",
+      "type": "Program Certificate",
+      "completion_date": "2026-07-25",
+      "status": "completed",
+      "display_name": "Artificial Intelligence Ambassadors Program — NTI / ESE"
+    },
+    {
+      "name": "AI, Automation & Data Analysis Diploma — Beginner Level",
+      "provider": "National Telecommunication Institute (NTI)",
+      "type": "Diploma",
+      "completion_date": null,
+      "status": "completed; date to confirm"
+    },
+    {
+      "name": "AI, Automation & Data Analysis Diploma — Advanced Level",
+      "provider": "National Telecommunication Institute (NTI)",
+      "type": "Diploma",
+      "completion_date": null,
+      "status": "completed; date to confirm"
+    },
+    {
+      "name": "Digital Marketing Diploma",
+      "provider": "Adham Hossam",
+      "type": "Diploma",
+      "completion_date": null,
+      "status": "completed; date to confirm"
+    },
+    {
+      "name": "Fundamentals of Digital Marketing",
+      "provider": "Google",
+      "type": "Certificate",
+      "completion_date": "2026-03",
+      "status": "completed"
+    },
+    {
+      "name": "Digital Ad Certificate – Digital Marketing",
+      "provider": "Digital Ad Expert",
+      "type": "Certificate",
+      "completion_date": "2024-07",
+      "credential_id": "124261390",
+      "status": "completed"
+    },
+    {
+      "name": "IMP Digital Marketing Courses",
+      "provider": "IMP",
+      "type": "Courses",
+      "completion_date": null,
+      "status": "completed; exact course titles and dates not specified"
+    },
+    {
+      "name": "Additional Courses & Training",
+      "provider": null,
+      "type": "Courses / training",
+      "completion_date": null,
+      "status": "completed; exact titles and providers to be added when verified"
+    }
+  ],
+  "additional_learning_to_confirm": [
+    "Meta Blueprint learning / certifications (list exact completed courses and issue dates)",
+    "NTI/ITI introductory AI and data analysis training (confirm institution, course title, completion status, and dates)",
+    "Learn How to Learn (confirm provider, completion status, and whether 98% refers to a score or completion progress)",
+    "IMP digital marketing training (confirm exact program title and completion status)"
+  ],
+  "languages": [
+    {
+      "language": "Arabic",
+      "level": "Native / fluent (confirm preferred wording)"
+    },
+    {
+      "language": "English",
+      "level": "B2 per user context; LinkedIn public index displays 'full professional proficiency'",
+      "status": "needs_confirmation_due_to_mismatch"
+    }
+  ],
+  "skills": {
+    "performance_marketing": [
+      "Meta Ads campaign setup and management",
+      "Paid social media",
+      "Lead generation",
+      "Campaign monitoring and optimization",
+      "Budget and performance analysis",
+      "KPI tracking and reporting"
+    ],
+    "strategy_and_content": [
+      "Social media strategy",
+      "Content planning and content pillars",
+      "Campaign concepts and creative direction",
+      "Ad copywriting",
+      "Content performance analysis"
+    ],
+    "analytics_and_conversion": [
+      "Campaign reporting",
+      "Performance insights",
+      "KPI dashboard planning",
+      "CRO audit fundamentals and website feedback"
+    ],
+    "ai_and_workflow_exploration": [
+      "Google AI Studio experimentation",
+      "AI-assisted content ideation",
+      "Prompt design and marketing workflow concepts",
+      "Exploration of marketing automation and AI agents"
+    ],
+    "tools_used_or_explored": [
+      "Meta Ads Manager",
+      "Meta Business Suite",
+      "Google AI Studio",
+      "Nyckel",
+      "Canva",
+      "CapCut"
+    ],
+    "tooling_note": "Before publishing a tools list, retain only tools used independently and confidently. Do not claim Power BI, advanced analytics engineering, or production-grade AI-agent development unless supported by shipped work."
+  },
+  "projects": [
+    {
+      "id": "instagram-page-growth",
+      "name": "Instagram Page Growth & Content Strategy",
+      "category": "Personal brand / social media growth",
+      "brand_or_account": "3shwaee_ / عشوائي",
+      "start": "2022-05",
+      "end": "2024-03",
+      "status": "completed",
+      "role": "Digital Marketer / Social Media Manager",
+      "summary": "Grew an Instagram page from zero to more than 20,000 followers through an organic content strategy focused on reach and engagement.",
+      "work": [
+        "Developed content direction focused on engagement and reach.",
+        "Reviewed account insights to guide content decisions.",
+        "Published content that generated strong reach during the active period."
+      ],
+      "metrics": {
+        "followers_start": 0,
+        "followers_peak_or_reported": "20,000+",
+        "growth_type": "Organic (per user context)",
+        "selected_reel_views_approx": [
+          1400000,
+          1500000,
+          1800000
+        ]
+      },
+      "public_description": "Managed and grew an Instagram page from 0 to 20K+ followers between May 2022 and March 2024. Built a content strategy centered on reach and engagement, used account insights to refine content decisions, and generated multiple Reels with approximately 1.4M–1.8M views.",
+      "proof_to_collect": [
+        "Profile Insights screenshots showing follower growth",
+        "Insights screenshots for the three high-view Reels",
+        "Representative content samples or archived links"
+      ]
+    },
+    {
+      "id": "ijadah-education",
+      "name": "IJADAH Education — B2B Lead Generation & Campaign Reporting",
+      "category": "Client case study",
+      "market": "United Arab Emirates; Dubai and Sharjah",
+      "period": "Reported campaign window: 2026-08-11 to 2026-09-10 (confirm reporting-year and dashboard dates)",
+      "status": "client work; metrics need reconciliation and client approval",
+      "role": "Performance marketing / Meta Ads / Reporting and recommendations",
+      "business_context": "Education and teacher-training services. The user reported that the client's preferred direction was B2B rather than campaigns targeting parents (B2C).",
+      "work": [
+        "Reviewed Meta campaign performance and placement/channel results.",
+        "Prepared campaign reporting and optimization recommendations.",
+        "Developed B2B-oriented campaign direction for schools and education stakeholders.",
+        "Worked on awareness messaging related to autism-spectrum indicators for the October awareness period.",
+        "Discussed teacher-training offers and assessment pricing as campaign communication inputs."
+      ],
+      "reported_metrics_snapshot_a": {
+        "spend_usd": 942.04,
+        "impressions": 215949,
+        "reach": 93959,
+        "clicks": 2520,
+        "reported_results": 48,
+        "result_breakdown": "18 leads + 30 conversations",
+        "reported_cost_per_result_usd": 19.63,
+        "status": "do not publish before reconciliation: reported channel spend sums to $945.04, not $942.04; reported channel costs also need checking"
+      },
+      "reported_metrics_snapshot_b": {
+        "spend_usd": 946.24,
+        "facebook_spend_usd": 353.74,
+        "instagram_spend_usd": 592.5,
+        "reported_messages_and_leads": 61,
+        "period": "not confirmed",
+        "status": "separate snapshot; do not merge with snapshot A until dates and event definitions are confirmed"
+      },
+      "other_monthly_spend_notes_usd": {
+        "may": 1280.85,
+        "june": 1966.46,
+        "july": 3597.16,
+        "august": 942.04,
+        "status": "year and monthly metric definitions need confirmation"
+      },
+      "public_description_without_unverified_metrics": "Supported Meta Ads performance monitoring and reporting for an education services account in the UAE, with campaign recommendations aligned to a B2B direction and education-sector audiences.",
+      "publication_requirements": [
+        "Reconcile spend, results, and cost-per-result figures against the source report.",
+        "Confirm the client permits use of its name, account screenshots, and campaign figures.",
+        "Anonymize lead or audience information."
+      ]
+    },
+    {
+      "id": "cardip-xpel-ppf",
+      "name": "Cardip — Premium XPEL Paint Protection Film (PPF)",
+      "category": "Client account / social media audit",
+      "market": "Saudi Arabia",
+      "period": "January–June; year to confirm",
+      "status": "client work; confirm scope and publication permission",
+      "role": "Instagram audit / campaign performance analysis",
+      "reported_scope": [
+        "Reviewed approximately 50 Reels.",
+        "Reviewed approximately 35 campaigns.",
+        "Analyzed campaign spend and WhatsApp lead volume."
+      ],
+      "reported_metrics": {
+        "media_spend_sar": 15800,
+        "whatsapp_leads": 436,
+        "calculated_average_cost_per_whatsapp_lead_sar": 36.24,
+        "note": "The average is calculated as 15,800 / 436 and should be checked against platform-attributed spend and lead definitions."
+      },
+      "public_description": "Conducted a performance review for a premium automotive paint-protection account, analyzing Instagram content, campaign activity, media spend, and WhatsApp lead generation.",
+      "publication_requirements": [
+        "Confirm the reporting year and exact audit period.",
+        "Clarify which work was the user's direct responsibility versus account-wide results.",
+        "Obtain approval before publishing client names or spend figures."
+      ]
+    },
+    {
+      "id": "diet-time",
+      "name": "Diet Time",
+      "category": "Client account",
+      "market": "Saudi Arabia",
+      "status": "needs project details",
+      "known_context": "Mentioned by the user as an account/project.",
+      "public_description": null,
+      "missing_fields": [
+        "Exact dates",
+        "Scope of responsibility",
+        "Campaign objective and channels",
+        "Results or verified KPIs",
+        "Public-use permission"
+      ]
+    },
+    {
+      "id": "burger-in-box",
+      "name": "Burger in Box",
+      "category": "Client account",
+      "status": "needs project details",
+      "known_context": "Mentioned by the user as an account/project.",
+      "public_description": null,
+      "missing_fields": [
+        "Market/location",
+        "Exact dates",
+        "Scope of responsibility",
+        "Campaign objective and channels",
+        "Results or verified KPIs",
+        "Public-use permission"
+      ]
+    },
+    {
+      "id": "shutny-abayas",
+      "name": "Shutny — Abayas",
+      "category": "Client account",
+      "market": "Gulf region; exact market to confirm",
+      "status": "needs project details",
+      "known_context": "Mentioned by the user as an abaya brand/account.",
+      "public_description": null,
+      "missing_fields": [
+        "Exact dates",
+        "Scope of responsibility",
+        "Campaign objective and channels",
+        "Results or verified KPIs",
+        "Public-use permission"
+      ]
+    },
+    {
+      "id": "kitchen-bazaar-national-day",
+      "name": "Kitchen Bazaar — Saudi National Day TikTok Campaign",
+      "category": "Client campaign",
+      "market": "Saudi Arabia",
+      "period": "Saudi National Day campaign; year to confirm",
+      "status": "needs details and publication permission",
+      "known_work": [
+        "TikTok campaign content/copy for a National Day sales promotion.",
+        "Promotional discount range communicated as 15%–80%."
+      ],
+      "public_description": "Supported campaign messaging for a Saudi National Day sales promotion on TikTok, with discount-led creative messaging.",
+      "missing_fields": [
+        "Exact campaign date/year",
+        "Whether responsibility covered copywriting, campaign setup, or both",
+        "Spend, results, or sales attribution if available",
+        "Client approval for publication"
+      ]
+    },
+    {
+      "id": "heart-of-life-rehabilitation",
+      "name": "Muasasat Qalb Al-Hayah for Speech Therapy — Motor Rehabilitation Campaign",
+      "category": "Client campaign / in progress",
+      "market": "Egypt",
+      "period": "October 2026",
+      "status": "in progress; no outcome metrics provided",
+      "known_work": [
+        "Developing captions, headlines, and descriptions in a warm Egyptian Arabic tone.",
+        "Supporting campaign messaging for a children's motor rehabilitation service focused on visual-motor perception and child abilities.",
+        "Researching audience-targeting keywords."
+      ],
+      "public_description": "Developing campaign messaging and audience-targeting direction for a children's motor rehabilitation service, with a focus on communicating the value of visual-motor perception support to parents.",
+      "publication_note": "Show as 'In progress' unless campaign delivery and results have been confirmed."
+    },
+    {
+      "id": "hookify",
+      "name": "Hookify — AI-Assisted Content Idea Experiment",
+      "category": "Personal / AI experiment",
+      "tool": "Google AI Studio (per user context)",
+      "status": "details to confirm",
+      "known_context": "A project named Hookify was previously mentioned.",
+      "public_description": null,
+      "missing_fields": [
+        "What the prototype actually does",
+        "Current build/demo link",
+        "Technology/model used",
+        "Whether this is a prototype, concept, or deployed app"
+      ]
+    },
+    {
+      "id": "nyckel-porsche-bmw",
+      "name": "Porsche vs BMW — Nyckel Experiment",
+      "category": "AI / classification experiment",
+      "tool": "Nyckel",
+      "status": "details to confirm",
+      "known_context": "A Porsche-vs-BMW project using Nyckel was previously mentioned.",
+      "public_description": null,
+      "missing_fields": [
+        "Exact classification task",
+        "Dataset/source and sample size",
+        "Evaluation results",
+        "Demo or repository link"
+      ]
+    },
+    {
+      "id": "marketing-kpi-dashboard",
+      "name": "Marketing KPI Dashboard",
+      "category": "Analytics / dashboard project",
+      "status": "details to confirm",
+      "known_context": "KPI dashboards were previously mentioned as a project area.",
+      "public_description": null,
+      "missing_fields": [
+        "Tool used (for example, Sheets, Looker Studio, Excel, or Power BI)",
+        "Metrics included",
+        "Data source and whether data is real or sample data",
+        "Screenshot/demo and business questions answered"
+      ]
+    },
+    {
+      "id": "cro-audit",
+      "name": "Website CRO Audit",
+      "category": "Conversion optimization",
+      "status": "project scope known; client and site details not provided",
+      "known_work": [
+        "Website review using the site URL as the available starting point.",
+        "Feedback framed around an online sales objective."
+      ],
+      "public_description": "Reviewed an e-commerce website through a conversion-rate-optimization lens, focusing on identifying friction points and opportunities that could support online sales.",
+      "missing_fields": [
+        "Website/business name or permission to anonymize it",
+        "Audit findings actually delivered",
+        "Whether analytics or heatmap data was available",
+        "Conversion results after recommendations, if any"
+      ]
+    },
+    {
+      "id": "internal-ai-marketing-tool",
+      "name": "Internal AI Marketing Tool Concept",
+      "category": "Internal innovation / automation concept",
+      "company_context": "eMarketing Egypt",
+      "status": "concept discussed; not deployed according to user context",
+      "known_context": [
+        "User developed an internal AI app idea before an employment evaluation.",
+        "Management considered testing or funding the idea, but the team had not adopted it at the time of the latest context."
+      ],
+      "public_description": "Proposed an AI-enabled internal marketing workflow concept intended to support team efficiency. The concept was considered for internal testing but should not be represented as a deployed company product.",
+      "missing_fields": [
+        "Actual prototype status and features",
+        "Whether an internal demo exists",
+        "Approval to publicly discuss company-internal ideas"
+      ]
+    },
+    {
+      "id": "marketing-ai-agent-platform",
+      "name": "AI Marketing Agent Platform — Proposed Scope",
+      "category": "AI product concept / in planning",
+      "company_context": "eMarketing Egypt",
+      "status": "requirements/planning stage as of 2026-10-27; not a shipped product",
+      "known_scope_requested": [
+        "Generative Engine Optimization (GEO) support",
+        "Performance marketing/media-buying support",
+        "Campaign planning and reporting",
+        "Optimization and scaling recommendations",
+        "Campaign execution capabilities",
+        "Idea generation",
+        "A controllable dashboard",
+        "Potential future subscription-based product model"
+      ],
+      "public_description": "Exploring the requirements for an AI-enabled marketing platform that could bring campaign planning, performance analysis, optimization, reporting, and dashboard-based control into a more unified workflow.",
+      "publication_note": "Describe only as a proposed or in-planning concept until an actual working prototype and implemented capabilities exist. Do not imply GEO or campaign execution are already operational."
+    },
+    {
+      "id": "customer-service-experiment",
+      "name": "Customer Service Experiment",
+      "category": "Experiment / research",
+      "status": "insufficient details",
+      "known_context": "A customer-service experiment was previously mentioned.",
+      "public_description": null,
+      "missing_fields": [
+        "Problem/question tested",
+        "Method and sample",
+        "Findings",
+        "Deliverable or link"
+      ]
+    }
+  ],
+  "recommended_portfolio_sections": [
+    "Hero / concise positioning statement",
+    "About",
+    "Selected Case Studies (start with Instagram growth, Cardip, and IJADAH once figures are verified)",
+    "Experience",
+    "Skills and Tools",
+    "Education and Certifications",
+    "AI / Experiments (clearly label concepts and prototypes)",
+    "Contact"
+  ],
+  "validation_checklist": [
+    "Confirm exact eMarketing internship and full-time start dates; reconcile the inconsistent offer-letter date.",
+    "Confirm Adham Hossam instructor start date and the dates of the previous mentor role; add exact freelance start date and approved client/project details.",
+    "Resolve English proficiency wording: B2 versus LinkedIn's 'full professional proficiency'.",
+    "Confirm official English degree title and whether GPA 3.040 should appear.",
+    "Reconcile the IJADAH spend and result snapshots; do not publish conflicting figures.",
+    "Confirm Cardip's reporting year and whether the 436 WhatsApp leads are directly attributable to the stated spend.",
+    "Collect result metrics, screenshots, and public-use permission for client case studies.",
+    "Add exact details and demo links for Hookify, Nyckel, KPI dashboard, CRO audit, and customer-service experiment.",
+    "Clearly label proposed AI concepts as concepts until implemented and tested."
+  ]
+}

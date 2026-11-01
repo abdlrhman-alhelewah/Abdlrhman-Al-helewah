@@ -344,8 +344,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initMetaProofTerminal();
   initProofModal();
   initPacingCalculator();
+  initThemeToggle();
   initContactForm();
-  initCvModal();
   initHookifyDemoEngine();
   initScrollSpy();
   initScrollAnimations();
@@ -408,7 +408,7 @@ function initNavigation() {
     });
   }
 
-  // Smooth scroll while keeping browser URL clean (no unsightly #hashes)
+  // Smooth scroll with precise sticky header offset
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const targetId = anchor.getAttribute('href');
@@ -416,7 +416,17 @@ function initNavigation() {
       const targetEl = document.querySelector(targetId);
       if (targetEl) {
         e.preventDefault();
-        targetEl.scrollIntoView({ behavior: 'smooth' });
+        if (targetId === '#home') {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          const headerOffset = 80;
+          const elementPosition = targetEl.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: Math.max(0, offsetPosition),
+            behavior: 'smooth'
+          });
+        }
         if (window.history && window.history.replaceState) {
           window.history.replaceState(null, '', window.location.pathname);
         }
@@ -1003,13 +1013,13 @@ function initContactForm() {
  */
 function initScrollSpy() {
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.site-nav .nav-link');
+  const navLinks = document.querySelectorAll('.site-nav .nav-link, .mobile-nav-drawer .nav-link');
 
   if (!sections.length || !navLinks.length) return;
 
-  window.addEventListener('scroll', () => {
+  function updateActiveLink() {
     let currentId = '';
-    const scrollPos = window.scrollY + 140;
+    const scrollPos = window.scrollY + 120;
 
     sections.forEach(section => {
       const top = section.offsetTop;
@@ -1027,7 +1037,10 @@ function initScrollSpy() {
         link.classList.remove('active');
       }
     });
-  }, { passive: true });
+  }
+
+  window.addEventListener('scroll', updateActiveLink, { passive: true });
+  updateActiveLink();
 }
 
 /**
@@ -1039,7 +1052,7 @@ function initScrollSpy() {
  */
 function initScrollAnimations() {
   const targets = document.querySelectorAll(
-    'section.section, .experience-card, .case-study-card, .skill-category-card, .cert-card, .contact-direct-card, .reveal-on-scroll'
+    'section, .reveal-on-scroll, .experience-card, .case-study-card, .skill-category-card, .cert-card, .contact-direct-card'
   );
 
   if (!targets.length) return;
@@ -1099,197 +1112,46 @@ function escapeHtml(str) {
 
 /**
  * --------------------------------------------------------------------------
- * 11. EXECUTIVE CV & PROFESSIONAL DOSSIER MODAL
+ * 11. THEME TOGGLER (Light & Dark Mode)
  * --------------------------------------------------------------------------
  */
-function initCvModal() {
-  const modal = document.getElementById('cv-modal');
-  const closeBtn = document.getElementById('cv-modal-close');
-  const printBtn = document.getElementById('cv-print-btn');
-  const openBtns = [
-    document.getElementById('open-cv-modal-nav-btn'),
-    document.getElementById('open-cv-modal-hero-btn'),
-    document.getElementById('open-cv-modal-mobile-btn'),
-    document.getElementById('open-cv-modal-contact-btn')
-  ].filter(Boolean);
+function initThemeToggle() {
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const mobileToggleBtn = document.getElementById('mobile-theme-toggle');
+  const storageKey = 'abdlrhman_theme';
 
-  function openCvModal() {
-    if (!modal) return;
-    modal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    if (closeBtn) closeBtn.focus();
+  function applyTheme(theme) {
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      document.documentElement.classList.add('light');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      document.documentElement.classList.remove('light');
+    }
   }
 
-  function closeCvModal() {
-    if (!modal) return;
-    modal.classList.remove('open');
-    document.body.style.overflow = '';
+  // Determine initial theme: check saved preference or system preference
+  const savedTheme = localStorage.getItem(storageKey);
+  if (savedTheme) {
+    applyTheme(savedTheme);
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    applyTheme('light');
+  } else {
+    applyTheme('dark');
   }
 
-  openBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      openCvModal();
-    });
-  });
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeCvModal);
+  function toggle() {
+    const isCurrentLight = document.documentElement.getAttribute('data-theme') === 'light' || document.documentElement.classList.contains('light');
+    const nextTheme = isCurrentLight ? 'dark' : 'light';
+    applyTheme(nextTheme);
+    localStorage.setItem(storageKey, nextTheme);
   }
 
-  if (modal) {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeCvModal();
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modal.classList.contains('open')) {
-        closeCvModal();
-      }
-    });
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', toggle);
   }
-
-  if (printBtn) {
-    printBtn.addEventListener('click', () => {
-      window.print();
-    });
-  }
-
-  // CV Tab Switching
-  const cvTabs = document.querySelectorAll('.cv-tab-btn');
-  const cvPanels = document.querySelectorAll('.cv-panel');
-
-  cvTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      cvTabs.forEach(t => t.classList.remove('active'));
-      cvPanels.forEach(p => p.classList.remove('active'));
-
-      tab.classList.add('active');
-      const target = tab.getAttribute('data-cv-tab');
-      const panel = document.getElementById(`cv-tab-${target}`);
-      if (panel) panel.classList.add('active');
-    });
-  });
-
-  // Copy English CV Bullets
-  const copyEnBtn = document.getElementById('copy-full-cv-en-btn');
-  if (copyEnBtn) {
-    copyEnBtn.addEventListener('click', () => {
-      const enText = `ABDL RHMAN AL HELEWAH — DIGITAL MARKETING SPECIALIST
-Email: abdlrhmanmahmoud69@gmail.com | Phone: +20 155 340 4607 | LinkedIn: linkedin.com/in/abdlrhman-al-helewah | Location: Cairo, Egypt
-
-PROFESSIONAL EXPERIENCE:
-
-1. eMarketing Egypt — Digital Marketing Specialist (Full-time | Aug 2026 — Present | Dokki, Giza, Egypt)
-• Manage and execute multi-channel digital marketing campaigns across Meta Ads, Snapchat Ads, and Google Ads for regional client accounts in Saudi Arabia, UAE, and Egypt.
-• Monitor daily campaign KPIs, prepare performance and attribution reports, and deliver data-driven optimization recommendations.
-• Contribute to campaign strategy, high-converting ad copy, audience segmentation, and creative angle testing.
-• Scaled Kitchen Bazaar (Saudi Arabia e-commerce retail): managed $24,352.55 Snapchat Ads spend generating $169,455.17 in purchases at a 6.95x average ROAS (1,643 orders, 26,955 add-to-carts at $0.90 CPA) paired with SAR 38.3K Google Ads delivering 78.4K clicks and 1,310 conversions.
-• Scaled IJADAH educational account in UAE: generated 980 verified inquiries across 28 flights with record low $4.14 CPL on parent cohorts (-83% vs account benchmark) and 628 WhatsApp chats.
-• Explored AI-enabled marketing workflows and internal campaign ideation tools.
-
-2. eMarketing Egypt — Digital Marketing Intern (Internship | Apr 2026 — Jul 2026 | Dokki, Giza, Egypt)
-• Supported digital marketing execution and campaign monitoring across client accounts.
-• Reviewed campaign KPIs, tracked lead-generation performance, and assisted in reporting and client debriefs.
-• Developed hands-on experience in paid social, creative briefs, and campaign iteration.
-
-3. Adham Hossam — Digital Marketing Instructor (Current Role | Egypt / Online)
-• Delivers digital marketing learning support and instructional sessions to trainees.
-• Provides hands-on training across paid advertising fundamentals, campaign structure, media buying workflows, and creative optimization.
-
-4. Adham Hossam — Digital Marketing Mentor / Group Mentor (Previous Role | Egypt / Online)
-• Supported trainees through regular follow-ups and detailed feedback on practical campaign assignments.
-• Coordinated training session schedules, distributed learning materials and recordings, and managed group communications.
-• Facilitated community onboarding and trainee group administration.
-
-5. Freelance — Freelance Digital Marketing Specialist (Current Independent Work)
-• Executes independent freelance digital marketing projects alongside other professional engagements.
-• Delivers services across paid social campaigns, content strategy, ad copywriting, performance monitoring, reporting, and conversion rate optimization (CRO) audits.
-
-6. Hookify — AI-Assisted Content Experiment & Prototype (Google AI Studio / Gemini API)
-• Built an AI-powered copywriting prototype producing stop-the-scroll hooks, reels scripts, and virality scoring using AIDA and PAS frameworks.
-
-EDUCATION:
-• Zagazig University — Bachelor's in Marketing Technology & E-Commerce (2020 — 2024 | GPA: 3.040)
-
-CERTIFICATIONS & QUALIFICATIONS:
-1. Artificial Intelligence Ambassadors Program — NTI / Engineers for a Sustainable Egypt (ESE) (Completed Jul 2026)
-2. AI, Automation & Data Analysis Diploma — Beginner Level, NTI
-3. AI, Automation & Data Analysis Diploma — Advanced Level, NTI
-4. Digital Marketing Diploma — Adham Hossam
-5. Fundamentals of Digital Marketing — Google (Completed Mar 2026)
-6. Digital Ad Certificate – Digital Marketing — Digital Ad Expert (Credential ID: 124261390, Jul 2024)
-7. IMP Digital Marketing Courses — IMP
-8. Additional Professional Courses & Specialized Training`;
-
-      navigator.clipboard.writeText(enText).then(() => {
-        const originalText = copyEnBtn.textContent;
-        copyEnBtn.textContent = '✓ Copied to Clipboard!';
-        setTimeout(() => {
-          copyEnBtn.textContent = originalText;
-        }, 2500);
-      });
-    });
-  }
-
-  // Copy Arabic CV Bullets
-  const copyArBtn = document.getElementById('copy-full-cv-ar-btn');
-  if (copyArBtn) {
-    copyArBtn.addEventListener('click', () => {
-      const arText = `عبدالرحمن الحليوه (Abdlrhman Al Helewah) — أخصائي تسويق رقمي وإعلانات ممولة
-البريد: abdlrhmanmahmoud69@gmail.com | هاتف / واتساب: +201553404607 | لينكد إن: linkedin.com/in/abdlrhman-al-helewah | القاهرة، مصر
-
-الخبرات المهنية وسجل العمل:
-
-1. شركة eMarketing Egypt — أخصائي تسويق رقمي (دوام كامل | أغسطس 2026 — حتى الآن | الدقي، الجيزة)
-• إدارة وتنفيذ الحملات الإعلانية المدفوعة متعددة القنوات (Meta Ads و Snapchat Ads و Google Ads) لعملاء إقليميين في السعودية والإمارات ومصر.
-• متابعة مؤشرات الأداء (KPIs)، وإعداد التقارير التحليلية، وتقديم توصيات التحسين المبنية على البيانات.
-• المشاركة في صياغة استراتيجيات الحملات، وكتابة النصوص الإعلانية الجاذبة، وتحديد وتجربة شرائح الجمهور المستهدف.
-• إدارة وتوسيع متجر Kitchen Bazaar في السعودية: تحقيق مبيعات فعلية بقيمة 169,455 دولار بعائد إنفاق إعلاني 6.95x ROAS عبر ميزانية Snapchat إعلانية بلغت 24,352 دولار (1,643 طلب شراء، 26,955 إضافة للسلة بتكلفة 0.90 دولار)، مع إدارة حملات Google Ads بميزانية 38.3 ألف ريال سعودي محققة 78,400 نقرة و1,310 تحويل.
-• تحقيق 980 استفساراً مؤكداً لحساب إجادة للتعليم (الإمارات) عبر 28 رحلة إعلانية مع خفض CPL لفئة أولياء الأمور إلى 4.14 دولار (-83% عن المعيار) و628 محادثة واتساب.
-• بحث وتطبيق أساليب العمل المدعومة بالذكاء الاصطناعي في إعداد الحملات والتحليل.
-
-2. شركة eMarketing Egypt — متدرب تسويق رقمي (تدريب عملي | أبريل 2026 — يوليو 2026 | الدقي، الجيزة)
-• دعم تنفيذ الحملات الإعلانية المدفوعة ومتابعة أداء الحسابات عبر مختلف المنصات.
-• تتبع مؤشرات توليد العملاء المحتملين والمساعدة في إعداد تقارير الأداء الأسبوعية والشهرية.
-• اكتساب خبرة عملية مباشرة في إعداد الإعلانات وصياغة الأفكار الإبداعية.
-
-3. أدهم حسام (Adham Hossam) — مدرب تسويق رقمي (الدور الحالي | مصر / أونلاين)
-• تقديم الدعم التدريبي والتعليمي في مجالات التسويق الرقمي وإدارة الحملات الإعلانية المدفوعة.
-• تدريب المتدربين على الهيكل الإعلاني، وإدارة الميزانيات، وتكتيكات التحسين والقياس.
-
-4. أدهم حسام (Adham Hossam) — مرشد ومتابع تدريب / Mentor (دور سابق منفصل | مصر / أونلاين)
-• المتابعة الدورية مع المتدربين وتقديم ملاحظات تفصيلية على المهام التطبيقية.
-• تنسيق الجلسات التدريبية وتوفير المواد التعليمية والتسجيلات ومتابعة مواعيد التلخيص.
-• إدارة مجموعات المتدربين وتنظيم التواصل الإداري الداخلي.
-
-5. العمل الحر — أخصائي تسويق رقمي مستقل / Freelance (مستمر إلى جانب الأدوار المهنية)
-• العمل المستقل على مشاريع تسويقية للعملاء تشمل إطلاق وإدارة الحملات المدفوعة، واستراتيجيات المحتوى، وكتابة الإعلانات، ومراجعة معدلات التحويل (CRO).
-
-6. مشروع Hookify — نموذج أولي لصناعة المحتوى بالذكاء الاصطناعي (Google AI Studio)
-• بناء نموذج أولي لتوليد الهوكات الفيروسية وسكريبتات الفيديوهات القصيرة بالاعتماد على نماذج Google Gemini وأطر الإقناع التسويقي.
-
-التعليم الأكاديمي:
-• جامعة الزقازيق — بكالوريوس تكنولوجيا التسويق والتجارة الإلكترونية (2020 — 2024 | المعدل التراكمي: 3.040)
-
-الشهادات والدبلومات المعتمدة:
-1. برنامج سفراء الذكاء الاصطناعي — المعهد القومي للاتصالات (NTI) بالتعاون مع مهندسون من أجل مصر مستدامة (ESE) (يوليو 2026)
-2. دبلومة الذكاء الاصطناعي والأتمتة وتحليل البيانات — المستوى التأسيسي (NTI)
-3. دبلومة الذكاء الاصطناعي والأتمتة وتحليل البيانات — المستوى المتقدم (NTI)
-4. دبلومة التسويق الرقمي — أدهم حسام (Adham Hossam)
-5. أساسيات التسويق الرقمي — معتمدة من Google (مارس 2026)
-6. شهادة الإعلانات الرقمية / Digital Ad Expert (رقم الاعتماد: 124261390 | يوليو 2024)
-7. كورسات التسويق الرقمي من IMP
-8. تدريبات مهنية ودورات متخصصة إضافية`;
-
-      navigator.clipboard.writeText(arText).then(() => {
-        const originalText = copyArBtn.textContent;
-        copyArBtn.textContent = '✓ تم النسخ إلى الحافظة!';
-        setTimeout(() => {
-          copyArBtn.textContent = originalText;
-        }, 2500);
-      });
-    });
+  if (mobileToggleBtn) {
+    mobileToggleBtn.addEventListener('click', toggle);
   }
 }
 

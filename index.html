@@ -51,18 +51,21 @@
         <span>Abdlrhman Al Helewah</span>
       </a>
 
-      <!-- Zone 2: Navigation Links -->
+      <!-- Zone 2: Navigation Links (Matching Exact Page Flow) -->
       <nav class="site-nav" aria-label="Main Navigation">
-        <a href="#case-studies" class="nav-link">Work</a>
         <a href="#experience" class="nav-link">Experience</a>
+        <a href="#case-studies" class="nav-link">Work</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#education-certs" class="nav-link">Education &amp; Certs</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
-      <!-- Zone 3: Primary Action & Mobile Hamburger -->
+      <!-- Zone 3: Primary Action, Theme Toggle & Mobile Hamburger -->
       <div class="header-actions">
-        <button type="button" class="btn btn-secondary btn-sm nav-cv-btn" id="open-cv-modal-nav-btn">View CV</button>
+        <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle light and dark mode" title="Toggle theme">
+          <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
         <a href="https://wa.me/201553404607" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm header-cta-btn">WhatsApp</a>
         <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
           <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true">
@@ -88,25 +91,25 @@
         <span class="mobile-drawer-role">Digital Marketing Specialist</span>
       </div>
     </div>
-    <a href="#case-studies" class="nav-link">Work</a>
     <a href="#experience" class="nav-link">Experience</a>
+    <a href="#case-studies" class="nav-link">Work</a>
     <a href="#skills" class="nav-link">Skills</a>
     <a href="#education-certs" class="nav-link">Education &amp; Certs</a>
     <a href="#contact" class="nav-link">Contact</a>
-    <button type="button" class="btn btn-secondary" id="open-cv-modal-mobile-btn" style="width: 100%; margin-top: 6px;">📄 View &amp; Copy CV Highlights</button>
+    <button type="button" class="btn btn-secondary mobile-theme-toggle-btn" id="mobile-theme-toggle" style="width: 100%; margin-top: 6px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+      <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/></svg>
+      <span class="theme-text">Toggle Light / Dark Mode</span>
+    </button>
     <a href="https://wa.me/201553404607" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-link-cta">Chat on WhatsApp</a>
   </div>
 
   <main id="main-content">
 
     <!-- ======================================================================
-         HERO SECTION
-         Immediate Positioning: Performance Media + Content + AI & Automation
-         ====================================================================== -->
-    <!-- ======================================================================
          HERO SECTION — DIRECT, HIGH-IMPACT, VERIFIED NUMBERS
          ====================================================================== -->
-    <section id="home" class="hero-section">
+    <section id="home" class="hero-section reveal-on-scroll">
       <div class="container hero-unified-container">
         
         <div class="hero-header-row">
@@ -119,12 +122,12 @@
               <span>Available for Roles &amp; Scaling · GCC &amp; Remote</span>
             </div>
             <h1 class="hero-title">Abdlrhman Al Helewah</h1>
-            <div class="hero-subhead">Digital Marketing Specialist · Performance &amp; Paid Media</div>
+            <div class="hero-subhead">Performance Marketing Specialist · Paid Acquisition &amp; Growth</div>
           </div>
         </div>
 
         <p class="hero-pitch">
-          I build and scale customer acquisition engines across <strong>Snapchat Ads</strong>, <strong>Google Ads</strong>, <strong>Meta Ads</strong>, and <strong>TikTok Ads</strong> in the GCC and Egypt—generating over <strong>$169,000+ in e-commerce revenue</strong> at <strong>6.95x ROAS</strong> and scaling high-intent lead pipelines. Founder of <strong>Hookify AI</strong>.
+          Scaling acquisition funnels across <strong>Snapchat, Google &amp; Meta Ads</strong> in the GCC and Egypt—generating <strong>$169,455 in verified e-commerce revenue</strong> at <strong>6.95x ROAS</strong> and 980 qualified leads with up to an 83% lower CPL. Founder of <strong>Hookify AI</strong>.
         </p>
 
         <!-- 4 Core High-Impact Signals (المختصر المفيد — الأرقام الحقيقية المؤكدة) -->
@@ -168,11 +171,6 @@
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
 
-          <button type="button" class="btn btn-secondary" id="open-cv-modal-hero-btn">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            View / Copy CV
-          </button>
-
           <button type="button" class="btn btn-secondary" id="hero-inspect-proof-btn" title="Inspect raw Meta Ads Manager screenshot">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
             Inspect Meta Proof
@@ -192,11 +190,11 @@
           <span class="section-eyebrow">Work History &amp; Roles</span>
           <h2 class="section-title">Professional Experience.</h2>
           <p class="section-description">
-            Hands-on digital marketing execution across agency client accounts, educational training, mentorship, and independent freelance engagements in Egypt and the GCC.
+            Hands-on performance marketing execution across GCC e-commerce, B2B lead generation, instructional training, and client engagements.
           </p>
         </div>
 
-        <div class="experience-container" style="display: flex; flex-direction: column; gap: 24px;">
+        <div class="experience-container" style="display: flex; flex-direction: column; gap: 20px;">
           
           <!-- Role 01: eMarketing Egypt — Specialist (Current Full-time) -->
           <article class="experience-card">
@@ -204,7 +202,7 @@
               <div>
                 <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
                   <h3 class="experience-role-title">Digital Marketing Specialist</h3>
-                  <span class="venture-badge-pill" style="font-size: 11px; padding: 2px 10px;">Current Full-Time Role</span>
+                  <span class="venture-badge-pill" style="font-size: 11px; padding: 2px 10px;">Current Full-Time</span>
                 </div>
                 <div class="experience-company-line">eMarketing Egypt · Dokki, Giza, Egypt</div>
               </div>
@@ -212,44 +210,18 @@
             </header>
 
             <div class="experience-responsibilities">
-              <h4 class="experience-responsibilities-title">Core Responsibilities &amp; Account Scope</h4>
               <ul class="experience-list">
                 <li>
-                  Manage and support end-to-end digital marketing activities across diverse client accounts, with a primary focus on Meta Ads, Snapchat Ads, Google Ads, and performance campaign monitoring.
+                  Direct and scale multi-channel performance media spend ($32.8K+) across <strong>Snapchat Ads, Google Ads, and Meta Ads</strong> for regional clients in Saudi Arabia, UAE, and Egypt.
                 </li>
                 <li>
-                  Directly handle campaign strategy, high-converting ad copy, audience segmentation, and testing directions across regional client markets in Saudi Arabia, UAE, and Egypt.
+                  Scaled <strong>Kitchen Bazaar (Saudi E-Com)</strong>: generated <strong>$169,455 in verified purchases at 6.95x ROAS</strong> via Snapchat Ads (1,643 orders, 26,955 add-to-carts at $0.90) and managed SAR 38.3K Google Ads (78.4K clicks, 1,310 conversions).
                 </li>
                 <li>
-                  Monitor campaign KPIs continuously and prepare granular weekly and monthly performance reports and client debriefs.
+                  Scaled <strong>IJADAH Education (UAE)</strong>: captured <strong>980 verified inquiries</strong> across 28 flights with an 83% reduction in CPL to a record <strong>$4.14</strong> and 628 direct WhatsApp chats.
                 </li>
                 <li>
-                  Formulate data-driven optimization recommendations, reallocating budgets to winning ad sets and mitigating creative fatigue.
-                </li>
-                <li>
-                  Explore AI-enabled marketing workflows and internal automation tooling to accelerate creative ideation and reporting efficiency.
-                </li>
-              </ul>
-            </div>
-
-            <!-- Selected Impact Subsection -->
-            <div class="selected-impact-box">
-              <div class="impact-header">
-                <svg class="icon impact-check-icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Selected Account Highlights &amp; Verified Delivery</span>
-              </div>
-              <ul class="impact-list">
-                <li>
-                  <span class="impact-check-icon" aria-hidden="true">→</span>
-                  <span><strong>Kitchen Bazaar (Saudi Arabia E-Commerce):</strong> Managed $24,352.55 Snapchat Ads spend driving $169,455.17 in purchases at a 6.95x ROAS (1,643 orders, 26,955 add-to-carts at $0.90) and SAR 38.3K Google Ads delivering 78.4K clicks and 1,310 conversions.</span>
-                </li>
-                <li>
-                  <span class="impact-check-icon" aria-hidden="true">→</span>
-                  <span><strong>IJADAH Education (UAE B2B Lead Gen):</strong> Generated 980 verified inquiries across 28 flights with a record low $4.14 CPL on parent cohorts (-83% vs account benchmark) and 628 WhatsApp chats.</span>
-                </li>
-                <li>
-                  <span class="impact-check-icon" aria-hidden="true">→</span>
-                  <span><strong>Lead Volume Acceleration:</strong> On one client account, scaled verified lead volume from 2 to 25 within three weeks while reducing the blended cost per lead.</span>
+                  Drive daily KPI monitoring, budget reallocation, attribution reporting, and AI-assisted ad copywriting workflows.
                 </li>
               </ul>
             </div>
@@ -266,19 +238,12 @@
             </header>
 
             <div class="experience-responsibilities">
-              <h4 class="experience-responsibilities-title">Internship Scope &amp; Contribution</h4>
               <ul class="experience-list">
                 <li>
-                  Supported digital marketing execution and daily campaign monitoring across active client accounts.
+                  Supported live campaign execution and daily monitoring across active Meta and Snapchat ad sets against target CPA benchmarks.
                 </li>
                 <li>
-                  Tracked lead-generation results and assisted in reviewing ad performance against client benchmarks.
-                </li>
-                <li>
-                  Assisted in preparing weekly campaign reporting, account follow-up tasks, and creative angle ideation.
-                </li>
-                <li>
-                  Gained practical, cross-platform experience in paid social setup, creative briefs, and conversion tracking.
+                  Assisted in weekly performance reporting, audience segment testing, and creative angle ideation.
                 </li>
               </ul>
             </div>
@@ -290,7 +255,7 @@
               <div>
                 <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
                   <h3 class="experience-role-title">Digital Marketing Instructor</h3>
-                  <span class="venture-badge-pill" style="font-size: 11px; padding: 2px 10px;">Current Instructional Role</span>
+                  <span class="venture-badge-pill" style="font-size: 11px; padding: 2px 10px;">Current Role</span>
                 </div>
                 <div class="experience-company-line">Adham Hossam · Egypt / Online</div>
               </div>
@@ -298,16 +263,12 @@
             </header>
 
             <div class="experience-responsibilities">
-              <h4 class="experience-responsibilities-title">Instructional Scope &amp; Training Delivery</h4>
               <ul class="experience-list">
                 <li>
-                  Delivers digital marketing training and instructional support to trainees across media buying and advertising strategy.
+                  Delivers hands-on training in media buying, ad platform architecture, and budget scaling strategies.
                 </li>
                 <li>
-                  Provides practical breakdowns of campaign architectures, budget allocation, audience segmentation, and ad creative optimization.
-                </li>
-                <li>
-                  Guides students through real-world advertising scenarios, conversion funnel design, and performance analytics.
+                  Breaks down real-world conversion funnel design, bidding tactics, and creative fatigue diagnostics.
                 </li>
               </ul>
             </div>
@@ -324,16 +285,12 @@
             </header>
 
             <div class="experience-responsibilities">
-              <h4 class="experience-responsibilities-title">Mentorship &amp; Trainee Coordination Scope</h4>
               <ul class="experience-list">
                 <li>
-                  Supported trainees through regular one-on-one and group follow-ups, providing detailed feedback on campaign assignments.
+                  Provided direct 1-on-1 and group feedback on trainee campaign builds and ad copywriting assignments.
                 </li>
                 <li>
-                  Coordinated session links, learning materials, lecture recordings, recap schedules, and ongoing trainee group communication.
-                </li>
-                <li>
-                  Managed trainee group administration, community support, and new cohort onboarding.
+                  Managed learning resources, recap schedules, community engagement, and new cohort onboarding.
                 </li>
               </ul>
             </div>
@@ -353,19 +310,12 @@
             </header>
 
             <div class="experience-responsibilities">
-              <h4 class="experience-responsibilities-title">Freelance Delivery Scope</h4>
               <ul class="experience-list">
                 <li>
-                  Executes independent freelance digital marketing projects alongside other professional commitments.
+                  Delivers tailored paid advertising, ad copywriting, and conversion rate optimization (CRO) audits for private clients.
                 </li>
                 <li>
-                  Tailors service delivery to client needs: paid social media campaign setup, content planning, ad copywriting, performance monitoring, and conversion tracking.
-                </li>
-                <li>
-                  Conducts specialized Website Conversion Rate Optimization (CRO) audits, identifying checkout friction points to increase sales conversion velocity.
-                </li>
-                <li>
-                  Performs social media account audits and develops organic reach strategies (including scaling personal accounts from 0 to 20,000+ followers).
+                  Audited Cardip XPEL PPF (SAR 15.8K spend, 436 qualified WhatsApp leads); grew personal brand (@3shwaee_) from 0 to 20,000+ organic followers.
                 </li>
               </ul>
             </div>
@@ -383,9 +333,9 @@
       <div class="container">
         <div class="section-header">
           <span class="section-eyebrow">Selected Case Studies</span>
-          <h2 class="section-title">Strategy in Practice: Client Projects.</h2>
+          <h2 class="section-title">Verified Client Projects &amp; Results.</h2>
           <p class="section-description">
-            Detailed breakdowns of objectives, challenges, strategy, tactical execution, and strategic takeaways. Click any project to open the full analysis.
+            Data-backed campaigns demonstrating scalable revenue, low acquisition costs, and full-funnel execution. Click any project for the full strategic audit.
           </p>
         </div>
 
@@ -777,13 +727,6 @@
             </div>
           </a>
         </div>
-
-        <div style="margin-top: 32px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
-          <button type="button" class="btn btn-secondary" id="open-cv-modal-contact-btn">
-            <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            Open Complete CV (English &amp; Arabic)
-          </button>
-        </div>
       </div>
     </section>
 
@@ -856,206 +799,7 @@
     </div>
   </div>
 
-  <!-- ========================================================================
-       ACCESSIBLE MODAL WINDOW FOR EXECUTIVE CV & PROFESSIONAL DOSSIER
-       ======================================================================== -->
-  <div id="cv-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="cv-modal-title" tabindex="-1">
-    <div class="modal-dialog modal-dialog-lg">
-      <div class="modal-header">
-        <div class="modal-title-group">
-          <span class="modal-eyebrow">Professional Dossier</span>
-          <h3 id="cv-modal-title" class="modal-title">Abdlrhman Al Helewah · Executive CV</h3>
-        </div>
-        <div style="display: flex; align-items: center; gap: 8px;">
-          <button type="button" class="btn btn-secondary btn-sm" id="cv-print-btn" title="Print or save as PDF" style="font-size: 12px; padding: 6px 12px;">
-            <svg class="icon" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-            Print / PDF
-          </button>
-          <button type="button" class="modal-close-btn" id="cv-modal-close" aria-label="Close CV modal">
-            <svg class="icon" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-          </button>
-        </div>
-      </div>
 
-      <div class="modal-body">
-        <!-- Candidate Overview Card -->
-        <div class="cv-candidate-card">
-          <div class="cv-candidate-header">
-            <img src="./assets/aistudio/abdlrhman_portrait_transparent.png" alt="Abdlrhman Al Helewah" class="cv-candidate-avatar" width="72" height="72" loading="lazy">
-            <div>
-              <h2 class="cv-candidate-name">Abdlrhman Al Helewah</h2>
-              <div class="cv-candidate-role">Digital Marketing Specialist · Performance, Paid Media &amp; Content Strategy</div>
-              <div class="cv-candidate-contacts">
-                <a href="mailto:abdlrhmanmahmoud69@gmail.com">abdlrhmanmahmoud69@gmail.com</a>
-                <span class="meta-separator">·</span>
-                <a href="https://wa.me/201553404607" target="_blank">+20 155 340 4607</a>
-                <span class="meta-separator">·</span>
-                <a href="https://www.linkedin.com/in/abdlrhman-al-helewah" target="_blank">LinkedIn Profile</a>
-                <span class="meta-separator">·</span>
-                <span>Cairo, Egypt (GCC Relocation Ready)</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Language Selector for Bullets -->
-        <div class="terminal-tabs-nav" role="tablist" aria-label="CV Language Selection">
-          <button type="button" class="cv-tab-btn active" data-cv-tab="en">English (ATS Ready)</button>
-          <button type="button" class="cv-tab-btn" data-cv-tab="ar">العربية (للمقابلات وسير العمل)</button>
-          <button type="button" class="cv-tab-btn" data-cv-tab="summary">Executive Summary &amp; Stack</button>
-        </div>
-
-        <!-- Tab EN -->
-        <div id="cv-tab-en" class="cv-panel active">
-          <div class="cv-action-bar">
-            <span>Ready-to-copy bullet points for CVs and recruitment submissions:</span>
-            <button type="button" class="btn btn-primary btn-sm" id="copy-full-cv-en-btn">
-              📋 Copy English Bullets
-            </button>
-          </div>
-          <div class="cv-bullets-box">
-            <h4>Work Experience &amp; Professional Roles:</h4>
-            
-            <h5>1. eMarketing Egypt — Digital Marketing Specialist (Full-time | Aug 2026 — Present | Dokki, Giza)</h5>
-            <ul>
-              <li>Manage and execute multi-channel paid acquisition across Meta Ads, Snapchat Ads, and Google Ads for client accounts across Saudi Arabia, UAE, and Egypt.</li>
-              <li>Scaled Kitchen Bazaar (Saudi Arabia e-commerce retail), managing $24,352.55 Snapchat Ads spend to generate $169,455.17 in purchases at a 6.95x average ROAS (1,643 purchases, 26,955 add-to-carts at $0.90 CPA), combined with SAR 38.3K Google Ads spend delivering 78.4K clicks and 1,310 conversions.</li>
-              <li>Scaled IJADAH educational account in the UAE, achieving 980 verified inquiries across 28 multi-stage flights with a record low $4.14 Cost Per Lead (CPL) on parent cohorts (-83% vs account benchmark) and 628 WhatsApp chats.</li>
-              <li>Monitor daily campaign KPIs, prepare performance and attribution reports, and deliver data-driven optimization recommendations.</li>
-              <li>Explore AI-enabled marketing workflows and internal automation tooling to accelerate creative ideation and reporting efficiency.</li>
-            </ul>
-
-            <h5 style="margin-top: 16px;">2. eMarketing Egypt — Digital Marketing Intern (Internship | Apr 2026 — Jul 2026 | Dokki, Giza)</h5>
-            <ul>
-              <li>Supported digital marketing execution and daily campaign monitoring across active client accounts.</li>
-              <li>Tracked lead-generation results and assisted in reviewing ad performance against client benchmarks.</li>
-              <li>Assisted in preparing weekly campaign reporting, account follow-up tasks, and creative angle ideation.</li>
-            </ul>
-
-            <h5 style="margin-top: 16px;">3. Adham Hossam — Digital Marketing Instructor (Current Role | Egypt / Online)</h5>
-            <ul>
-              <li>Delivers digital marketing training and instructional support to trainees across media buying and advertising strategy.</li>
-              <li>Provides practical breakdowns of campaign architectures, budget allocation, audience segmentation, and ad creative optimization.</li>
-              <li>Guides students through real-world advertising scenarios, conversion funnel design, and performance analytics.</li>
-            </ul>
-
-            <h5 style="margin-top: 16px;">4. Adham Hossam — Digital Marketing Mentor / Group Mentor (Previous Role | Egypt / Online)</h5>
-            <ul>
-              <li>Supported trainees through regular one-on-one and group follow-ups, providing detailed feedback on practical campaign assignments.</li>
-              <li>Coordinated session links, learning materials, lecture recordings, recap schedules, and ongoing trainee group communication.</li>
-              <li>Managed trainee group administration, community support, and new cohort onboarding.</li>
-            </ul>
-
-            <h5 style="margin-top: 16px;">5. Freelance — Freelance Digital Marketing Specialist (Ongoing Independent Practice)</h5>
-            <ul>
-              <li>Executes independent freelance digital marketing projects alongside other professional engagements.</li>
-              <li>Delivers paid social campaign management, content strategy, ad copywriting, performance reporting, and conversion rate optimization (CRO) audits.</li>
-              <li>Audited high-ticket automotive protection accounts (Cardip XPEL PPF), analyzing ~50 Reels and ~35 campaigns across SAR 15,800 spend to generate 436 qualified WhatsApp leads.</li>
-              <li>Grew personal Instagram account (@3shwaee_) from 0 to 20,000+ followers organically, generating multiple viral Reels exceeding 1.4M–1.8M views.</li>
-            </ul>
-
-            <h5 style="margin-top: 16px;">6. Hookify — AI-Assisted Content Experiment &amp; Prototype (Google AI Studio)</h5>
-            <ul>
-              <li>Architected a full-stack Generative AI copywriting prototype utilizing Google Gemini AI engine for high-converting social media hooks and video reels scripts.</li>
-            </ul>
-
-            <h4 style="margin-top: 24px;">Education &amp; Credentials:</h4>
-            <ul>
-              <li><strong>Zagazig University:</strong> Bachelor's in Marketing Technology &amp; E-Commerce (2020 — 2024 | GPA: 3.040)</li>
-              <li><strong>8 Verified Certifications:</strong> NTI AI Ambassadors Program (Jul 2026), NTI AI &amp; Automation Diplomas (Beginner &amp; Advanced), Adham Hossam Digital Marketing Diploma, Google Fundamentals of Digital Marketing (Mar 2026), Digital Ad Expert Certificate (#124261390, Jul 2024), IMP Courses, and Professional Training.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Tab AR -->
-        <div id="cv-tab-ar" class="cv-panel" dir="rtl" style="text-align: right;">
-          <div class="cv-action-bar">
-            <span>نقاط الإنجازات المهنية الجاهزة للنسخ والمقابلات الشخصية:</span>
-            <button type="button" class="btn btn-primary btn-sm" id="copy-full-cv-ar-btn">
-              📋 نسخ النقاط باللغة العربية
-            </button>
-          </div>
-          <div class="cv-bullets-box">
-            <h4>الخبرات المهنية وسجل العمل:</h4>
-
-            <h5>1. شركة eMarketing Egypt — أخصائي تسويق رقمي وإعلانات ممولة (دوام كامل | أغسطس 2026 — حتى الآن | الدقي، الجيزة)</h5>
-            <ul>
-              <li>إدارة وتنفيذ الحملات الإعلانية المدفوعة متعددة القنوات (Meta Ads و Snapchat Ads و Google Ads) لعملاء إقليميين في السعودية والإمارات ومصر.</li>
-              <li>إدارة وتوسيع متجر Kitchen Bazaar في السعودية: تحقيق مبيعات فعلية بقيمة 169,455 دولار بعائد إنفاق إعلاني 6.95x ROAS عبر ميزانية Snapchat إعلانية بلغت 24,352 دولار (1,643 طلب شراء، 26,955 إضافة للسلة بتكلفة 0.90 دولار)، مع إدارة حملات Google Ads بميزانية 38.3 ألف ريال سعودي محققة 78,400 نقرة و1,310 تحويل.</li>
-              <li>تحقيق 980 استفساراً مؤكداً لحساب إجادة للتعليم عبر 28 حملة إعلانية، مع خفض تكلفة العميل المحتمل (CPL) إلى رقم قياسي 4.14$ (-83% عن متوسط الحساب) و628 محادثة واتساب.</li>
-              <li>متابعة مؤشرات الأداء (KPIs)، وإعداد التقارير التحليلية الأسبوعية والشهرية، وتقديم توصيات التحسين الفوري.</li>
-              <li>تطبيق أساليب العمل المدعومة بالذكاء الاصطناعي (AI Workflows) لتسريع صناعة الأفكار الإعلانية وتحليل الحملات.</li>
-            </ul>
-
-            <h5 style="margin-top: 16px;">2. شركة eMarketing Egypt — متدرب تسويق رقمي (تدريب عملي | أبريل 2026 — يوليو 2026 | الدقي، الجيزة)</h5>
-            <ul>
-              <li>دعم تنفيذ الحملات الإعلانية ومتابعة أداء الحسابات عبر المنصات الرقمية المختلفة.</li>
-              <li>تتبع مؤشرات توليد العملاء والمساعدة في إعداد تقارير الأداء الأسبوعية.</li>
-              <li>اكتساب خبرة تطبيقية مباشرة في إعداد الإعلانات وصياغة النصوص الإعلانية.</li>
-            </ul>
-
-            <h5 style="margin-top: 16px;">3. أدهم حسام (Adham Hossam) — مدرب تسويق رقمي (الدور الحالي | مصر / أونلاين)</h5>
-            <ul>
-              <li>تقديم الدعم التدريبي والتعليمي في مجالات التسويق الرقمي وإدارة الحملات الإعلانية المدفوعة.</li>
-              <li>تدريب المتدربين على الهيكل الإعلاني، وإدارة الميزانيات، وتكتيكات التحسين والقياس.</li>
-              <li>تحليل حالات واقعية للحملات الإعلانية وتصميم مسارات التحويل وقمع المبيعات (Sales Funnels).</li>
-            </ul>
-
-            <h5 style="margin-top: 16px;">4. أدهم حسام (Adham Hossam) — مرشد ومتابع تدريب / Mentor (دور سابق منفصل | مصر / أونلاين)</h5>
-            <ul>
-              <li>المتابعة الفردية والجماعية مع المتدربين وتقديم ملاحظات تفصيلية على المهام الإعلانية التطبيقية.</li>
-              <li>تنسيق الجلسات ومشاركة المواد التعليمية والتسجيلات وإدارة جداول التلخيص الدوري.</li>
-              <li>إدارة مجموعات المتدربين وتنظيم التواصل الإداري واستقبال الدفعات الجديدة.</li>
-            </ul>
-
-            <h5 style="margin-top: 16px;">5. العمل الحر — أخصائي تسويق رقمي مستقل / Freelance (مستمر إلى جانب الأدوار المهنية)</h5>
-            <ul>
-              <li>تنفيذ مشاريع تسويقية مستقلة للعملاء تشمل إطلاق وإدارة الحملات الإعلانية واستراتيجيات المحتوى وكتابة الإعلانات ومراجعة معدلات التحويل (CRO).</li>
-              <li>تدقيق حساب Cardip لحماية السيارات في السعودية: تحليل حوالي 50 ريلز و35 حملة إعلانية بميزانية 15,800 ريال وتحقيق 436 استفسار واتساب مؤهل.</li>
-              <li>تنمية حساب إنستغرام شخصي (@3shwaee_) من 0 إلى أكثر من 20,000 متابع بشكل عضوي، وتحقيق فيديوهات ريلز تخطت 1.4 إلى 1.8 مليون مشاهدة.</li>
-            </ul>
-
-            <h5 style="margin-top: 16px;">6. مشروع Hookify — نموذج أولي لصناعة المحتوى بالذكاء الاصطناعي (Google AI Studio)</h5>
-            <ul>
-              <li>تطوير نموذج أولي لتوليد الهوكات الفيروسية وسكريبتات الفيديوهات القصيرة بالاعتماد على نماذج Google Gemini.</li>
-            </ul>
-
-            <h4 style="margin-top: 24px;">التعليم الأكاديمي والمؤهلات:</h4>
-            <ul>
-              <li><strong>جامعة الزقازيق:</strong> بكالوريوس تكنولوجيا التسويق والتجارة الإلكترونية (2020 — 2024 | المعدل التراكمي: 3.040).</li>
-              <li><strong>8 شهادات ودبلومات معتمدة:</strong> برنامج سفراء الذكاء الاصطناعي (NTI/ESE، يوليو 2026)، دبلومتا الذكاء الاصطناعي والأتمتة التأسيسي والمتقدم (NTI)، دبلومة التسويق الرقمي (أدهم حسام)، أساسيات التسويق الرقمي (Google، مارس 2026)، شهادة خبير الإعلانات الرقمية (ID: 124261390، يوليو 2024)، دورات IMP، وتدريبات مهنية متخصصة.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Tab Summary -->
-        <div id="cv-tab-summary" class="cv-panel">
-          <div class="cv-bullets-box">
-            <h4>Executive Summary &amp; Professional Pitch</h4>
-            <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
-              Abdlrhman Al Helewah is a Digital Marketing Specialist based in Cairo, Egypt, holding a Bachelor's degree in Marketing Technology &amp; E-Commerce from Zagazig University (GPA 3.040). He combines hands-on performance media buying across Snapchat Ads, Google Ads, and Meta Ads with practical data analysis and AI-assisted workflows. With verified client results including $169,455 in e-commerce purchases at 6.95x ROAS for Kitchen Bazaar and 980 qualified inquiries for IJADAH Education at a record low $4.14 CPL, Abdlrhman bridges ad platform execution, persuasive copy, and conversion optimization.
-            </p>
-            <h5 style="margin-top: 16px;">Core Competencies &amp; Toolkit</h5>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 10px;">
-              <div class="bring-card" style="padding: 14px;">
-                <strong style="color: var(--text-primary); font-size: 13px;">Paid Acquisition:</strong>
-                <p style="font-size: 12px; color: var(--text-secondary); margin: 4px 0 0 0;">Snapchat Ads Manager, Google Ads (Search &amp; PMax), Meta Ads Manager, TikTok Ads, CPL Reduction, Direct WhatsApp Funnels.</p>
-              </div>
-              <div class="bring-card" style="padding: 14px;">
-                <strong style="color: var(--text-primary); font-size: 13px;">Strategy &amp; Content:</strong>
-                <p style="font-size: 12px; color: var(--text-secondary); margin: 4px 0 0 0;">High-Converting Copywriting, Hook Formulation, Organic Growth (0 to 20K+ followers), Content Calendars.</p>
-              </div>
-              <div class="bring-card" style="padding: 14px;">
-                <strong style="color: var(--text-primary); font-size: 13px;">Measurement &amp; AI:</strong>
-                <p style="font-size: 12px; color: var(--text-secondary); margin: 4px 0 0 0;">Performance Reporting, Google Analytics 4, CRO Audits, Google AI Studio, Gemini API, Prompt Engineering.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
 
   <!-- ========================================================================
        FOOTER
