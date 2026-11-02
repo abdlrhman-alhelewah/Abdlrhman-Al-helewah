@@ -336,6 +336,7 @@ const CASE_STUDIES = [
  * --------------------------------------------------------------------------
  */
 document.addEventListener('DOMContentLoaded', () => {
+  initLanguageToggle();
   initNavigation();
   renderCaseStudies('all');
   initCaseStudyFilters();
@@ -348,6 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initHookifyDemoEngine();
   initScrollSpy();
+  initScrollProgress();
   initScrollAnimations();
 });
 
@@ -360,6 +362,7 @@ function initNavigation() {
   const toggleBtn = document.querySelector('.mobile-nav-toggle');
   const drawer = document.querySelector('.mobile-nav-drawer');
   const backToTopBtn = document.querySelector('.back-to-top-btn');
+  const floatingTopBtn = document.getElementById('floating-back-to-top');
 
   function closeDrawer() {
     if (drawer && drawer.classList.contains('open')) {
@@ -396,6 +399,23 @@ function initNavigation() {
       if (e.key === 'Escape') {
         closeDrawer();
       }
+    });
+  }
+
+  // Floating Back to Top Button with scroll threshold
+  if (floatingTopBtn) {
+    function toggleFloatingBtn() {
+      if (window.scrollY > 280) {
+        floatingTopBtn.classList.add('visible');
+      } else {
+        floatingTopBtn.classList.remove('visible');
+      }
+    }
+    window.addEventListener('scroll', toggleFloatingBtn, { passive: true });
+    toggleFloatingBtn();
+
+    floatingTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
@@ -455,42 +475,68 @@ function initNavigation() {
  * 4. CASE STUDIES RENDERING & FILTERING
  * --------------------------------------------------------------------------
  */
+let currentActiveFilter = 'all';
+
+function getCurrentLang() {
+  return document.documentElement.getAttribute('lang') || 'en';
+}
+
 function renderCaseStudies(filterCategory) {
   const grid = document.getElementById('case-studies-grid');
   if (!grid) return;
 
-  const filtered = filterCategory === 'all'
-    ? CASE_STUDIES
-    : CASE_STUDIES.filter(cs => cs.category === filterCategory);
+  if (filterCategory) {
+    currentActiveFilter = filterCategory;
+  }
+  const activeCategory = currentActiveFilter || 'all';
+  const isAr = getCurrentLang() === 'ar';
 
-  grid.innerHTML = filtered.map(cs => `
-    <article class="case-study-card" data-category="${cs.category}">
-      <div class="case-study-card-body">
-        <div class="card-top-meta">
-          <span class="card-client">${escapeHtml(cs.client)}</span>
-          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: flex-end;">
-            <span class="card-status-badge ${escapeHtml(cs.status)}">${escapeHtml(cs.statusLabel || cs.status)}</span>
-            <span class="card-industry">${escapeHtml(cs.region)}</span>
+  const filtered = activeCategory === 'all'
+    ? CASE_STUDIES
+    : CASE_STUDIES.filter(cs => cs.category === activeCategory);
+
+  grid.innerHTML = filtered.map(cs => {
+    const arData = (isAr && typeof CASE_STUDIES_AR !== 'undefined' && CASE_STUDIES_AR[cs.id]) ? CASE_STUDIES_AR[cs.id] : null;
+
+    const client = arData ? arData.client : cs.client;
+    const region = arData ? arData.region : cs.region;
+    const headline = arData ? arData.headline : cs.headline;
+    const teaser = arData ? arData.teaser : cs.teaser;
+    const services = arData ? arData.services : cs.services;
+    const industry = arData ? arData.industry : cs.industry;
+    const statusLabel = arData ? arData.statusLabel : (cs.statusLabel || cs.status);
+    const keyDeliverablesText = isAr ? 'أبرز الأهداف والنتائج' : 'Key Objective & Focus';
+    const viewButtonText = isAr ? 'عرض دراسة الحالة' : 'View Case Study';
+
+    return `
+      <article class="case-study-card" data-category="${cs.category}">
+        <div class="case-study-card-body">
+          <div class="card-top-meta">
+            <span class="card-client">${escapeHtml(client)}</span>
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: flex-end;">
+              <span class="card-status-badge ${escapeHtml(cs.status)}">${escapeHtml(statusLabel)}</span>
+              <span class="card-industry">${escapeHtml(region)}</span>
+            </div>
+          </div>
+          <h3 class="card-title">${escapeHtml(headline)}</h3>
+          <p class="card-summary">${escapeHtml(teaser)}</p>
+          
+          <div class="card-teaser-result">
+            <strong>${escapeHtml(keyDeliverablesText)}</strong>
+            <span>${escapeHtml(services)}</span>
           </div>
         </div>
-        <h3 class="card-title">${escapeHtml(cs.headline)}</h3>
-        <p class="card-summary">${escapeHtml(cs.teaser)}</p>
-        
-        <div class="card-teaser-result">
-          <strong>Key Objective &amp; Focus</strong>
-          <span>${escapeHtml(cs.services)}</span>
-        </div>
-      </div>
 
-      <div class="card-footer">
-        <span class="card-services-text">${escapeHtml(cs.industry)}</span>
-        <button type="button" class="btn btn-secondary btn-sm open-modal-btn" data-id="${cs.id}" aria-haspopup="dialog">
-          View Case Study
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
-      </div>
-    </article>
-  `).join('');
+        <div class="card-footer">
+          <span class="card-services-text">${escapeHtml(industry)}</span>
+          <button type="button" class="btn btn-secondary btn-sm open-modal-btn" data-id="${cs.id}" aria-haspopup="dialog">
+            ${escapeHtml(viewButtonText)}
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="${isAr ? 'M19 12H5M12 19l-7-7 7-7' : 'M5 12h14M12 5l7 7-7 7'}"/></svg>
+          </button>
+        </div>
+      </article>
+    `;
+  }).join('');
 
   // Re-attach modal trigger events to newly rendered buttons
   attachModalTriggers();
@@ -567,57 +613,70 @@ function openModalWithData(study) {
 
   if (!backdrop || !titleEl || !bodyEl) return;
 
-  titleEl.textContent = study.headline;
+  const isAr = getCurrentLang() === 'ar';
+  const arData = (isAr && typeof CASE_STUDIES_AR !== 'undefined' && CASE_STUDIES_AR[study.id]) ? CASE_STUDIES_AR[study.id] : null;
+
+  const headline = arData ? arData.headline : study.headline;
+  const client = arData ? arData.client : study.client;
+  const region = arData ? arData.region : study.region;
+  const industry = arData ? arData.industry : study.industry;
+  const services = arData ? arData.services : study.services;
+  const objective = arData ? arData.objective : study.objective;
+  const challenge = arData ? arData.challenge : study.challenge;
+  const strategy = arData ? arData.strategy : study.strategy;
+  const execution = arData ? arData.execution : study.execution;
+
+  titleEl.textContent = headline;
   if (clientEl) {
-    clientEl.textContent = `${study.client} · ${study.region} · ${study.industry}`;
+    clientEl.textContent = `${client} · ${region} · ${industry}`;
   }
 
   bodyEl.innerHTML = `
     <!-- Top Metadata Grid -->
     <div class="modal-meta-grid">
       <div class="modal-meta-item">
-        <span class="modal-meta-label">Client</span>
-        <span class="modal-meta-val">${escapeHtml(study.client)}</span>
+        <span class="modal-meta-label">${isAr ? 'العميل' : 'Client'}</span>
+        <span class="modal-meta-val">${escapeHtml(client)}</span>
       </div>
       <div class="modal-meta-item">
-        <span class="modal-meta-label">Industry</span>
-        <span class="modal-meta-val">${escapeHtml(study.industry)}</span>
+        <span class="modal-meta-label">${isAr ? 'القطاع' : 'Industry'}</span>
+        <span class="modal-meta-val">${escapeHtml(industry)}</span>
       </div>
       <div class="modal-meta-item">
-        <span class="modal-meta-label">Market</span>
-        <span class="modal-meta-val">${escapeHtml(study.region)}</span>
+        <span class="modal-meta-label">${isAr ? 'السوق' : 'Market'}</span>
+        <span class="modal-meta-val">${escapeHtml(region)}</span>
       </div>
       <div class="modal-meta-item">
-        <span class="modal-meta-label">Core Scope</span>
-        <span class="modal-meta-val">${escapeHtml(study.services)}</span>
+        <span class="modal-meta-label">${isAr ? 'نطاق العمل' : 'Core Scope'}</span>
+        <span class="modal-meta-val">${escapeHtml(services)}</span>
       </div>
     </div>
 
     <!-- Objective & Challenge -->
     <div class="modal-section-block">
-      <h4 class="modal-block-label">01. Objective</h4>
-      <p class="modal-block-text">${escapeHtml(study.objective)}</p>
+      <h4 class="modal-block-label">${isAr ? '01. الهدف الرئيسي' : '01. Objective'}</h4>
+      <p class="modal-block-text">${escapeHtml(objective)}</p>
     </div>
 
     <div class="modal-section-block">
-      <h4 class="modal-block-label">02. Challenge</h4>
-      <p class="modal-block-text">${escapeHtml(study.challenge)}</p>
+      <h4 class="modal-block-label">${isAr ? '02. التحدي والسياق' : '02. Challenge'}</h4>
+      <p class="modal-block-text">${escapeHtml(challenge)}</p>
     </div>
 
     <!-- Strategy & Execution -->
     <div class="modal-section-block">
-      <h4 class="modal-block-label">03. Strategy & Hypotheses</h4>
-      <p class="modal-block-text">${escapeHtml(study.strategy)}</p>
+      <h4 class="modal-block-label">${isAr ? '03. الاستراتيجية والفرضيات' : '03. Strategy & Hypotheses'}</h4>
+      <p class="modal-block-text">${escapeHtml(strategy)}</p>
     </div>
 
     <div class="modal-section-block">
-      <h4 class="modal-block-label">04. Tactical Execution</h4>
-      <p class="modal-block-text">${escapeHtml(study.execution)}</p>
+      <h4 class="modal-block-label">${isAr ? '04. التنفيذ التكتيكي' : '04. Tactical Execution'}</h4>
+      <p class="modal-block-text">${escapeHtml(execution)}</p>
     </div>
 
     <!-- Measurable Results -->
     <div class="modal-result-box">
-      <h4 class="modal-block-label" style="margin-bottom: 12px;">05. Verified Key Results</h4>
+      <h4 class="modal-block-label" style="margin-bottom: 12px;">${isAr ? '05. النتائج المؤكدة والمخرجات' : '05. Verified Key Results'}</h4>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px;">
         ${study.results.map(r => `
           <div style="background-color: var(--bg-primary); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
@@ -1023,44 +1082,171 @@ function initContactForm() {
 
 /**
  * --------------------------------------------------------------------------
- * 9. SCROLL SPY FOR NAVIGATION
+ * 9. INTERSECTION OBSERVER SCROLL SPY & PROGRESS FEEDBACK
  * --------------------------------------------------------------------------
+ * Tracks active sections using an Intersection Observer as the user scrolls.
+ * When a section becomes active, applies the '.active' class to the corresponding
+ * nav-link and updates the scroll progress bar width to provide direct visual feedback.
  */
 function initScrollSpy() {
-  const sections = document.querySelectorAll('section[id]');
+  const sections = document.querySelectorAll('main section[id], section#home');
   const navLinks = document.querySelectorAll('.site-nav .nav-link, .mobile-nav-drawer .nav-link');
+  const progressBar = document.getElementById('scroll-progress-bar');
 
   if (!sections.length || !navLinks.length) return;
 
-  function updateActiveLink() {
-    let currentId = '';
-    const scrollPos = window.scrollY + 120;
-    const isAtBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 60;
+  // Approximate section progress anchor targets for synchronized visual feedback
+  const sectionProgressMap = {
+    'home': 5,
+    'experience': 28,
+    'case-studies': 52,
+    'skills': 75,
+    'education-certs': 88,
+    'contact': 100
+  };
 
-    if (isAtBottom) {
-      currentId = 'contact';
-    } else if (window.scrollY > 160) {
-      sections.forEach(section => {
-        const top = section.offsetTop;
-        const height = section.offsetHeight;
-        if (scrollPos >= top && scrollPos < top + height) {
-          currentId = section.getAttribute('id') || '';
-        }
-      });
-    }
+  function setActiveSection(sectionId) {
+    if (!sectionId) return;
 
+    // 1. Apply specific 'active' class to the corresponding nav-link
     navLinks.forEach(link => {
       const href = link.getAttribute('href');
-      if (href === `#${currentId}`) {
+      if (href === `#${sectionId}`) {
         link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
       } else {
         link.classList.remove('active');
+        link.removeAttribute('aria-current');
       }
     });
+
+    // 2. Update scroll progress bar width and edge glow to provide visual feedback
+    if (progressBar) {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const realScrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      const benchmark = sectionProgressMap[sectionId] !== undefined ? sectionProgressMap[sectionId] : realScrollPercent;
+
+      // Calculate responsive progress width
+      const displayProgress = Math.min(100, Math.max(0, Math.max(realScrollPercent, benchmark * 0.94)));
+      progressBar.style.width = `${displayProgress}%`;
+
+      // Psychological color coding for edge glow
+      let edgeGlow = 'rgba(37, 99, 235, 0.95)'; // Royal Blue (Experience / B2B)
+      if (displayProgress > 66 || sectionId === 'contact' || sectionId === 'education-certs') {
+        edgeGlow = 'rgba(16, 185, 129, 0.95)'; // Emerald Green (Results / Contact)
+      } else if (displayProgress > 33 || sectionId === 'case-studies' || sectionId === 'skills') {
+        edgeGlow = 'rgba(6, 182, 212, 0.95)'; // Electric Cyan (Case Studies / AI & Automation)
+      }
+      progressBar.style.setProperty('--scroll-edge-glow', edgeGlow);
+    }
   }
 
-  window.addEventListener('scroll', updateActiveLink, { passive: true });
-  updateActiveLink();
+  // Create the Intersection Observer to track active sections as the user scrolls
+  const observerOptions = {
+    root: null,
+    rootMargin: '-20% 0px -40% 0px',
+    threshold: [0, 0.25, 0.5, 0.75]
+  };
+
+  const activeRatios = new Map();
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.getAttribute('id');
+      if (!id) return;
+      if (entry.isIntersecting) {
+        activeRatios.set(id, entry.intersectionRatio);
+      } else {
+        activeRatios.delete(id);
+      }
+    });
+
+    // Find the section currently most prominent in the viewport
+    if (activeRatios.size > 0) {
+      let topSectionId = '';
+      let highestRatio = -1;
+      activeRatios.forEach((ratio, id) => {
+        if (ratio > highestRatio) {
+          highestRatio = ratio;
+          topSectionId = id;
+        }
+      });
+      if (topSectionId) {
+        setActiveSection(topSectionId);
+      }
+    }
+  }, observerOptions);
+
+  sections.forEach(section => sectionObserver.observe(section));
+
+  // Fallback and edge detection for continuous scroll & top/bottom boundaries
+  function handleScrollEdge() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const isAtBottom = window.innerHeight + scrollTop >= document.documentElement.scrollHeight - 60;
+
+    if (isAtBottom) {
+      setActiveSection('contact');
+    } else if (scrollTop < 90) {
+      setActiveSection('home');
+    }
+  }
+
+  window.addEventListener('scroll', handleScrollEdge, { passive: true });
+  handleScrollEdge();
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * 9B. SCROLL / READING PROGRESS INDICATOR
+ * --------------------------------------------------------------------------
+ * Computes fluid 0-100% reading progress through the page and updates
+ * the glowing gradient line at the bottom of the sticky navigation header.
+ */
+function initScrollProgress() {
+  const progressBar = document.getElementById('scroll-progress-bar');
+  const siteHeader = document.querySelector('.site-header');
+  if (!progressBar) return;
+
+  let ticking = false;
+
+  function updateProgress() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop / docHeight) * 100)) : 0;
+    progressBar.style.width = `${progress}%`;
+
+    // 1. Psychological Color Coding: dynamic leading edge glow halo
+    let edgeGlow = 'rgba(37, 99, 235, 0.9)'; // Royal Blue (Experience / B2B)
+    if (progress > 66) {
+      edgeGlow = 'rgba(16, 185, 129, 0.95)'; // Emerald Green (Results / Fast Contact)
+    } else if (progress > 33) {
+      edgeGlow = 'rgba(6, 182, 212, 0.95)'; // Electric Cyan (Case Studies / AI & Automation)
+    }
+    progressBar.style.setProperty('--scroll-edge-glow', edgeGlow);
+
+    // 2. Elevated Header on Scroll transition
+    if (siteHeader) {
+      if (scrollTop > 18) {
+        siteHeader.classList.add('scrolled');
+      } else {
+        siteHeader.classList.remove('scrolled');
+      }
+    }
+
+    ticking = false;
+  }
+
+  function requestTick() {
+    if (!ticking) {
+      window.requestAnimationFrame(updateProgress);
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', requestTick, { passive: true });
+  window.addEventListener('resize', requestTick, { passive: true });
+  updateProgress();
 }
 
 /**
@@ -1312,4 +1498,543 @@ function initHookifyDemoEngine() {
   // Initial render
   renderHooks();
 }
+
+/**
+ * ==========================================================================
+ * 13. BILINGUAL LOCALIZATION ENGINE (ARABIC / ENGLISH)
+ * ==========================================================================
+ */
+const CASE_STUDIES_AR = {
+  'kitchen-bazaar': {
+    client: 'مطبخ بازار (Kitchen Bazaar)',
+    region: 'السعودية (KSA) · تجارة إلكترونية',
+    headline: 'توسيع مبيعات متجر إلكتروني: 169,455$ مبيعات بعائد 6.95x ROAS',
+    teaser: 'إدارة إنفاق 24,352$ إعلانات سناب شات محققة 169,455$ مبيعات مؤكدة بعائد 6.95x ROAS (1,643 طلباً و26,955 إضافة للسلة بـ 0.90$) و38.3 ألف ريال إعلانات جوجل جلبت 78.4 ألف نقرة و1,310 تحويل.',
+    services: 'سناب شات · إعلانات جوجل · تيك توك · مضاعفة الـ ROAS',
+    industry: 'مبيعات التجزئة والتجارة الإلكترونية',
+    statusLabel: 'مشروع عميل مكتمل',
+    objective: 'تعظيم إيرادات المبيعات وعدد الطلبات للمتجر، مع الحفاظ على عائد إنفاق إعلاني (ROAS) يتجاوز 5x، وخفض تكلفة إضافة السلة عن 1.00$، واقتناص نية الشراء العالية عبر بحث جوجل في السعودية.',
+    challenge: 'المنافسة الشديدة في قطاع مستلزمات المطبخ والمنزل بالسعودية، حيث ترتفع تكلفة الظهور (CPM) في المواسم، ويؤدي الاستهداف العشوائي إلى التخلي عن السلات دون إتمام الشراء.',
+    strategy: 'تصميم قمع استحواذ ثنائي المحور: 1) إعلانات سناب شات باستخدام الكتالوج الديناميكي والتركيز على شريحة السيدات 25-44 مع عروض موسمية حققت بعض مجموعاتها 15.43x ROAS؛ 2) إعلانات بحث جوجل لاقتناص الكلمات ذات نية الشراء المباشرة.',
+    execution: 'إدارة أكثر من 20 مجموعة إعلانية مع إيقاف فوري للزوايا المرهقة وتوسيع الحملات الرابحة. تحقيق 26,955 إضافة للسلة بتكلفة 0.90$ وإغلاق 1,643 طلب شراء بمتوسط تكلفة استحواذ 14.54$.'
+  },
+  'ijadah-education': {
+    client: 'إجادة للتعليم (IJADAH)',
+    region: 'الإمارات العربية المتحدة (UAE)',
+    headline: 'منظومة متعددة المراحل لجلب وتأهيل استفسارات الطلاب عبر واتساب',
+    teaser: 'إطلاق 28 حملة إعلانية على ميتا جلبت 980 استفساراً مؤكداً لشرائح أولياء الأمور والمدارس مع خفض تكلفة العميل بنسبة 83% لتصل إلى 4.14$.',
+    services: 'إعلانات ميتا · استهداف B2B وأولياء الأمور · تأهيل عبر واتساب',
+    industry: 'التعليم والتدريب المهني',
+    statusLabel: 'مشروع عميل مكتمل',
+    objective: 'جلب استفسارات مؤكدة عالية الجودة من أولياء الأمور وإدارات المدارس مع بيانات اتصال كاملة، مع خفض الهدر الإعلاني في الرسائل غير المؤهلة.',
+    challenge: 'إرهاق إعلاني مرتفع لدى المقيمين في الإمارات، مما رفع تكلفة النقرة وتسبب في رسائل استفسار عشوائية غير مؤهلة استنزفت فريق التسجيل والاستشارات.',
+    strategy: 'تقسيم الحساب الإعلاني إلى شرائح نفسية محددة: فيديوهات بناء المصداقية التعليمية، إعادة استهداف المتفاعلين بنماذج ميتا الفورية (Instant Forms) المحتوية على أسئلة تأهيلية، وحملات محادثات B2B للمدارس.',
+    execution: 'اختبار زوايا إعلانية متعددة تفاضل بين المناهج التعليمية والمستقبل المهني. استبعاد الجماهير غير المهتمة واستخدام جماهير مشابهة (Lookalike) لعملاء سابقين.'
+  },
+  'cardip-automotive': {
+    client: 'كارديب (Cardip)',
+    region: 'المملكة العربية السعودية (KSA)',
+    headline: 'تدقيق حملات أفلام حماية السيارات (XPEL PPF) واستقطاب عملاء واتساب',
+    teaser: 'تدقيق ما يقارب 50 ريلز و35 حملة إعلانية بإنفاق 15,800 ريال، وتحقيق 436 عميل واتساب مؤهل بمتوسط 36.24 ريال للاستفسار.',
+    services: 'أفلام حماية XPEL · إعلانات إنستجرام · توجيه مباشر لواتساب',
+    industry: 'خدمات وتعديل سيارات فاخرة',
+    statusLabel: 'مشروع عميل مكتمل',
+    objective: 'مراجعة أداء الحملات والمحتوى السابق، وتحديد أفضل الزوايا الإبداعية المؤثرة، وبناء مسار استجابة مرئي يربط أصحاب السيارات الفاخرة مباشرة بمستشاري الخدمة عبر واتساب.',
+    challenge: 'خدمات حماية وتلميع السيارات عالية القيمة تتطلب ثقة عميقة. صفحات الهبوط التقليدية شهدت تسرباً كبيراً لأن ملاك السيارات يفضلون الاستفسار الفوري ومناقشة تفاصيل الضمان قبل الحجز.',
+    strategy: 'تدقيق 50 مقطع ريلز و35 حملة إعلانية، والتركيز على مقاطع إثبات الجودة والحرفية (وضوح الطلاء، المعالجة الذاتية للخدوش، وضمان XPEL) مع التوجيه المباشر لمحادثات واتساب.',
+    execution: 'تحليل كفاءة الإنفاق الإعلاني في الرياض والمنطقة الشرقية، وتوجيه الميزانيات نحو الفيديوهات الأكثر إقناعاً مع استبعاد الزوايا غير المجدية.'
+  },
+  'instagram-page-growth': {
+    client: '3shwaee_ (عشوائي)',
+    region: 'الشرق الأوسط / نمو عضوي',
+    headline: 'تنمية حساب إنستجرام عضوياً: من 0 إلى 20,000+ متابع و1.8M مشاهدة ريلز',
+    teaser: 'بناء وتنمية حساب إنستجرام من الصفر لأكثر من 20 ألف متابع بدون أي تمويل إعلاني، عبر استراتيجية محتوى ممنهجة تركز على الهوكات القوية والتحليل المبني على البيانات.',
+    services: 'استراتيجية المحتوى · الانتشار العضوي · تحليل إحصائيات الحساب',
+    industry: 'صناعة المحتوى والعلامات الشخصية',
+    statusLabel: 'نمو عضوي مكتمل',
+    objective: 'تأسيس محرك محتوى مستدام، واكتشاف الركائز الأعلى تفاعلاً، وتخطي حاجز 20,000 متابع حقيقي باستخدام مقاطع الريلز.',
+    challenge: 'بناء جمهور متفاعل على إنستجرام من الصفر التام دون ميزانية إعلانية مدفوعة، وسط تشبع كبير بالمحتوى المنافس.',
+    strategy: 'صياغة هوكات بداية تثير الفضول وتوقف التمرير (Thumb-Stop Hooks)، واستخدام تحليلات إنستجرام الاحترافية لدراسة منحنيات الاحتفاظ بالمشاهدين ومضاعفة المحتوى الرابح.',
+    execution: 'إنتاج ونشر مقاطع ريلز قصيرة بانتظام بين مايو 2022 ومارس 2024، مع تحسين الإيقاع والخطوط المستخدمة.'
+  },
+  'heart-of-life-rehabilitation': {
+    client: 'مؤسسة قلب الحياة للتخاطب والتأهيل',
+    region: 'مصر',
+    headline: 'التأهيل الحركي للأطفال والتوعية بالإدراك البصري الحركي',
+    teaser: 'تطوير الرسائل التسويقية وتوجيه الجمهور المستهدف لخدمة تأهيل حركي للأطفال في مصر، وتوعية أولياء الأمور بأهمية دعم الإدراك البصري الحركي.',
+    services: 'صياغة الرسائل الإعلانية · اللهجة المصرية · أبحاث الكلمات المفتاحية',
+    industry: 'رعاية صحية وتأهيل أطفال',
+    statusLabel: 'قيد التنفيذ والمتابعة',
+    objective: 'بناء إطار حملة إعلانية إنسانية عالية الثقة، توضح لأولياء الأمور أهمية التمارين البصرية الحركية للأطفال ذوي التأخر في الكلام والنمو.',
+    challenge: 'الوصول إلى أولياء الأمور القلقين برسائل دقيقة طبياً ومتعاطفة دون إثارة الفزع أو المبالغة.',
+    strategy: 'صياغة نصوص وعناوين باللهجة المصرية الدافئة والقريبة من الأسرة، وإجراء بحث للكلمات المفتاحية لرصد استفسارات الأمهات والآباء الشائعة.',
+    execution: 'هيكلة ركائز التواصل الإعلاني وتناول علامات الملاحظة لدى الأطفال (التناسق بين العين واليد، التوازن، ردود الفعل) مع دعوة واضحة لطلب التقييم.'
+  },
+  'cro-audit': {
+    client: 'متجر تجارة إلكترونية',
+    region: 'مواقع المتاجر الإلكترونية',
+    headline: 'تدقيق وتحسين معدل التحويل (CRO) لمتجر تجارة إلكترونية',
+    teaser: 'إجراء تقييم شامل لمعدل التحويل عبر المتجر الإلكتروني، واكتشاف نقاط تسرب العملاء في عرض المنتجات، وتدفق سلة الجوال، وعوامل الثقة لزيادة المبيعات.',
+    services: 'تشخيص مسار الشراء · تجربة الجوال · إشارات الثقة و UX',
+    industry: 'تحسين معدلات التحويل (CRO)',
+    statusLabel: 'تدقيق واستراتيجية',
+    objective: 'تشخيص تسرب التحويلات عبر صفحات تفاصيل المنتجات وسلة الشراء والدفع، وتقديم توصيات قابلة للاختبار لرفع سرعة الشراء.',
+    challenge: 'المتجر يجلب زيارات منتظمة من الإعلانات الممولة، لكن معدل تحويل الجوال كان أقل من المعايير بسبب احتكاك خفي في خطوات الشراء.',
+    strategy: 'تحليل مسارات تصفح الزوار من الدخول وحتى إتمام الطلب، واكتشاف عوائق اختيار خيارات المنتج، ووضوح ملخص السلة، وأزرار الشراء الثابتة للجوال.',
+    execution: 'تسليم مصفوفة تدقيق تصنف الإصلاحات حسب الأثر والجهد، مع إبراز شارات الأمان والدفع المفقودة، وتبسيط حقول الدفع على الجوال.'
+  },
+  'hookify-ai-saas': {
+    client: 'منصة Hookify AI (أداة ومسرع الميديا باينج)',
+    region: 'مشروع وأداة إنتاجية',
+    headline: 'Hookify — محرك ذكاء اصطناعي لصناعة الهوكات الإعلانية ونصوص الريلز',
+    teaser: 'ابتكار وهندسة أداة ذكاء اصطناعي متكاملة باستخدام React وNode ونماذج Gemini AI لإنتاج هوكات إعلانية جذابة، ونصوص ريلز مدتها 30 ثانية، مع تحليل احتمالية الانتشار.',
+    services: 'Google AI Studio · Gemini API · محرك كتابة الإعلانات',
+    industry: 'تكنولوجيا التسويق والذكاء الاصطناعي',
+    statusLabel: 'أداة ومسرع إعلاني',
+    objective: 'تطوير أداة تسرع عمل الميديا باير عبر تطبيق أطر الإعلانات المباشرة (AIDA, PAS, Curiosity Gap) لإنتاج أفكار وهوكات إعلانية بلمح البصر.',
+    challenge: 'يقضي الميديا بايرز وصناع الإعلانات ساعات طويلة في ابتكار زوايا إعلانية جديدة، بينما تنتج روبوتات الدردشة العامة نصوصاً تقليدية لا تبيع.',
+    strategy: 'الاستفادة من Google AI Studio وGemini API لتصميم مصفوفات أوامر ذكية تصنع هوكات ونصوصاً مقسمة (Hook, Body, CTA) مع درجات تفاعل متوقعة.',
+    execution: 'بناء واجهة تفاعلية كاملة تدعم العربية والإنجليزية (RTL/LTR) مع محاكاة فورية لمعدلات الاحتفاظ بالمشاهدة في أول 3 ثوانٍ.'
+  },
+  'nyckel-porsche-bmw': {
+    client: 'تجربة تصنيف الصور بالرؤية الحاسوبية',
+    region: 'منصة Nyckel ML',
+    headline: 'بورشه مقابل بي إم دبليو — تجربة تعلم الآلة وتصنيف الصور',
+    teaser: 'تدريب واختبار نموذج تصنيف صور متخصص عبر منصة Nyckel لاختبار دقة التعرف على الملامح التصميمية الفاخرة بين سيارات بورشه وبي إم دبليو.',
+    services: 'منصة Nyckel · رؤية حاسوبية · تصنيف آلي',
+    industry: 'تعلم الآلة والذكاء الاصطناعي',
+    statusLabel: 'تجربة تعلم آلة',
+    objective: 'تدريب نموذج تصنيف مرئي قادر على التمييز بين التفاصيل التصميمية الدقيقة لعلامتين تجاريتين رائدتين في عالم السيارات.',
+    challenge: 'فهم آليات عمل منصات تعلم الآلة السريعة ومتطلبات جمع البيانات وتقييم دقة التصنيف.',
+    strategy: 'جمع بيانات تدريب متوازنة تغطي زوايا وموديلات وظروف إضاءة مختلفة، وتقييم مؤشرات الثقة وحالات الالتباس.',
+    execution: 'استخدام مسار التدريب السريع على Nyckel واختبار النموذج مقابل صور تحقق ودراسة تغير ثقة النموذج باختلاف الزاوية.'
+  },
+  'marketing-kpi-dashboard': {
+    client: 'إطار تحليل البيانات والميديا باينج',
+    region: 'إطار متعدد المنصات',
+    headline: 'لوحة تحكم مؤشرات الأداء (KPIs) ومعدل الإنفاق اليومي للحملات',
+    teaser: 'تصميم نموذج موحد لبيانات الحملات الإعلانية يدمج أرقام ميتا وسناب شات وجوجل في مؤشرات موحدة وأتمتة وتيرة الإنفاق.',
+    services: 'تقارير الأداء · وتيرة الإنفاق Pacing · مسارات التحويل',
+    industry: 'تحليل البيانات وإعداد التقارير',
+    statusLabel: 'إطار عمل تحليلي',
+    objective: 'توحيد مقاييس التسويق الأساسية (CPL, CPA, ROAS, CPM, CTR, Hook Rate) في لوحة واحدة واضحة ودقيقة.',
+    challenge: 'تشتت مديري الحملات بين لوحات إعلانية متعددة، مما يؤخر إعادة توزيع الميزانيات ويخفي إرهاق الإعلانات.',
+    strategy: 'تحديد منطق الإسناد والنماذج الرياضية لحساب معدلات الإنفاق اليومي والتنبؤ بالميزانية لمنع الهدر وتنبيه الفريق.',
+    execution: 'بناء حاسبات تفاعلية لوتيرة الصرف تسوي بين مقاييس المنصات المختلفة وتقدم رؤية فورية لحالة الميزانية.'
+  },
+  'marketing-ai-agent-platform': {
+    client: 'هندسة منتجات الذكاء الاصطناعي',
+    region: 'مخطط ومعمارية مقترحة',
+    headline: 'منصة وكلاء الذكاء الاصطناعي للميديا باينج — الرؤية والمعمارية',
+    teaser: 'دراسة المتطلبات المعمارية لمنصة وكلاء ذكاء اصطناعي موحدة تربط بين توليد الأفكار، تحسين محركات التوليد (GEO)، والمتابعة التلقائية للحملات.',
+    services: 'أنظمة الوكلاء الذاتية · أبحاث GEO · مسارات الميديا باينج',
+    industry: 'أتمتة التسويق والأنظمة الذكية',
+    statusLabel: 'مفهوم قيد التخطيط',
+    objective: 'وضع مواصفات لمنصة وكلاء موحدة تدعم ابتكار الحملات ومراقبة الأداء مع إبقاء التحكم النهائي بيد الإنسان.',
+    challenge: 'تنقل المسوقين بين عشرات الأدوات المنفصلة للبحث والكتابة وإطلاق الإعلانات والمراقبة، مما يخلق هدراً في الوقت.',
+    strategy: 'تحديد مسارات العمل ووحدات الوكلاء: وكيل الأفكار، وكيل النصوص، وكيل رصد وتيرة الصرف والانحرافات، مع لوحة تحكم تفاعلية.',
+    execution: 'توثيق المتطلبات المعمارية واحتياجات الـ API وهندسة الأوامر لتطبيقها في النماذج الأولية المستقبلية.'
+  }
+};
+
+const I18N_DICTIONARY = {
+  ar: {
+    // Navigation
+    nav_home: 'الرئيسية',
+    nav_experience: 'الخبرات',
+    nav_work: 'سوابق الأعمال',
+    nav_skills: 'المهارات',
+    nav_education: 'التعليم والشهادات',
+    nav_contact: 'تواصل معي',
+    cta_whatsapp: 'واتساب',
+    drawer_role: 'بيرفورمانس ميديا باير',
+    toggle_theme: 'تبديل الوضع الليلي / الفاتح',
+    chat_whatsapp: 'تواصل عبر واتساب',
+
+    // Hero
+    hero_status: 'متاح لإدارة الحملات وتوسيع المبيعات · الخليج وعن بُعد',
+    hero_name: 'عبدالرحمن الحليوة',
+    hero_role: 'بيرفورمانس ميديا باير · إدارة الإعلانات الممولة ونمو المبيعات',
+    hero_pitch: 'بيرفورمانس ميديا باير متخصص في إدارة وتوسيع الحملات الممولة عالية الربحية عبر <strong>سناب شات، إعلانات جوجل، وميتا (فيسبوك وإنستجرام)</strong> في الخليج ومصر. حققت <strong>169,455$ مبيعات موثقة في التجارة الإلكترونية بعائد 6.95x ROAS</strong> و<strong>980 عميل محتمل مؤهل</strong> (أقل تكلفة للعميل 4.14$). أستخدم أدوات الذكاء الاصطناعي والأتمتة وتحليل البيانات كميزة تنافسية لاختبار الزوايا الإعلانية أسرع وتحقيق أعلى عائد استثمار.',
+
+    // KPIs
+    kpi_1_label: 'مبيعات التجارة الإلكترونية',
+    kpi_1_sub: '1,643 طلب · السعودية (إعلانات سناب شات)',
+    kpi_2_label: 'عملاء محتملون مؤهلون',
+    kpi_2_sub: '4.14$ أقل تكلفة للعميل · الإمارات (28 حملة)',
+    kpi_3_label: 'ميزانيات إعلانية مدارة',
+    kpi_3_badge: 'متعدد القنوات',
+    kpi_3_sub: 'سناب شات، جوجل وميتا عبر دول الخليج',
+    kpi_4_label: 'أداة تسريع الميديا باينج',
+    kpi_4_badge: 'محرك هوكات ذكي',
+    kpi_4_sub: 'مؤسس ومطوّر · مضاعفة سرعة اختبار الإعلانات',
+
+    // Hero CTAs
+    hero_cta_wa: 'تواصل عبر واتساب',
+    hero_cta_work: 'استعراض سوابق الأعمال',
+    hero_cta_proof: 'معاينة إثبات ميتا المباشر',
+
+    // Experience
+    exp_eyebrow: 'الخبرات العملية والأدوار',
+    exp_title: 'الخبرة المهنية الميدانية.',
+    exp_desc: 'تنفيذ احترافي للحملات الإعلانية الممولة عبر التجارة الإلكترونية الخليجية، وجلب العملاء المحتملين ذوي القيمة العالية، وتدريب الكوادر التسويقية.',
+    exp_r1_title: 'بيرفورمانس ميديا باير',
+    exp_r1_badge: 'دوام كامل حالي',
+    exp_r1_company: 'إي ماركتنج إيجيبت (eMarketing Egypt) · الدقي، الجيزة، مصر',
+    exp_r1_dates: 'أغسطس 2026 — حتى الآن',
+    exp_r1_b1: 'إدارة وتوسيع ميزانيات إعلانية ممولة (+32.8 ألف دولار) عبر <strong>إعلانات سناب شات، إعلانات جوجل، وإعلانات ميتا</strong> لعملاء إقليميين في السعودية والإمارات ومصر.',
+    exp_r1_b2: 'توسيع مبيعات <strong>مطبخ بازار (Kitchen Bazaar - متجر سعودي)</strong>: تحقيق <strong>169,455$ مبيعات موثقة بعائد 6.95x ROAS</strong> عبر سناب شات (1,643 طلب، و26,955 إضافة للسلة بتكلفة 0.90$) وإدارة 38.3 ألف ريال إعلانات جوجل (78.4 ألف نقرة، 1,310 تحويل).',
+    exp_r1_b3: 'توسيع نتائج <strong>إجادة للتعليم (الإمارات)</strong>: جلب <strong>980 استفساراً مؤهلاً</strong> عبر 28 حملة مع خفض تكلفة العميل بنسبة 83% لتصل إلى رقم قياسي <strong>4.14$</strong> و628 محادثة واتساب مباشرة.',
+    exp_r1_b4: 'متابعة يومية لمؤشرات الأداء (KPIs)، وإعادة توزيع الميزانيات، وتقارير الإسناد، وتطبيق أتمتة كتابة النصوص الإعلانية بالذكاء الاصطناعي لمعالجة إرهاق الإعلانات.',
+
+    exp_r2_title: 'مدرب تسويق رقمي وإعلانات ممولة',
+    exp_r2_badge: 'دور حالي',
+    exp_r2_company: 'أدهم حسام · مصر / أونلاين',
+    exp_r2_dates: 'دور حالي',
+    exp_r2_b1: 'تقديم تدريب تطبيقي عملي في الميديا باينج وهيكلة المنصات الإعلانية واستراتيجيات توسيع الميزانيات.',
+    exp_r2_b2: 'تحليل وتفكيك مسارات التحويل (Funnels)، تكتيكات المزايدة، وتشخيص إرهاق الإعلانات والجمهور.',
+
+    exp_r3_title: 'مرشد وموجّه فرق إعلانية',
+    exp_r3_company: 'أدهم حسام · مصر / أونلاين',
+    exp_r3_dates: 'دور سابق',
+    exp_r3_b1: 'تقديم تقييم وتوجيه فردي وجماعي مباشر لحملات المتدربين وصياغة النصوص الإعلانية الإقناعية.',
+    exp_r3_b2: 'إدارة الموارد التعليمية، وجداول المراجعات، ودعم مجتمع المتدربين، ومتابعة الدفعات الجديدة.',
+
+    exp_r4_title: 'بيرفورمانس ميديا باير مستقل',
+    exp_r4_badge: 'مشاريع خاصة',
+    exp_r4_company: 'ممارسة مهنية مستقلة · عن بُعد / الخليج ومصر',
+    exp_r4_dates: 'ممارسة مستمرة',
+    exp_r4_b1: 'إدارة وتخصيص الحملات الممولة، وصياغة الإعلانات، وتدقيق تحسين معدل التحويل (CRO) لعملاء ومتاجر خاصة.',
+    exp_r4_b2: 'تدقيق حملات Cardip لأفلام حماية XPEL (إنفاق 15.8 ألف ريال، 436 عميل واتساب مؤهل)؛ وتنمية براند شخصي (@3shwaee_) من الصفر لأكثر من 20 ألف متابع.',
+
+    // Skills
+    skills_eyebrow: 'أدوات الميديا باير ومضاعفات القوة',
+    skills_title: 'القدرات الأساسية والميزة التنافسية التقنية.',
+    skills_desc: 'التخصص الأساسي: بيرفورمانس ميديا باينج وتوسيع الإعلانات الممولة. الأتمتة بالذكاء الاصطناعي، البرمجة بلغة بايثون، وتحليل البيانات المتقدم تمثل مضاعفات سرعة فائقة لاختبار الهوكات، وخفض تكلفة الاستحواذ، ومضاعفة الـ ROAS.',
+    skills_p1_title: 'بيرفورمانس ميديا باينج (التخصص الأساسي)',
+    skills_p2_title: 'استراتيجية الإعلانات الإبداعية',
+    skills_p3_title: 'تحليل البيانات وإسناد التحويلات',
+    skills_p4_title: 'الذكاء الاصطناعي والأتمتة (ميزتي التنافسية)',
+
+    s_snap: 'مدير إعلانات سناب شات (Snapchat Ads)',
+    s_google: 'إعلانات جوجل (بحث و PMax)',
+    s_meta: 'مدير إعلانات ميتا (Facebook & Instagram)',
+    s_tiktok: 'مدير إعلانات تيك توك (TikTok Ads)',
+    s_buying: 'الميديا باينج واستراتيجيات المزايدة',
+    s_opt: 'توسيع الحملات وخفض الـ CPA',
+    s_audiences: 'الجماهير المشابهة والمخصصة',
+    s_retarget: 'مسارات إعادة الاستهداف (Retargeting)',
+    s_fatigue: 'تشخيص إرهاق الإعلانات (Fatigue)',
+
+    s_paid_strat: 'هندسة مسارات الشراء (Funnel Architecture)',
+    s_hooks: 'صياغة الهوكات واختبار الزوايا',
+    s_persona: 'أبحاث الجمهور والشخصيات المستهدفة',
+    s_briefs: 'إعداد بريفات الفيديو الإعلاني و UGC',
+    s_offers: 'هندسة العروض ذات التحويل العالي',
+    s_audits: 'تدقيق وتحليل إعلانات المنافسين',
+    s_cro: 'تحسين صفحات الهبوط والتوجيه المباشر',
+    s_prop: 'اختبار عروض القيمة والرسائل',
+
+    s_kpi: 'هندسة مؤشرات الأداء والـ ROAS',
+    s_ga4: 'جوجل أناليتكس 4 (GA4)',
+    s_capi: 'تتبع Meta Pixel و Conversions API (CAPI)',
+    s_utm: 'ترميز الروابط (UTM Taxonomy)',
+    s_rep: 'تقارير الأداء وتكلفة الاستحواذ المجمعة',
+    s_dash: 'لوحات تحكم الأداء التنفيذية',
+    s_attr: 'نماذج الإسناد متعدد اللمسات',
+    s_sql: 'تحليل ومعالجة البيانات التسويقية',
+
+    s_ai_copy: 'توليد النصوص الإعلانية بالذكاء الاصطناعي',
+    s_prompt: 'هندسة الأوامر الموجهة للميديا بايرز',
+    s_auto_bid: 'أتمتة تنبيهات الميزانية وسرعة الإنفاق',
+    s_hookify: 'محرك هوكات Hookify AI',
+    s_creative_mat: 'مصفوفة التوسع بالزوايا الإبداعية',
+    s_scripts: 'أتمتة المهام اليومية باستخدام بايثون',
+    s_persona_mod: 'محاكاة شخصيات المشترين بالذكاء الاصطناعي',
+    s_workflow: 'المراقبة المؤتمتة لحملات المنافسين',
+
+    // Contact
+    contact_eyebrow: 'تواصل مباشر',
+    contact_title: 'دعنا نناقش حملتك الإعلانية القادمة.',
+    contact_desc: 'متاح لأدوار الميديا باينج، توسيع الحسابات الإعلانية، واستشارات نمو المبيعات. تواصل مباشرة عبر وسيلتك المفضلة:',
+    contact_wa_label: 'الرد الأسرع',
+    contact_wa_val: 'محادثة واتساب',
+    contact_email_label: 'البريد الإلكتروني المباشر',
+    contact_email_val: 'إرسال بريد',
+    contact_li_label: 'الشبكة المهنية',
+    contact_li_val: 'الملف الشخصي على لينكد إن',
+
+    // Footer
+    footer_name: 'عبدالرحمن الحليوة',
+    footer_role: 'بيرفورمانس ميديا باير'
+  },
+  en: {
+    // Navigation
+    nav_home: 'Home',
+    nav_experience: 'Experience',
+    nav_work: 'Work',
+    nav_skills: 'Skills',
+    nav_education: 'Education & Certs',
+    nav_contact: 'Contact',
+    cta_whatsapp: 'WhatsApp',
+    drawer_role: 'Performance Media Buyer',
+    toggle_theme: 'Toggle Light / Dark Mode',
+    chat_whatsapp: 'Chat on WhatsApp',
+
+    // Hero
+    hero_status: 'Available for Scaling & Media Buying · GCC & Remote',
+    hero_name: 'Abdlrhman Al Helewah',
+    hero_role: 'Performance Media Buyer · Paid Acquisition & Scaled Growth',
+    hero_pitch: 'Performance Media Buyer managing high-growth acquisition across <strong>Snapchat, Google & Meta Ads</strong> in the GCC and Egypt. Generated <strong>$169,455 in verified e-commerce revenue at 6.95x ROAS</strong> and <strong>980 qualified leads</strong> ($4.14 lowest CPL). Leverages custom AI automation & deep data analytics as power tools to test angles faster and maximize client profit.',
+
+    // KPIs
+    kpi_1_label: 'E-Com Purchases Revenue',
+    kpi_1_sub: '1,643 Orders · Saudi Arabia (Snapchat Ads)',
+    kpi_2_label: 'Qualified Leads Captured',
+    kpi_2_sub: '$4.14 Lowest CPL · UAE (28 Meta Flights)',
+    kpi_3_label: 'Managed Ad Spend',
+    kpi_3_badge: 'Multi-Channel',
+    kpi_3_sub: 'Snapchat, Google & Meta Ads across GCC',
+    kpi_4_label: 'Ad Multiplier Tool',
+    kpi_4_badge: 'AI Hook Engine',
+    kpi_4_sub: 'Creator & Media Buyer Edge · Ad Velocity',
+
+    // Hero CTAs
+    hero_cta_wa: 'Chat on WhatsApp',
+    hero_cta_work: 'View Case Studies',
+    hero_cta_proof: 'Inspect Meta Proof',
+
+    // Experience
+    exp_eyebrow: 'Work History & Roles',
+    exp_title: 'Professional Experience.',
+    exp_desc: 'Hands-on performance media buying execution across GCC e-commerce, high-ticket lead generation, instructional training, and client scaling engagements.',
+    exp_r1_title: 'Performance Media Buyer',
+    exp_r1_badge: 'Current Full-Time',
+    exp_r1_company: 'eMarketing Egypt · Dokki, Giza, Egypt',
+    exp_r1_dates: 'Aug 2026 — Present',
+    exp_r1_b1: 'Direct and scale multi-channel performance media spend ($32.8K+) across <strong>Snapchat Ads, Google Ads, and Meta Ads</strong> for regional clients in Saudi Arabia, UAE, and Egypt.',
+    exp_r1_b2: 'Scaled <strong>Kitchen Bazaar (Saudi E-Com)</strong>: generated <strong>$169,455 in verified purchases at 6.95x ROAS</strong> via Snapchat Ads (1,643 orders, 26,955 add-to-carts at $0.90) and managed SAR 38.3K Google Ads (78.4K clicks, 1,310 conversions).',
+    exp_r1_b3: 'Scaled <strong>IJADAH Education (UAE)</strong>: captured <strong>980 verified inquiries</strong> across 28 flights with an 83% reduction in CPL to a record <strong>$4.14</strong> and 628 direct WhatsApp chats.',
+    exp_r1_b4: 'Drive daily KPI monitoring, budget reallocation, attribution reporting, and custom AI-assisted ad copywriting workflows to counter creative fatigue.',
+
+    exp_r2_title: 'Digital Marketing Instructor',
+    exp_r2_badge: 'Current Role',
+    exp_r2_company: 'Adham Hossam · Egypt / Online',
+    exp_r2_dates: 'Current Role',
+    exp_r2_b1: 'Delivers hands-on training in media buying, ad platform architecture, and budget scaling strategies.',
+    exp_r2_b2: 'Breaks down real-world conversion funnel design, bidding tactics, and creative fatigue diagnostics.',
+
+    exp_r3_title: 'Digital Marketing Mentor / Group Mentor',
+    exp_r3_company: 'Adham Hossam · Egypt / Online',
+    exp_r3_dates: 'Previous Mentoring Role',
+    exp_r3_b1: 'Provided direct 1-on-1 and group feedback on trainee campaign builds and ad copywriting assignments.',
+    exp_r3_b2: 'Managed learning resources, recap schedules, community engagement, and new cohort onboarding.',
+
+    exp_r4_title: 'Independent Performance Media Buyer',
+    exp_r4_badge: 'Independent Practice',
+    exp_r4_company: 'Independent Practice · Remote / GCC & Egypt',
+    exp_r4_dates: 'Ongoing Practice',
+    exp_r4_b1: 'Delivers tailored paid advertising, ad copywriting, and conversion rate optimization (CRO) audits for private clients.',
+    exp_r4_b2: 'Audited Cardip XPEL PPF (SAR 15.8K spend, 436 qualified WhatsApp leads); grew personal brand (@3shwaee_) from 0 to 20,000+ organic followers.',
+
+    // Skills
+    skills_eyebrow: 'Media Buying Toolkit & Multipliers',
+    skills_title: 'Core Competencies & Technical Edge.',
+    skills_desc: 'Primary Trade: Performance Media Buying & Paid Scaling. AI automation, custom Python scripts, and deep data analysis act as unfair speed levers to test creative hooks, diagnose fatigue, and maximize ROAS.',
+    skills_p1_title: 'Performance Media Buying',
+    skills_p2_title: 'Paid Creative Strategy',
+    skills_p3_title: 'Data Analytics & Attribution',
+    skills_p4_title: 'AI & Automation (The Edge)',
+
+    s_snap: 'Snapchat Ads Manager',
+    s_google: 'Google Ads (Search & PMax)',
+    s_meta: 'Meta Ads Manager',
+    s_tiktok: 'TikTok Ads Manager',
+    s_buying: 'Media Buying & Bidding',
+    s_opt: 'Campaign Scaling & CPA Opt',
+    s_audiences: 'Lookalike & Custom Audiences',
+    s_retarget: 'Retargeting Funnels',
+    s_fatigue: 'Ad Fatigue Diagnostics',
+
+    s_paid_strat: 'Ad Funnel Architecture',
+    s_hooks: 'Hook Formulation & Angle Testing',
+    s_persona: 'Audience & Persona Research',
+    s_briefs: 'Creative Briefing for Video/UGC',
+    s_offers: 'High-Converting Offer Angles',
+    s_audits: 'Competitive Ad Audits',
+    s_cro: 'Landing Page CRO & Direct Routing',
+    s_prop: 'Value Proposition Testing',
+
+    s_kpi: 'ROAS & KPI Architecture',
+    s_ga4: 'Google Analytics 4 (GA4)',
+    s_capi: 'Meta Pixel & CAPI Tracking',
+    s_utm: 'UTM Tagging Taxonomy',
+    s_rep: 'Telemetry & Blended CPA Reports',
+    s_dash: 'Executive Growth Dashboards',
+    s_attr: 'Multi-Touch Attribution',
+    s_sql: 'Data Analysis & Normalization',
+
+    s_ai_copy: 'AI-Powered Ad Copy Generation',
+    s_prompt: 'Prompt Engineering for Media Buyers',
+    s_auto_bid: 'Daily Pacing & Spend Alert Logic',
+    s_hookify: 'Hookify AI Engine',
+    s_creative_mat: 'Creative Angle Matrix Scaling',
+    s_scripts: 'Python & Workflow Automation',
+    s_persona_mod: 'Synthetic Buyer Persona Simulation',
+    s_workflow: 'Automated Competitive Telemetry',
+
+    // Contact
+    contact_eyebrow: 'Get In Touch',
+    contact_title: 'Let’s Discuss Your Next Campaign.',
+    contact_desc: 'Available for performance media buying roles, ad account scaling, and growth consultations. Connect directly via your preferred channel:',
+    contact_wa_label: 'Fastest Response',
+    contact_wa_val: 'WhatsApp Chat',
+    contact_email_label: 'Direct Inbox',
+    contact_email_val: 'Send Email',
+    contact_li_label: 'Professional Network',
+    contact_li_val: 'LinkedIn Profile',
+
+    // Footer
+    footer_name: 'Abdlrhman Al Helewah',
+    footer_role: 'Performance Media Buyer'
+  }
+};
+
+/**
+ * --------------------------------------------------------------------------
+ * 13B. ROBUST CLIENT-SIDE i18n ENGINE (JSON DICTIONARY + RTL/LTR DYNAMICS)
+ * --------------------------------------------------------------------------
+ * Maps all data-i18n attributes in the document to the active JSON dictionary.
+ * Dynamically synchronizes document direction (html[dir]="rtl|ltr"), language code
+ * (html[lang]="ar|en"), text contents, input placeholders, aria labels, and
+ * dynamic component rendering.
+ */
+function initLanguageToggle() {
+  const langToggleBtn = document.getElementById('lang-toggle');
+  const mobileLangToggleBtn = document.getElementById('mobile-lang-toggle');
+  const storageKey = 'abdlrhman_lang';
+
+  function applyLanguage(lang) {
+    const isAr = lang === 'ar';
+    const activeDir = isAr ? 'rtl' : 'ltr';
+    const activeLang = isAr ? 'ar' : 'en';
+
+    // 1. Manage RTL/LTR switching dynamically by updating html attributes
+    document.documentElement.setAttribute('lang', activeLang);
+    document.documentElement.setAttribute('dir', activeDir);
+
+    const dict = I18N_DICTIONARY[activeLang];
+    if (!dict) return;
+
+    // 2. Map data-i18n elements to JSON dictionary
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (key && dict[key] !== undefined) {
+        const btnText = el.querySelector('.btn-text');
+        if (btnText) {
+          btnText.textContent = dict[key];
+        } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+          el.placeholder = dict[key];
+        } else {
+          el.innerHTML = dict[key];
+        }
+      }
+    });
+
+    // 3. Support dynamic attribute translations (placeholder, title, aria-label)
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (key && dict[key]) el.placeholder = dict[key];
+    });
+
+    document.querySelectorAll('[data-i18n-title]').forEach(el => {
+      const key = el.getAttribute('data-i18n-title');
+      if (key && dict[key]) el.title = dict[key];
+    });
+
+    document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+      const key = el.getAttribute('data-i18n-aria');
+      if (key && dict[key]) el.setAttribute('aria-label', dict[key]);
+    });
+
+    // 4. Update Language Toggle Button Labels & Tooltips
+    const desktopBtnText = document.querySelector('#lang-toggle .lang-btn-text');
+    if (desktopBtnText) {
+      desktopBtnText.textContent = isAr ? 'English' : 'العربية';
+    }
+    if (langToggleBtn) {
+      langToggleBtn.setAttribute('title', isAr ? 'Switch to English' : 'تغيير اللغة إلى العربية');
+      langToggleBtn.setAttribute('aria-label', isAr ? 'Switch to English' : 'تغيير اللغة إلى العربية');
+    }
+
+    const mobileBtnText = document.querySelector('#mobile-lang-toggle .mobile-lang-text');
+    if (mobileBtnText) {
+      mobileBtnText.textContent = isAr ? 'English' : 'العربية';
+    }
+
+    // 5. Update Case Study Filter Button Labels
+    const filterLabels = {
+      'all': isAr ? 'جميع المشاريع (10)' : 'All Projects (10)',
+      'paid-media': isAr ? 'الإعلانات الممولة والنتائج' : 'Paid Media & Performance',
+      'growth': isAr ? 'النمو والمحتوى العضوي' : 'Organic & Social Growth',
+      'ai-experiments': isAr ? 'الذكاء الاصطناعي والأتمتة' : 'AI & Automation',
+      'strategy-audit': isAr ? 'التدقيق والحملات الحالية' : 'Audits & In Progress'
+    };
+
+    document.querySelectorAll('.case-studies-filter .filter-btn').forEach(btn => {
+      const filter = btn.getAttribute('data-filter');
+      if (filter && filterLabels[filter]) {
+        btn.textContent = filterLabels[filter];
+      }
+    });
+
+    // 6. Re-render case studies cards in active language
+    if (typeof renderCaseStudies === 'function') {
+      renderCaseStudies(currentActiveFilter || 'all');
+    }
+
+    // 7. Dispatch custom event for extensible dynamic components
+    try {
+      document.dispatchEvent(new CustomEvent('languageChanged', {
+        detail: { lang: activeLang, dir: activeDir }
+      }));
+    } catch (e) {
+      // Ignore in older environments
+    }
+  }
+
+  // Load saved preference safely with try/catch
+  let savedLang = 'en';
+  try {
+    savedLang = localStorage.getItem(storageKey) || 'en';
+  } catch (e) {
+    savedLang = 'en';
+  }
+
+  if (savedLang === 'ar') {
+    applyLanguage('ar');
+  } else {
+    applyLanguage('en');
+  }
+
+  function toggleLanguage() {
+    const currentLang = document.documentElement.getAttribute('lang') || 'en';
+    const nextLang = currentLang === 'ar' ? 'en' : 'ar';
+    applyLanguage(nextLang);
+    try {
+      localStorage.setItem(storageKey, nextLang);
+    } catch (e) {
+      // Ignore quota or security errors
+    }
+  }
+
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', toggleLanguage);
+  }
+
+  if (mobileLangToggleBtn) {
+    mobileLangToggleBtn.addEventListener('click', toggleLanguage);
+  }
+}
+
 

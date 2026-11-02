@@ -1,38 +1,38 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" class="light">
+<html lang="en" data-theme="light" class="light" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Primary Meta Tags -->
-  <title>Abdlrhman Al Helewah | Digital Marketing Specialist</title>
-  <meta name="title" content="Abdlrhman Al Helewah | Digital Marketing Specialist">
-  <meta name="description" content="Personal portfolio of Abdlrhman Al Helewah, Digital Marketing Specialist focusing on Performance Marketing, Content Strategy, Analytics, and AI Automation.">
+  <title>Abdlrhman Al Helewah | Performance Media Buyer</title>
+  <meta name="title" content="Abdlrhman Al Helewah | Performance Media Buyer">
+  <meta name="description" content="Portfolio of Abdlrhman Al Helewah, Performance Media Buyer driving high-ROAS paid acquisition across Snapchat, Google, and Meta Ads in the GCC and Egypt.">
   <meta name="author" content="Abdlrhman Al Helewah">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph / Facebook -->
   <link rel="canonical" href="https://abdlrhman-alhelewah.com/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Abdlrhman Al Helewah | Digital Marketing Specialist">
-  <meta property="og:description" content="Personal portfolio of Abdlrhman Al Helewah, Digital Marketing Specialist focusing on Performance Marketing, Content Strategy, Analytics, and AI Automation.">
+  <meta property="og:title" content="Abdlrhman Al Helewah | Performance Media Buyer">
+  <meta property="og:description" content="Portfolio of Abdlrhman Al Helewah, Performance Media Buyer driving high-ROAS paid acquisition across Snapchat, Google, and Meta Ads in the GCC and Egypt.">
   <meta property="og:url" content="https://abdlrhman-alhelewah.com/">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Abdlrhman Al Helewah | Digital Marketing Specialist">
-  <meta name="twitter:description" content="Personal portfolio of Abdlrhman Al Helewah, Digital Marketing Specialist focusing on Performance Marketing, Content Strategy, Analytics, and AI Automation.">
+  <meta name="twitter:title" content="Abdlrhman Al Helewah | Performance Media Buyer">
+  <meta name="twitter:description" content="Portfolio of Abdlrhman Al Helewah, Performance Media Buyer driving high-ROAS paid acquisition across Snapchat, Google, and Meta Ads in the GCC and Egypt.">
 
-  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono (Preconnected for Performance) -->
+  <!-- Google Fonts: Alexandria (Arabic/Latin), Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Static Stylesheet -->
   <link rel="stylesheet" href="./style.css">
 
-  <!-- Vanilla Client Script (Deferred) -->
-  <script src="./script.js" defer></script>
+  <!-- Vanilla Client Script (Vite Module) -->
+  <script type="module" src="./script.js"></script>
 </head>
 <body>
 
@@ -48,25 +48,30 @@
       <!-- Zone 1: Brand Wordmark -->
       <a href="#home" class="site-brand" aria-label="Abdlrhman Al Helewah Home">
         <span class="brand-dot" aria-hidden="true"></span>
-        <span>Abdlrhman Al Helewah</span>
+        <span class="brand-name-text">Abdlrhman Al Helewah</span>
       </a>
 
       <!-- Zone 2: Navigation Links (Matching Exact Page Flow) -->
       <nav class="site-nav" aria-label="Main Navigation">
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#case-studies" class="nav-link">Work</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#education-certs" class="nav-link">Education &amp; Certs</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#experience" class="nav-link" data-i18n="nav_experience">Experience</a>
+        <a href="#case-studies" class="nav-link" data-i18n="nav_work">Work</a>
+        <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
+        <a href="#education-certs" class="nav-link" data-i18n="nav_education">Education &amp; Certs</a>
+        <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
       </nav>
 
-      <!-- Zone 3: Primary Action, Theme Toggle & Mobile Hamburger -->
+      <!-- Zone 3: Primary Action, Theme Toggle, Language Switcher & Mobile Hamburger -->
       <div class="header-actions">
+        <button type="button" class="lang-toggle-btn" id="lang-toggle" aria-label="Switch Language" title="تغيير اللغة إلى العربية">
+          <svg class="icon icon-globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span class="lang-btn-text">العربية</span>
+        </button>
+
         <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle light and dark mode" title="Toggle theme">
           <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         </button>
-        <a href="https://wa.me/201553404607" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm header-cta-btn">WhatsApp</a>
+        <a href="https://wa.me/201553404607" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm header-cta-btn" data-i18n="cta_whatsapp">WhatsApp</a>
         <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
           <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true">
             <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -80,6 +85,10 @@
         </button>
       </div>
     </div>
+    <!-- Reading / Scroll Progress Bar -->
+    <div class="scroll-progress-track" aria-hidden="true">
+      <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+    </div>
   </header>
 
   <!-- Mobile Drawer -->
@@ -88,20 +97,24 @@
       <img src="./assets/aistudio/IMG_20220916_235436_349_310de63d.jpg" onerror="this.src='./assets/aistudio/abdlrhman_portrait_transparent.png'" alt="Abdlrhman Al Helewah" class="mobile-drawer-avatar" width="46" height="46" loading="lazy">
       <div class="mobile-drawer-meta">
         <span class="mobile-drawer-name">Abdlrhman Al Helewah</span>
-        <span class="mobile-drawer-role">Performance Marketing Specialist</span>
+        <span class="mobile-drawer-role" data-i18n="drawer_role">Performance Media Buyer</span>
       </div>
     </div>
-    <a href="#experience" class="nav-link">Experience</a>
-    <a href="#case-studies" class="nav-link">Work</a>
-    <a href="#skills" class="nav-link">Skills</a>
-    <a href="#education-certs" class="nav-link">Education &amp; Certs</a>
-    <a href="#contact" class="nav-link">Contact</a>
+    <a href="#experience" class="nav-link" data-i18n="nav_experience">Experience</a>
+    <a href="#case-studies" class="nav-link" data-i18n="nav_work">Work</a>
+    <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
+    <a href="#education-certs" class="nav-link" data-i18n="nav_education">Education &amp; Certs</a>
+    <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+    <button type="button" class="btn btn-secondary mobile-lang-toggle-btn" id="mobile-lang-toggle" style="width: 100%; margin-top: 6px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+      <svg class="icon icon-globe" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+      <span class="mobile-lang-text">العربية</span>
+    </button>
     <button type="button" class="btn btn-secondary mobile-theme-toggle-btn" id="mobile-theme-toggle" style="width: 100%; margin-top: 6px; display: flex; align-items: center; justify-content: center; gap: 8px;">
       <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/></svg>
-      <span class="theme-text">Toggle Light / Dark Mode</span>
+      <span class="theme-text" data-i18n="toggle_theme">Toggle Light / Dark Mode</span>
     </button>
-    <a href="https://wa.me/201553404607" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-link-cta">Chat on WhatsApp</a>
+    <a href="https://wa.me/201553404607" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-link-cta" data-i18n="chat_whatsapp">Chat on WhatsApp</a>
   </div>
 
   <main id="main-content">
@@ -119,73 +132,73 @@
           <div class="hero-identity">
             <div class="hero-status-pill" aria-label="Professional Status">
               <span class="status-pulse-dot" style="background-color: var(--accent-emerald);"></span>
-              <span>Available for Roles &amp; Scaling · GCC &amp; Remote</span>
+              <span data-i18n="hero_status">Available for Scaling &amp; Media Buying · GCC &amp; Remote</span>
             </div>
-            <h1 class="hero-title">Abdlrhman Al Helewah</h1>
-            <div class="hero-subhead">Performance Marketing Specialist · Paid Acquisition &amp; Growth</div>
+            <h1 class="hero-title" data-i18n="hero_name">Abdlrhman Al Helewah</h1>
+            <div class="hero-subhead" data-i18n="hero_role">Performance Media Buyer · Paid Acquisition &amp; Scaled Growth</div>
           </div>
         </div>
 
-        <p class="hero-pitch">
-          Performance Marketing Specialist driving paid acquisition across <strong>Snapchat, Google &amp; Meta Ads</strong> in the GCC and Egypt. Delivered <strong>$169,455 in verified e-commerce revenue at 6.95x ROAS</strong> and <strong>980 qualified leads</strong> ($4.14 lowest CPL). Founder of <strong>Hookify AI</strong>.
+        <p class="hero-pitch" data-i18n="hero_pitch">
+          Performance Media Buyer managing high-growth acquisition across <strong>Snapchat, Google &amp; Meta Ads</strong> in the GCC and Egypt. Generated <strong>$169,455 in verified e-commerce revenue at 6.95x ROAS</strong> and <strong>980 qualified leads</strong> ($4.14 lowest CPL). Leverages custom AI automation &amp; deep data analytics as power tools to test angles faster and maximize client profit.
         </p>
 
         <!-- Streamlined 4-KPI Metric Cards Banner -->
         <div class="hero-kpis-banner" aria-label="Key Performance Indicators">
           <div class="hero-kpi-card">
             <div class="kpi-card-header">
-              <span class="hero-kpi-label">E-Com Purchases Revenue</span>
+              <span class="hero-kpi-label" data-i18n="kpi_1_label">E-Com Purchases Revenue</span>
               <span class="kpi-badge kpi-badge-green">6.95x ROAS</span>
             </div>
             <div class="hero-kpi-val tabular-nums">$169,455</div>
-            <div class="hero-kpi-sub">1,643 Orders · Saudi Arabia (Snapchat Ads)</div>
+            <div class="hero-kpi-sub" data-i18n="kpi_1_sub">1,643 Orders · Saudi Arabia (Snapchat Ads)</div>
           </div>
 
           <div class="hero-kpi-card">
             <div class="kpi-card-header">
-              <span class="hero-kpi-label">Qualified Leads Captured</span>
+              <span class="hero-kpi-label" data-i18n="kpi_2_label">Qualified Leads Captured</span>
               <span class="kpi-badge kpi-badge-blue">-83% CPL</span>
             </div>
             <div class="hero-kpi-val tabular-nums">980 Leads</div>
-            <div class="hero-kpi-sub">$4.14 Lowest CPL · UAE (28 Meta Flights)</div>
+            <div class="hero-kpi-sub" data-i18n="kpi_2_sub">$4.14 Lowest CPL · UAE (28 Meta Flights)</div>
           </div>
 
           <div class="hero-kpi-card">
             <div class="kpi-card-header">
-              <span class="hero-kpi-label">Managed Ad Spend</span>
-              <span class="kpi-badge kpi-badge-neutral">Multi-Channel</span>
+              <span class="hero-kpi-label" data-i18n="kpi_3_label">Managed Ad Spend</span>
+              <span class="kpi-badge kpi-badge-neutral" data-i18n="kpi_3_badge">Multi-Channel</span>
             </div>
             <div class="hero-kpi-val tabular-nums">$32,800+</div>
-            <div class="hero-kpi-sub">Snapchat, Google &amp; Meta Ads across GCC</div>
+            <div class="hero-kpi-sub" data-i18n="kpi_3_sub">Snapchat, Google &amp; Meta Ads across GCC</div>
           </div>
 
           <div class="hero-kpi-card">
             <div class="kpi-card-header">
-              <span class="hero-kpi-label">Production AI Venture</span>
-              <span class="kpi-badge kpi-badge-cyan">Full-Stack SaaS</span>
+              <span class="hero-kpi-label" data-i18n="kpi_4_label">Ad Multiplier Tool</span>
+              <span class="kpi-badge kpi-badge-cyan" data-i18n="kpi_4_badge">AI Hook Engine</span>
             </div>
             <div class="hero-kpi-val">Hookify AI</div>
-            <div class="hero-kpi-sub">Founder &amp; AI Engineer · Content Engine</div>
+            <div class="hero-kpi-sub" data-i18n="kpi_4_sub">Creator &amp; Media Buyer Edge · Ad Velocity</div>
           </div>
         </div>
 
         <!-- Direct Action CTAs -->
         <div class="hero-actions-row">
-          <a href="https://wa.me/201553404607" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <a href="https://wa.me/201553404607" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="hero_cta_wa">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
             </svg>
-            Chat on WhatsApp
+            <span class="btn-text">Chat on WhatsApp</span>
           </a>
 
-          <a href="#case-studies" class="btn btn-secondary">
-            View Case Studies
+          <a href="#case-studies" class="btn btn-secondary" data-i18n="hero_cta_work">
+            <span class="btn-text">View Case Studies</span>
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
 
-          <button type="button" class="btn btn-secondary" id="hero-inspect-proof-btn" title="Inspect raw Meta Ads Manager screenshot">
+          <button type="button" class="btn btn-secondary" id="hero-inspect-proof-btn" title="Inspect raw Meta Ads Manager screenshot" data-i18n="hero_cta_proof">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            Inspect Meta Proof
+            <span class="btn-text">Inspect Meta Proof</span>
           </button>
         </div>
 
@@ -199,134 +212,112 @@
     <section id="experience" class="section reveal-on-scroll">
       <div class="container">
         <div class="section-header">
-          <span class="section-eyebrow">Work History &amp; Roles</span>
-          <h2 class="section-title">Professional Experience.</h2>
-          <p class="section-description">
-            Hands-on performance marketing execution across GCC e-commerce, B2B lead generation, instructional training, and client engagements.
+          <span class="section-eyebrow" data-i18n="exp_eyebrow">Work History &amp; Roles</span>
+          <h2 class="section-title" data-i18n="exp_title">Professional Experience.</h2>
+          <p class="section-description" data-i18n="exp_desc">
+            Hands-on performance media buying execution across GCC e-commerce, high-ticket lead generation, instructional training, and client scaling engagements.
           </p>
         </div>
 
         <div class="experience-container" style="display: flex; flex-direction: column; gap: 20px;">
           
-          <!-- Role 01: eMarketing Egypt — Specialist (Current Full-time) -->
-          <article class="experience-card">
+          <!-- Role 01: eMarketing Egypt — Performance Media Buyer (Current Full-time) -->
+          <article class="experience-card" data-role="media-buyer">
             <header class="experience-header">
               <div>
                 <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-                  <h3 class="experience-role-title">Digital Marketing Specialist</h3>
-                  <span class="venture-badge-pill" style="font-size: 11px; padding: 2px 10px;">Current Full-Time</span>
+                  <h3 class="experience-role-title" data-i18n="exp_r1_title">Performance Media Buyer</h3>
+                  <span class="venture-badge-pill" style="font-size: 11px; padding: 2px 10px;" data-i18n="exp_r1_badge">Current Full-Time</span>
                 </div>
-                <div class="experience-company-line">eMarketing Egypt · Dokki, Giza, Egypt</div>
+                <div class="experience-company-line" data-i18n="exp_r1_company">eMarketing Egypt · Dokki, Giza, Egypt</div>
               </div>
-              <div class="experience-dates tabular-nums">Aug 2026 — Present</div>
+              <div class="experience-dates tabular-nums" data-i18n="exp_r1_dates">Aug 2026 — Present</div>
             </header>
 
             <div class="experience-responsibilities">
               <ul class="experience-list">
-                <li>
+                <li data-i18n="exp_r1_b1">
                   Direct and scale multi-channel performance media spend ($32.8K+) across <strong>Snapchat Ads, Google Ads, and Meta Ads</strong> for regional clients in Saudi Arabia, UAE, and Egypt.
                 </li>
-                <li>
+                <li data-i18n="exp_r1_b2">
                   Scaled <strong>Kitchen Bazaar (Saudi E-Com)</strong>: generated <strong>$169,455 in verified purchases at 6.95x ROAS</strong> via Snapchat Ads (1,643 orders, 26,955 add-to-carts at $0.90) and managed SAR 38.3K Google Ads (78.4K clicks, 1,310 conversions).
                 </li>
-                <li>
+                <li data-i18n="exp_r1_b3">
                   Scaled <strong>IJADAH Education (UAE)</strong>: captured <strong>980 verified inquiries</strong> across 28 flights with an 83% reduction in CPL to a record <strong>$4.14</strong> and 628 direct WhatsApp chats.
                 </li>
-                <li>
-                  Drive daily KPI monitoring, budget reallocation, attribution reporting, and AI-assisted ad copywriting workflows.
+                <li data-i18n="exp_r1_b4">
+                  Drive daily KPI monitoring, budget reallocation, attribution reporting, and custom AI-assisted ad copywriting workflows to counter creative fatigue.
                 </li>
               </ul>
             </div>
           </article>
 
-          <!-- Role 02: eMarketing Egypt — Intern (Previous Internship) -->
-          <article class="experience-card">
-            <header class="experience-header">
-              <div>
-                <h3 class="experience-role-title">Digital Marketing Intern</h3>
-                <div class="experience-company-line">eMarketing Egypt · Dokki, Giza, Egypt</div>
-              </div>
-              <div class="experience-dates tabular-nums">Apr 2026 — Jul 2026</div>
-            </header>
-
-            <div class="experience-responsibilities">
-              <ul class="experience-list">
-                <li>
-                  Supported live campaign execution and daily monitoring across active Meta and Snapchat ad sets against target CPA benchmarks.
-                </li>
-                <li>
-                  Assisted in weekly performance reporting, audience segment testing, and creative angle ideation.
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Role 03: Adham Hossam — Instructor (Current Role) -->
+          <!-- Role 02: Adham Hossam — Instructor (Current Role) -->
           <article class="experience-card">
             <header class="experience-header">
               <div>
                 <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-                  <h3 class="experience-role-title">Digital Marketing Instructor</h3>
-                  <span class="venture-badge-pill" style="font-size: 11px; padding: 2px 10px;">Current Role</span>
+                  <h3 class="experience-role-title" data-i18n="exp_r2_title">Digital Marketing Instructor</h3>
+                  <span class="venture-badge-pill" style="font-size: 11px; padding: 2px 10px;" data-i18n="exp_r2_badge">Current Role</span>
                 </div>
-                <div class="experience-company-line">Adham Hossam · Egypt / Online</div>
+                <div class="experience-company-line" data-i18n="exp_r2_company">Adham Hossam · Egypt / Online</div>
               </div>
-              <div class="experience-dates tabular-nums">Current Role</div>
+              <div class="experience-dates tabular-nums" data-i18n="exp_r2_dates">Current Role</div>
             </header>
 
             <div class="experience-responsibilities">
               <ul class="experience-list">
-                <li>
+                <li data-i18n="exp_r2_b1">
                   Delivers hands-on training in media buying, ad platform architecture, and budget scaling strategies.
                 </li>
-                <li>
+                <li data-i18n="exp_r2_b2">
                   Breaks down real-world conversion funnel design, bidding tactics, and creative fatigue diagnostics.
                 </li>
               </ul>
             </div>
           </article>
 
-          <!-- Role 04: Adham Hossam — Mentor (Previous Role - Kept Separate) -->
+          <!-- Role 03: Adham Hossam — Mentor (Previous Role) -->
           <article class="experience-card">
             <header class="experience-header">
               <div>
-                <h3 class="experience-role-title">Digital Marketing Mentor / Group Mentor</h3>
-                <div class="experience-company-line">Adham Hossam · Egypt / Online</div>
+                <h3 class="experience-role-title" data-i18n="exp_r3_title">Digital Marketing Mentor / Group Mentor</h3>
+                <div class="experience-company-line" data-i18n="exp_r3_company">Adham Hossam · Egypt / Online</div>
               </div>
-              <div class="experience-dates tabular-nums">Previous Mentoring Role</div>
+              <div class="experience-dates tabular-nums" data-i18n="exp_r3_dates">Previous Mentoring Role</div>
             </header>
 
             <div class="experience-responsibilities">
               <ul class="experience-list">
-                <li>
+                <li data-i18n="exp_r3_b1">
                   Provided direct 1-on-1 and group feedback on trainee campaign builds and ad copywriting assignments.
                 </li>
-                <li>
+                <li data-i18n="exp_r3_b2">
                   Managed learning resources, recap schedules, community engagement, and new cohort onboarding.
                 </li>
               </ul>
             </div>
           </article>
 
-          <!-- Role 05: Freelance Digital Marketing Specialist -->
+          <!-- Role 04: Independent Performance Media Buyer -->
           <article class="experience-card">
             <header class="experience-header">
               <div>
                 <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-                  <h3 class="experience-role-title">Freelance Digital Marketing Specialist</h3>
-                  <span class="venture-badge-pill" style="font-size: 11px; padding: 2px 10px;">Independent Projects</span>
+                  <h3 class="experience-role-title" data-i18n="exp_r4_title">Independent Performance Media Buyer</h3>
+                  <span class="venture-badge-pill" style="font-size: 11px; padding: 2px 10px;" data-i18n="exp_r4_badge">Independent Practice</span>
                 </div>
-                <div class="experience-company-line">Independent Practice · Remote / GCC &amp; Egypt</div>
+                <div class="experience-company-line" data-i18n="exp_r4_company">Independent Practice · Remote / GCC &amp; Egypt</div>
               </div>
-              <div class="experience-dates tabular-nums">Ongoing Practice</div>
+              <div class="experience-dates tabular-nums" data-i18n="exp_r4_dates">Ongoing Practice</div>
             </header>
 
             <div class="experience-responsibilities">
               <ul class="experience-list">
-                <li>
+                <li data-i18n="exp_r4_b1">
                   Delivers tailored paid advertising, ad copywriting, and conversion rate optimization (CRO) audits for private clients.
                 </li>
-                <li>
+                <li data-i18n="exp_r4_b2">
                   Audited Cardip XPEL PPF (SAR 15.8K spend, 436 qualified WhatsApp leads); grew personal brand (@3shwaee_) from 0 to 20,000+ organic followers.
                 </li>
               </ul>
@@ -464,32 +455,32 @@
     <section id="skills" class="section reveal-on-scroll">
       <div class="container">
         <div class="section-header">
-          <span class="section-eyebrow">Skills & Capabilities</span>
-          <h2 class="section-title">Core Competencies & Tooling.</h2>
-          <p class="section-description">
-            Structured by discipline and functional application. Focused on tools and methods applied directly in campaign workflows.
+          <span class="section-eyebrow" data-i18n="skills_eyebrow">Media Buying Toolkit &amp; Multipliers</span>
+          <h2 class="section-title" data-i18n="skills_title">Core Competencies &amp; Technical Edge.</h2>
+          <p class="section-description" data-i18n="skills_desc">
+            Primary Trade: Performance Media Buying &amp; Paid Scaling. AI automation, custom Python scripts, and deep data analysis act as unfair speed levers to test creative hooks, diagnose fatigue, and maximize ROAS.
           </p>
         </div>
 
         <div class="skills-grid">
-          <!-- Pillar 1: Performance Marketing -->
+          <!-- Pillar 1: Performance Marketing (Core Profession) -->
           <div class="skill-category-card">
             <div class="skill-cat-header">
               <div class="skill-cat-icon" aria-hidden="true">
                 <svg class="icon" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
               </div>
-              <h3 class="skill-cat-title">Performance Marketing</h3>
+              <h3 class="skill-cat-title" data-i18n="skills_p1_title">Performance Media Buying</h3>
             </div>
             <div class="skill-tags-flow">
-              <span class="skill-item-tag">Snapchat Ads Manager</span>
-              <span class="skill-item-tag">Google Ads (Search &amp; PMax)</span>
-              <span class="skill-item-tag">Meta Ads Manager</span>
-              <span class="skill-item-tag">TikTok Ads Manager</span>
-              <span class="skill-item-tag">Media Buying &amp; Bidding</span>
-              <span class="skill-item-tag">Campaign Optimization</span>
-              <span class="skill-item-tag">Lookalike &amp; Custom Audiences</span>
-              <span class="skill-item-tag">Retargeting Funnels</span>
-              <span class="skill-item-tag">Ad Fatigue Diagnostics</span>
+              <span class="skill-item-tag" data-i18n="s_snap">Snapchat Ads Manager</span>
+              <span class="skill-item-tag" data-i18n="s_google">Google Ads (Search &amp; PMax)</span>
+              <span class="skill-item-tag" data-i18n="s_meta">Meta Ads Manager</span>
+              <span class="skill-item-tag" data-i18n="s_tiktok">TikTok Ads Manager</span>
+              <span class="skill-item-tag" data-i18n="s_buying">Media Buying &amp; Bidding</span>
+              <span class="skill-item-tag" data-i18n="s_opt">Campaign Scaling &amp; CPA Opt</span>
+              <span class="skill-item-tag" data-i18n="s_audiences">Lookalike &amp; Custom Audiences</span>
+              <span class="skill-item-tag" data-i18n="s_retarget">Retargeting Funnels</span>
+              <span class="skill-item-tag" data-i18n="s_fatigue">Ad Fatigue Diagnostics</span>
             </div>
           </div>
 
@@ -499,17 +490,17 @@
               <div class="skill-cat-icon" aria-hidden="true">
                 <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
               </div>
-              <h3 class="skill-cat-title">Strategy & Creative</h3>
+              <h3 class="skill-cat-title" data-i18n="skills_p2_title">Paid Creative Strategy</h3>
             </div>
             <div class="skill-tags-flow">
-              <span class="skill-item-tag">Digital Marketing Strategy</span>
-              <span class="skill-item-tag">Content Strategy & Planning</span>
-              <span class="skill-item-tag">Hook Formulation</span>
-              <span class="skill-item-tag">Audience & Persona Research</span>
-              <span class="skill-item-tag">Creative Briefing</span>
-              <span class="skill-item-tag">Offer & Angle Formulation</span>
-              <span class="skill-item-tag">Competitive Ad Audits</span>
-              <span class="skill-item-tag">Value Proposition Testing</span>
+              <span class="skill-item-tag" data-i18n="s_paid_strat">Ad Funnel Architecture</span>
+              <span class="skill-item-tag" data-i18n="s_hooks">Hook Formulation &amp; Angle Testing</span>
+              <span class="skill-item-tag" data-i18n="s_persona">Audience &amp; Persona Research</span>
+              <span class="skill-item-tag" data-i18n="s_briefs">Creative Briefing for Video/UGC</span>
+              <span class="skill-item-tag" data-i18n="s_offers">High-Converting Offer Angles</span>
+              <span class="skill-item-tag" data-i18n="s_audits">Competitive Ad Audits</span>
+              <span class="skill-item-tag" data-i18n="s_cro">Landing Page CRO &amp; Direct Routing</span>
+              <span class="skill-item-tag" data-i18n="s_prop">Value Proposition Testing</span>
             </div>
           </div>
 
@@ -519,37 +510,37 @@
               <div class="skill-cat-icon" aria-hidden="true">
                 <svg class="icon" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
               </div>
-              <h3 class="skill-cat-title">Analytics & Measurement</h3>
+              <h3 class="skill-cat-title" data-i18n="skills_p3_title">Data Analytics &amp; Attribution</h3>
             </div>
             <div class="skill-tags-flow">
-              <span class="skill-item-tag">KPI Architecture</span>
-              <span class="skill-item-tag">Performance Analysis</span>
-              <span class="skill-item-tag">Google Analytics 4 (GA4)</span>
-              <span class="skill-item-tag">Meta Pixel & CAPI Understanding</span>
-              <span class="skill-item-tag">UTM Tagging Taxonomy</span>
-              <span class="skill-item-tag">Custom Client Reporting</span>
-              <span class="skill-item-tag">Dashboard Thinking</span>
-              <span class="skill-item-tag">Attribution Principles</span>
+              <span class="skill-item-tag" data-i18n="s_kpi">ROAS &amp; KPI Architecture</span>
+              <span class="skill-item-tag" data-i18n="s_ga4">Google Analytics 4 (GA4)</span>
+              <span class="skill-item-tag" data-i18n="s_capi">Meta Pixel &amp; CAPI Tracking</span>
+              <span class="skill-item-tag" data-i18n="s_utm">UTM Tagging Taxonomy</span>
+              <span class="skill-item-tag" data-i18n="s_rep">Telemetry &amp; Blended CPA Reports</span>
+              <span class="skill-item-tag" data-i18n="s_dash">Executive Growth Dashboards</span>
+              <span class="skill-item-tag" data-i18n="s_attr">Multi-Touch Attribution</span>
+              <span class="skill-item-tag" data-i18n="s_sql">Data Analysis &amp; Normalization</span>
             </div>
           </div>
 
-          <!-- Pillar 4: AI & Automation -->
+          <!-- Pillar 4: AI & Automation (Multiplier) -->
           <div class="skill-category-card">
             <div class="skill-cat-header">
               <div class="skill-cat-icon" aria-hidden="true">
                 <svg class="icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
               </div>
-              <h3 class="skill-cat-title">AI & Workflow Automation</h3>
+              <h3 class="skill-cat-title" data-i18n="skills_p4_title">AI &amp; Automation (The Edge)</h3>
             </div>
             <div class="skill-tags-flow">
-              <span class="skill-item-tag">AI-Assisted Copywriting</span>
-              <span class="skill-item-tag">Prompt Engineering Frameworks</span>
-              <span class="skill-item-tag">Marketing Automation Logic</span>
-              <span class="skill-item-tag">Data Normalization Scripts</span>
-              <span class="skill-item-tag">Creative Angle Matrices</span>
-              <span class="skill-item-tag">Automated Spend Summaries</span>
-              <span class="skill-item-tag">AI Persona Modeling</span>
-              <span class="skill-item-tag">Continuous Workflow Tooling</span>
+              <span class="skill-item-tag" data-i18n="s_ai_copy">AI-Powered Ad Copy Generation</span>
+              <span class="skill-item-tag" data-i18n="s_prompt">Prompt Engineering for Media Buyers</span>
+              <span class="skill-item-tag" data-i18n="s_auto_bid">Daily Pacing &amp; Spend Alert Logic</span>
+              <span class="skill-item-tag" data-i18n="s_hookify">Hookify AI Engine</span>
+              <span class="skill-item-tag" data-i18n="s_creative_mat">Creative Angle Matrix Scaling</span>
+              <span class="skill-item-tag" data-i18n="s_scripts">Python &amp; Workflow Automation</span>
+              <span class="skill-item-tag" data-i18n="s_persona_mod">Synthetic Buyer Persona Simulation</span>
+              <span class="skill-item-tag" data-i18n="s_workflow">Automated Competitive Telemetry</span>
             </div>
           </div>
         </div>
@@ -698,10 +689,10 @@
     <section id="contact" class="section reveal-on-scroll">
       <div class="container" style="max-width: 860px; text-align: center;">
         <div class="section-header" style="text-align: center; margin-bottom: 32px;">
-          <span class="section-eyebrow">Get In Touch</span>
-          <h2 class="section-title">Let’s Discuss Your Next Campaign.</h2>
-          <p class="section-description" style="margin: 0 auto;">
-            Available for performance marketing roles, ad account scaling, and growth consultations. Connect directly via your preferred channel:
+          <span class="section-eyebrow" data-i18n="contact_eyebrow">Get In Touch</span>
+          <h2 class="section-title" data-i18n="contact_title">Let’s Discuss Your Next Campaign.</h2>
+          <p class="section-description" style="margin: 0 auto;" data-i18n="contact_desc">
+            Available for performance media buying roles, ad account scaling, and growth consultations. Connect directly via your preferred channel:
           </p>
         </div>
 
@@ -711,8 +702,8 @@
               <svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
             </div>
             <div class="contact-direct-info">
-              <span class="contact-direct-label">Fastest Response</span>
-              <strong class="contact-direct-val">WhatsApp Chat</strong>
+              <span class="contact-direct-label" data-i18n="contact_wa_label">Fastest Response</span>
+              <strong class="contact-direct-val" data-i18n="contact_wa_val">WhatsApp Chat</strong>
               <span class="contact-direct-meta">+20 155 340 4607</span>
             </div>
           </a>
@@ -722,8 +713,8 @@
               <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
             <div class="contact-direct-info">
-              <span class="contact-direct-label">Direct Inbox</span>
-              <strong class="contact-direct-val">Send Email</strong>
+              <span class="contact-direct-label" data-i18n="contact_email_label">Direct Inbox</span>
+              <strong class="contact-direct-val" data-i18n="contact_email_val">Send Email</strong>
               <span class="contact-direct-meta">abdlrhmanmahmoud69@gmail.com</span>
             </div>
           </a>
@@ -733,8 +724,8 @@
               <svg class="icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             </div>
             <div class="contact-direct-info">
-              <span class="contact-direct-label">Professional Network</span>
-              <strong class="contact-direct-val">LinkedIn Profile</strong>
+              <span class="contact-direct-label" data-i18n="contact_li_label">Professional Network</span>
+              <strong class="contact-direct-val" data-i18n="contact_li_val">LinkedIn Profile</strong>
               <span class="contact-direct-meta">in/abdlrhman-al-helewah</span>
             </div>
           </a>
@@ -820,21 +811,24 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand-line">
-        <strong>Abdlrhman Al Helewah</strong> · Digital Marketing Specialist
+        <strong data-i18n="footer_name">Abdlrhman Al Helewah</strong> · <span data-i18n="footer_role">Performance Media Buyer</span>
       </div>
 
       <div class="footer-links">
-        <a href="#home" class="footer-link">Home</a>
-        <a href="#experience" class="footer-link">Experience</a>
-        <a href="#case-studies" class="footer-link">Work</a>
-        <a href="#education-certs" class="footer-link">Education &amp; Certs</a>
-        <a href="#contact" class="footer-link">Contact</a>
-        <button type="button" class="back-to-top-btn" aria-label="Back to top of page">
-          Top ↑
-        </button>
+        <a href="#home" class="footer-link" data-i18n="nav_home">Home</a>
+        <a href="#experience" class="footer-link" data-i18n="nav_experience">Experience</a>
+        <a href="#case-studies" class="footer-link" data-i18n="nav_work">Work</a>
+        <a href="#skills" class="footer-link" data-i18n="nav_skills">Skills</a>
+        <a href="#education-certs" class="footer-link" data-i18n="nav_education">Education &amp; Certs</a>
+        <a href="#contact" class="footer-link" data-i18n="nav_contact">Contact</a>
       </div>
     </div>
   </footer>
+
+  <!-- Persistent Floating Back to Top Button -->
+  <button type="button" class="floating-back-to-top" id="floating-back-to-top" aria-label="Back to top" title="Back to top">
+    <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
 
 </body>
 </html>
