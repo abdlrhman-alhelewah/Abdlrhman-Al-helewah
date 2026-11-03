@@ -55,6 +55,7 @@
       <nav class="site-nav" aria-label="Main Navigation">
         <a href="#experience" class="nav-link" data-i18n="nav_experience">Experience</a>
         <a href="#case-studies" class="nav-link" data-i18n="nav_work">Work</a>
+        <a href="#playbook" class="nav-link" data-i18n="nav_playbook">Playbook</a>
         <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
         <a href="#education-certs" class="nav-link" data-i18n="nav_education">Education &amp; Certs</a>
         <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
@@ -102,6 +103,7 @@
     </div>
     <a href="#experience" class="nav-link" data-i18n="nav_experience">Experience</a>
     <a href="#case-studies" class="nav-link" data-i18n="nav_work">Work</a>
+    <a href="#playbook" class="nav-link" data-i18n="nav_playbook">Playbook</a>
     <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
     <a href="#education-certs" class="nav-link" data-i18n="nav_education">Education &amp; Certs</a>
     <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
@@ -199,6 +201,11 @@
           <button type="button" class="btn btn-secondary" id="hero-inspect-proof-btn" title="Inspect raw Meta Ads Manager screenshot" data-i18n="hero_cta_proof">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
             <span class="btn-text">Inspect Meta Proof</span>
+          </button>
+
+          <button type="button" class="btn btn-secondary" id="hero-one-pager-btn" title="View & Print Executive Growth Brief" data-i18n="hero_cta_onepager">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            <span class="btn-text">Executive One-Pager</span>
           </button>
         </div>
 
@@ -335,9 +342,9 @@
     <section id="case-studies" class="section reveal-on-scroll">
       <div class="container">
         <div class="section-header">
-          <span class="section-eyebrow">Selected Case Studies</span>
-          <h2 class="section-title">Verified Client Projects &amp; Results.</h2>
-          <p class="section-description">
+          <span class="section-eyebrow" data-i18n="cs_eyebrow">Selected Case Studies</span>
+          <h2 class="section-title" data-i18n="cs_title">Verified Client Projects &amp; Results.</h2>
+          <p class="section-description" data-i18n="cs_desc">
             Data-backed campaigns demonstrating scalable revenue, low acquisition costs, and full-funnel execution. Click any project for the full strategic audit.
           </p>
         </div>
@@ -449,6 +456,249 @@
     </section>
 
     <!-- ======================================================================
+         ENTERPRISE SCALING & ROI PLAYBOOK
+         Modular, Tabbed Hub — Zero Fluff, High Decision Velocity
+         ====================================================================== -->
+    <section id="playbook" class="section reveal-on-scroll">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow" data-i18n="playbook_eyebrow">Enterprise Operating System</span>
+          <h2 class="section-title" data-i18n="playbook_title">Scaling Protocol &amp; ROI Simulator.</h2>
+          <p class="section-description" data-i18n="playbook_desc">
+            A disciplined, risk-managed operating system designed for enterprise brands and high-ticket clients. Fast decision-making without guesswork.
+          </p>
+        </div>
+
+        <div class="playbook-box">
+          <!-- 4 Focused Navigation Tabs -->
+          <div class="playbook-tabs" role="tablist" aria-label="Playbook Modules">
+            <button type="button" class="playbook-tab-btn active" data-tab="scaling-rules" role="tab" aria-selected="true">
+              <svg class="icon" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+              <span data-i18n="pb_tab_scaling">Scaling &amp; Kill Rules</span>
+            </button>
+            <button type="button" class="playbook-tab-btn" data-tab="roi-calc" role="tab" aria-selected="false">
+              <svg class="icon" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg>
+              <span data-i18n="pb_tab_roi">Instant ROI Simulator</span>
+            </button>
+            <button type="button" class="playbook-tab-btn" data-tab="roadmap-90" role="tab" aria-selected="false">
+              <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              <span data-i18n="pb_tab_roadmap">30-60-90 Day Roadmap</span>
+            </button>
+            <button type="button" class="playbook-tab-btn" data-tab="enterprise-faq" role="tab" aria-selected="false">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span data-i18n="pb_tab_faq">Guarantees &amp; FAQ</span>
+            </button>
+          </div>
+
+          <!-- Tab 1: Scaling Protocols & Kill Rules -->
+          <div id="pb-panel-scaling-rules" class="playbook-panel active" role="tabpanel">
+            <div class="scaling-rules-grid">
+              <!-- Pillar 1: Vertical Scaling -->
+              <div class="scaling-rule-card">
+                <div class="rule-card-badge badge-green" data-i18n="rule_1_badge">+15% to +20% / 48-72h</div>
+                <h3 class="rule-card-title" data-i18n="rule_1_title">Controlled Vertical Scaling</h3>
+                <p class="rule-card-desc" data-i18n="rule_1_desc">
+                  Budget is only scaled by 15%–20% every 48–72 hours when verified ROAS consistently exceeds account baseline. Prevents algorithm learning reset and auction CPM spikes.
+                </p>
+                <div class="rule-card-meta">
+                  <span data-i18n="rule_1_trigger">Condition:</span>
+                  <strong data-i18n="rule_1_trigger_val">ROAS &gt; Target for 3 consecutive days</strong>
+                </div>
+              </div>
+
+              <!-- Pillar 2: Hard Stop Kill Rules -->
+              <div class="scaling-rule-card">
+                <div class="rule-card-badge badge-red" data-i18n="rule_2_badge">Hard Stop at 1.5x CPA</div>
+                <h3 class="rule-card-title" data-i18n="rule_2_title">Disciplined Kill Rules (Stop Loss)</h3>
+                <p class="rule-card-desc" data-i18n="rule_2_desc">
+                  Zero emotional attachment to creative angles. Any ad set reaching 1.5x of target CPA without generating verified purchases or leads is sunset immediately to protect margin.
+                </p>
+                <div class="rule-card-meta">
+                  <span data-i18n="rule_2_trigger">Condition:</span>
+                  <strong data-i18n="rule_2_trigger_val">Spend &ge; 1.5x Target CPA with 0 conversions</strong>
+                </div>
+              </div>
+
+              <!-- Pillar 3: Creative Refresh Cycle -->
+              <div class="scaling-rule-card">
+                <div class="rule-card-badge badge-blue" data-i18n="rule_3_badge">Weekly Rotation</div>
+                <h3 class="rule-card-title" data-i18n="rule_3_title">Proactive Fatigue Refresh</h3>
+                <p class="rule-card-desc" data-i18n="rule_3_desc">
+                  Tracking 3-second Hook Rate and Outbound CTR daily. When creative engagement dips &gt;20% below baseline, 3 fresh hook variants are deployed before CPA degradation occurs.
+                </p>
+                <div class="rule-card-meta">
+                  <span data-i18n="rule_3_trigger">Cycle:</span>
+                  <strong data-i18n="rule_3_trigger_val">3 new angles deployed every Monday</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: Instant ROI & Profit Simulator -->
+          <div id="pb-panel-roi-calc" class="playbook-panel" role="tabpanel">
+            <div class="roi-simulator-grid">
+              <div class="roi-inputs-col">
+                <div class="calc-input-group">
+                  <label for="sim-market-select" data-i18n="sim_market_label">Target Market &amp; Goal</label>
+                  <select id="sim-market-select" class="calc-select">
+                    <option value="ksa-ecom" selected>KSA E-Commerce · Snapchat &amp; Google (Benchmark ~6.0x ROAS)</option>
+                    <option value="uae-leadgen">UAE Inbound Lead Gen · Meta &amp; WhatsApp (Benchmark ~$4.50 CPL)</option>
+                    <option value="gcc-highticket">High-Ticket Services &amp; PPF · Instagram / WhatsApp (Benchmark ~$9.50 CPL)</option>
+                  </select>
+                </div>
+
+                <div class="calc-input-group">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <label for="sim-spend-input" data-i18n="sim_spend_label">Monthly Media Spend ($ USD)</label>
+                    <span id="sim-spend-display" class="calc-range-val tabular-nums">$10,000</span>
+                  </div>
+                  <input type="range" id="sim-spend-input" min="2000" max="50000" step="1000" value="10000" class="calc-slider">
+                  <div class="sim-spend-presets">
+                    <button type="button" class="spend-chip" data-spend="3000">$3,000</button>
+                    <button type="button" class="spend-chip active" data-spend="10000">$10,000</button>
+                    <button type="button" class="spend-chip" data-spend="25000">$25,000</button>
+                    <button type="button" class="spend-chip" data-spend="50000">$50,000</button>
+                  </div>
+                </div>
+
+                <div class="calc-input-group" id="sim-aov-group">
+                  <label for="sim-aov-input" data-i18n="sim_aov_label">Average Order Value (AOV in $)</label>
+                  <input type="number" id="sim-aov-input" min="20" max="500" value="75" class="calc-number-input">
+                </div>
+              </div>
+
+              <div class="roi-results-col">
+                <div class="sim-results-card">
+                  <div class="sim-header">
+                    <span class="sim-header-label" data-i18n="sim_res_eyebrow">Projected Performance Model</span>
+                    <span class="venture-badge-pill" data-i18n="sim_res_badge">Data-Backed Simulation</span>
+                  </div>
+
+                  <div class="sim-metric-row">
+                    <div>
+                      <span class="sim-metric-label" id="sim-metric-conversions-label" data-i18n="sim_res_conversions">Projected Completed Orders</span>
+                      <strong class="sim-metric-value tabular-nums" id="sim-val-conversions">~800 Orders</strong>
+                    </div>
+                    <div>
+                      <span class="sim-metric-label" id="sim-metric-revenue-label" data-i18n="sim_res_revenue">Projected Gross Revenue</span>
+                      <strong class="sim-metric-value tabular-nums text-accent" id="sim-val-revenue">$60,000</strong>
+                    </div>
+                  </div>
+
+                  <div class="sim-sub-metrics">
+                    <div class="sim-sub-item">
+                      <span data-i18n="sim_res_roas">Expected ROAS:</span>
+                      <strong class="tabular-nums" id="sim-val-roas">6.00x ROAS</strong>
+                    </div>
+                    <div class="sim-sub-item">
+                      <span data-i18n="sim_res_cpa">Target CPA Limit:</span>
+                      <strong class="tabular-nums" id="sim-val-cpa">$12.50 / Order</strong>
+                    </div>
+                  </div>
+
+                  <a id="sim-whatsapp-cta" href="https://wa.me/201553404607?text=Hello%20Abdlrhman,%20I%20tested%20your%20ROI%20simulator%20with%20a%20$10,000%20budget%20and%20want%20to%20discuss%20scaling%20my%20account." target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 14px;">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                    <span class="btn-text" data-i18n="sim_cta_discuss">Discuss This Scenario on WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: 30-60-90 Day Roadmap -->
+          <div id="pb-panel-roadmap-90" class="playbook-panel" role="tabpanel">
+            <div class="roadmap-stages-grid">
+              <!-- Stage 1 -->
+              <div class="roadmap-stage-card">
+                <div class="roadmap-stage-header">
+                  <span class="stage-num">01</span>
+                  <div>
+                    <span class="stage-timeframe" data-i18n="stage_1_time">Days 1 — 30</span>
+                    <h3 class="stage-title" data-i18n="stage_1_title">Audit &amp; Foundation</h3>
+                  </div>
+                </div>
+                <ul class="roadmap-list">
+                  <li data-i18n="stage_1_b1">Pixel, CAPI, and GA4 event tracking verification.</li>
+                  <li data-i18n="stage_1_b2">Immediate shutdown of bleeding ad sets wasting spend.</li>
+                  <li data-i18n="stage_1_b3">Deploy initial 5 creative angles &amp; hook tests.</li>
+                </ul>
+                <div class="stage-milestone" data-i18n="stage_1_goal">Goal: Plug budget leaks &amp; identify winning hook.</div>
+              </div>
+
+              <!-- Stage 2 -->
+              <div class="roadmap-stage-card">
+                <div class="roadmap-stage-header">
+                  <span class="stage-num">02</span>
+                  <div>
+                    <span class="stage-timeframe" data-i18n="stage_2_time">Days 31 — 60</span>
+                    <h3 class="stage-title" data-i18n="stage_2_title">Funnel Depth &amp; Stabilization</h3>
+                  </div>
+                </div>
+                <ul class="roadmap-list">
+                  <li data-i18n="stage_2_b1">Activate structured retargeting &amp; dynamic catalogs.</li>
+                  <li data-i18n="stage_2_b2">Landing page CRO suggestions to eliminate checkout drop-offs.</li>
+                  <li data-i18n="stage_2_b3">Establish verified Blended CPA &amp; target ROAS baseline.</li>
+                </ul>
+                <div class="stage-milestone" data-i18n="stage_2_goal">Goal: Consistently hit target CPA &amp; ROAS.</div>
+              </div>
+
+              <!-- Stage 3 -->
+              <div class="roadmap-stage-card">
+                <div class="roadmap-stage-header">
+                  <span class="stage-num">03</span>
+                  <div>
+                    <span class="stage-timeframe" data-i18n="stage_3_time">Days 61 — 90</span>
+                    <h3 class="stage-title" data-i18n="stage_3_title">Controlled Scaled Growth</h3>
+                  </div>
+                </div>
+                <ul class="roadmap-list">
+                  <li data-i18n="stage_3_b1">Vertical budget scale (+20%) on winning ad sets.</li>
+                  <li data-i18n="stage_3_b2">Horizontal expansion into Lookalikes &amp; new buyer personas.</li>
+                  <li data-i18n="stage_3_b3">Cross-channel synergy (e.g. Google Search capturing Snap interest).</li>
+                </ul>
+                <div class="stage-milestone" data-i18n="stage_3_goal">Goal: Maximize gross profit volume while holding margin.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 4: Guarantees & Enterprise FAQ -->
+          <div id="pb-panel-enterprise-faq" class="playbook-panel" role="tabpanel">
+            <div class="enterprise-faq-grid">
+              <div class="faq-card">
+                <h3 class="faq-q" data-i18n="faq_q1">How is client data confidentiality (NDA) handled?</h3>
+                <p class="faq-a" data-i18n="faq_a1">
+                  Strict bilateral NDA compliance. All ad accounts, pixels, customer lists, and financial telemetry remain 100% under your ownership. Case studies presented on this site are either published with explicit client consent or fully anonymized.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-q" data-i18n="faq_q2">What is the minimum monthly media budget you manage?</h3>
+                <p class="faq-a" data-i18n="faq_a2">
+                  Typically between $3,000/mo and $50,000+/mo across GCC and Egypt. This range ensures statistically valid conversion volumes for algorithmic learning and meaningful scale without wasted trial spend.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-q" data-i18n="faq_q3">How do you coordinate with our sales team or CRM?</h3>
+                <p class="faq-a" data-i18n="faq_a3">
+                  Inbound leads and WhatsApp inquiries are routed instantly via Webhooks / WhatsApp Business API into your team's CRM or chat inbox. We audit response velocity to ensure high lead-to-close ratios.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-q" data-i18n="faq_q4">How frequently are reports and pacing updates shared?</h3>
+                <p class="faq-a" data-i18n="faq_a4">
+                  24/7 access to live consolidated KPI dashboards, accompanied by structured weekly executive summaries (spend, CPA, ROAS, and next week's angle tests) plus monthly strategic syncs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
          SKILLS & CAPABILITIES SECTION
          Categorized Cleanly — Anti-Slop (No Fake % Progress Bars)
          ====================================================================== -->
@@ -555,9 +805,9 @@
     <section id="education-certs" class="section reveal-on-scroll">
       <div class="container">
         <div class="section-header">
-          <span class="section-eyebrow">Academic &amp; Professional Credentials</span>
-          <h2 class="section-title">Education &amp; Certifications.</h2>
-          <p class="section-description">
+          <span class="section-eyebrow" data-i18n="edu_eyebrow">Academic &amp; Professional Credentials</span>
+          <h2 class="section-title" data-i18n="edu_title">Education &amp; Certifications.</h2>
+          <p class="section-description" data-i18n="edu_desc">
             Formal university degree in marketing technology combined with specialized diplomas and accreditations in performance advertising, artificial intelligence, and data analytics.
           </p>
         </div>
@@ -566,16 +816,16 @@
         <div class="about-narrative-box" style="margin-bottom: 32px;">
           <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
             <div>
-              <span class="cert-issuer" style="display: inline-block; margin-bottom: 6px;">Higher Education Degree</span>
-              <h3 style="font-size: 22px; font-weight: 700; color: var(--text-primary); margin: 0 0 6px 0;">Bachelor's in Marketing Technology &amp; E-Commerce</h3>
-              <div style="font-size: 15px; color: var(--accent-blue); font-weight: 600;">Zagazig University · Faculty of Commerce</div>
+              <span class="cert-issuer" style="display: inline-block; margin-bottom: 6px;" data-i18n="degree_level">Higher Education Degree</span>
+              <h3 style="font-size: 22px; font-weight: 700; color: var(--text-primary); margin: 0 0 6px 0;" data-i18n="degree_title">Bachelor's in Marketing Technology &amp; E-Commerce</h3>
+              <div style="font-size: 15px; color: var(--accent-blue); font-weight: 600;" data-i18n="degree_uni">Zagazig University · Faculty of Commerce</div>
             </div>
             <div style="text-align: right;">
               <span class="experience-dates tabular-nums">2020 — 2024</span>
-              <div style="font-size: 13px; color: var(--accent-emerald); font-family: var(--font-mono); font-weight: 700; margin-top: 8px;">Cumulative GPA: 3.040</div>
+              <div style="font-size: 13px; color: var(--accent-emerald); font-family: var(--font-mono); font-weight: 700; margin-top: 8px;" data-i18n="degree_gpa">Cumulative GPA: 3.040</div>
             </div>
           </div>
-          <p class="about-sub-text" style="margin-top: 14px;">
+          <p class="about-sub-text" style="margin-top: 14px;" data-i18n="degree_desc">
             Rigorous undergraduate program focused on the intersection of modern e-commerce architectures, marketing technology stacks, consumer data analytics, and digital acquisition channels.
           </p>
         </div>
@@ -586,96 +836,96 @@
           <!-- Cert 01: NTI AI Ambassadors -->
           <div class="cert-card">
             <div>
-              <div class="cert-issuer">NTI / ESE</div>
-              <h3 class="cert-title">Artificial Intelligence Ambassadors Program</h3>
+              <div class="cert-issuer" data-i18n="cert_1_issuer">NTI / ESE</div>
+              <h3 class="cert-title" data-i18n="cert_1_title">Artificial Intelligence Ambassadors Program</h3>
             </div>
             <div class="cert-meta">
-              <span>National Telecommunication Institute</span>
-              <span>Jul 2026</span>
+              <span data-i18n="cert_1_org">National Telecommunication Institute</span>
+              <span data-i18n="cert_1_date">Jul 2026</span>
             </div>
           </div>
 
           <!-- Cert 02: NTI Beginner AI & Data Analysis -->
           <div class="cert-card">
             <div>
-              <div class="cert-issuer">National Telecommunication Institute</div>
-              <h3 class="cert-title">AI, Automation &amp; Data Analysis Diploma (Beginner Level)</h3>
+              <div class="cert-issuer" data-i18n="cert_2_issuer">National Telecommunication Institute</div>
+              <h3 class="cert-title" data-i18n="cert_2_title">AI, Automation &amp; Data Analysis Diploma (Beginner Level)</h3>
             </div>
             <div class="cert-meta">
-              <span>NTI Professional Diploma</span>
-              <span>Completed</span>
+              <span data-i18n="cert_2_org">NTI Professional Diploma</span>
+              <span data-i18n="cert_completed">Completed</span>
             </div>
           </div>
 
           <!-- Cert 03: NTI Advanced AI & Data Analysis -->
           <div class="cert-card">
             <div>
-              <div class="cert-issuer">National Telecommunication Institute</div>
-              <h3 class="cert-title">AI, Automation &amp; Data Analysis Diploma (Advanced Level)</h3>
+              <div class="cert-issuer" data-i18n="cert_3_issuer">National Telecommunication Institute</div>
+              <h3 class="cert-title" data-i18n="cert_3_title">AI, Automation &amp; Data Analysis Diploma (Advanced Level)</h3>
             </div>
             <div class="cert-meta">
-              <span>NTI Advanced Diploma</span>
-              <span>Completed</span>
+              <span data-i18n="cert_3_org">NTI Advanced Diploma</span>
+              <span data-i18n="cert_completed">Completed</span>
             </div>
           </div>
 
           <!-- Cert 04: Adham Hossam Digital Marketing Diploma -->
           <div class="cert-card">
             <div>
-              <div class="cert-issuer">Adham Hossam</div>
-              <h3 class="cert-title">Digital Marketing Diploma</h3>
+              <div class="cert-issuer" data-i18n="cert_4_issuer">Adham Hossam</div>
+              <h3 class="cert-title" data-i18n="cert_4_title">Digital Marketing Diploma</h3>
             </div>
             <div class="cert-meta">
-              <span>Comprehensive Diploma</span>
-              <span>Completed</span>
+              <span data-i18n="cert_4_org">Comprehensive Diploma</span>
+              <span data-i18n="cert_completed">Completed</span>
             </div>
           </div>
 
           <!-- Cert 05: Google Fundamentals -->
           <div class="cert-card">
             <div>
-              <div class="cert-issuer">Google</div>
-              <h3 class="cert-title">Fundamentals of Digital Marketing</h3>
+              <div class="cert-issuer" data-i18n="cert_5_issuer">Google</div>
+              <h3 class="cert-title" data-i18n="cert_5_title">Fundamentals of Digital Marketing</h3>
             </div>
             <div class="cert-meta">
-              <span>Google Certified Specialist</span>
-              <span>Mar 2026</span>
+              <span data-i18n="cert_5_org">Google Certified Specialist</span>
+              <span data-i18n="cert_5_date">Mar 2026</span>
             </div>
           </div>
 
           <!-- Cert 06: Digital Ad Expert -->
           <div class="cert-card">
             <div>
-              <div class="cert-issuer">Digital Ad Expert</div>
-              <h3 class="cert-title">Digital Ad Certificate – Digital Marketing</h3>
+              <div class="cert-issuer" data-i18n="cert_6_issuer">Digital Ad Expert</div>
+              <h3 class="cert-title" data-i18n="cert_6_title">Digital Ad Certificate – Digital Marketing</h3>
             </div>
             <div class="cert-meta">
               <span>ID: 124261390</span>
-              <span>Jul 2024</span>
+              <span data-i18n="cert_6_date">Jul 2024</span>
             </div>
           </div>
 
           <!-- Cert 07: IMP Digital Marketing -->
           <div class="cert-card">
             <div>
-              <div class="cert-issuer">IMP</div>
-              <h3 class="cert-title">IMP Digital Marketing Courses</h3>
+              <div class="cert-issuer" data-i18n="cert_7_issuer">IMP</div>
+              <h3 class="cert-title" data-i18n="cert_7_title">IMP Digital Marketing Courses</h3>
             </div>
             <div class="cert-meta">
-              <span>Specialized Programs</span>
-              <span>Completed</span>
+              <span data-i18n="cert_7_org">Specialized Programs</span>
+              <span data-i18n="cert_completed">Completed</span>
             </div>
           </div>
 
           <!-- Cert 08: Additional Training -->
           <div class="cert-card">
             <div>
-              <div class="cert-issuer">Professional Development</div>
-              <h3 class="cert-title">Additional Professional Courses &amp; Specialized Training</h3>
+              <div class="cert-issuer" data-i18n="cert_8_issuer">Professional Development</div>
+              <h3 class="cert-title" data-i18n="cert_8_title">Additional Professional Courses &amp; Specialized Training</h3>
             </div>
             <div class="cert-meta">
-              <span>Continuous Learning</span>
-              <span>Ongoing</span>
+              <span data-i18n="cert_8_org">Continuous Learning</span>
+              <span data-i18n="cert_ongoing">Ongoing</span>
             </div>
           </div>
 
@@ -802,7 +1052,96 @@
     </div>
   </div>
 
+  <!-- ========================================================================
+       ACCESSIBLE MODAL FOR EXECUTIVE ONE-PAGER GROWTH BRIEF
+       ======================================================================== -->
+  <div id="one-pager-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="one-pager-modal-title" tabindex="-1">
+    <div class="modal-dialog modal-dialog-lg" style="max-width: 840px;">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-eyebrow" data-i18n="op_eyebrow">Executive Growth Brief</span>
+          <h3 id="one-pager-modal-title" class="modal-title" data-i18n="op_title">Abdlrhman Al Helewah · Performance Media Buyer</h3>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <button type="button" class="btn btn-secondary btn-sm" id="one-pager-print-btn" title="Print or Save as PDF" style="font-size: 12px; padding: 6px 12px; gap: 6px;">
+            <svg class="icon" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <span data-i18n="op_print_btn">Print / PDF</span>
+          </button>
+          <button type="button" class="modal-close-btn" id="one-pager-close-btn" aria-label="Close one-pager">
+            <svg class="icon" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
 
+      <div class="modal-body" style="padding: 20px;">
+        <div class="one-pager-sheet">
+          <div class="one-pager-header">
+            <div>
+              <h2 style="font-size: 20px; font-weight: 800; color: var(--text-primary); margin: 0 0 4px 0;" data-i18n="hero_name">Abdlrhman Al Helewah</h2>
+              <div style="font-size: 13px; color: var(--accent-blue); font-weight: 600;" data-i18n="hero_role">Performance Media Buyer · Paid Acquisition &amp; Scaled Growth</div>
+            </div>
+            <div class="one-pager-contact-links">
+              <span>+20 155 340 4607</span> · <span>abdlrhmanmahmoud69@gmail.com</span> · <span>in/abdlrhman-al-helewah</span>
+            </div>
+          </div>
+
+          <div class="one-pager-kpis-grid">
+            <div class="op-kpi">
+              <span class="op-kpi-num tabular-nums">$169,455</span>
+              <span class="op-kpi-label" data-i18n="op_kpi_1">E-Com Purchases (6.95x ROAS)</span>
+            </div>
+            <div class="op-kpi">
+              <span class="op-kpi-num tabular-nums">980</span>
+              <span class="op-kpi-label" data-i18n="op_kpi_2">Qualified Leads ($4.14 CPL)</span>
+            </div>
+            <div class="op-kpi">
+              <span class="op-kpi-num tabular-nums">$32,800+</span>
+              <span class="op-kpi-label" data-i18n="op_kpi_3">Managed GCC Spend</span>
+            </div>
+            <div class="op-kpi">
+              <span class="op-kpi-num tabular-nums">100%</span>
+              <span class="op-kpi-label" data-i18n="op_kpi_4">Margin &amp; ROI Priority</span>
+            </div>
+          </div>
+
+          <div class="op-section">
+            <h4 class="op-section-title" data-i18n="op_sec_summary">Executive Summary</h4>
+            <p class="op-section-desc" data-i18n="hero_pitch">
+              Performance Media Buyer managing high-growth acquisition across <strong>Snapchat, Google &amp; Meta Ads</strong> in the GCC and Egypt. Leverages custom AI automation &amp; deep data analytics as power tools to test angles faster and maximize client profit.
+            </p>
+          </div>
+
+          <div class="op-two-col">
+            <div class="op-section">
+              <h4 class="op-section-title" data-i18n="op_sec_platforms">Core Paid Channels</h4>
+              <ul class="op-bullet-list">
+                <li data-i18n="op_plat_1"><strong>Snapchat Ads Manager:</strong> Catalog prospecting &amp; scaling ($169.4K revenue, 6.95x ROAS).</li>
+                <li data-i18n="op_plat_2"><strong>Google Ads:</strong> High-intent Search &amp; Performance Max (1,310 conversions).</li>
+                <li data-i18n="op_plat_3"><strong>Meta Ads Manager:</strong> Inbound lead generation &amp; WhatsApp qualification (980 inquiries).</li>
+                <li data-i18n="op_plat_4"><strong>TikTok Ads:</strong> Direct UGC and short-form video creative angle tests.</li>
+              </ul>
+            </div>
+            <div class="op-section">
+              <h4 class="op-section-title" data-i18n="op_sec_rules">Risk &amp; Scaling Protocols</h4>
+              <ul class="op-bullet-list">
+                <li data-i18n="op_rule_1"><strong>+15%–20% Rule:</strong> Controlled vertical budget scaling every 48–72h.</li>
+                <li data-i18n="op_rule_2"><strong>1.5x CPA Stop-Loss:</strong> Automatic shutdown of non-performing ad sets.</li>
+                <li data-i18n="op_rule_3"><strong>Weekly Rotation:</strong> Proactive creative refresh countering ad fatigue.</li>
+                <li data-i18n="op_rule_4"><strong>Attribution:</strong> Conversions API (CAPI), UTM tagging &amp; blended CPA reporting.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="op-section" style="margin-top: 6px;">
+            <h4 class="op-section-title" data-i18n="op_sec_edu">Education &amp; Credentials</h4>
+            <div style="font-size: 12.5px; color: var(--text-secondary); line-height: 1.5;" data-i18n="op_edu_desc">
+              <strong>Bachelor's in Marketing Technology &amp; E-Commerce</strong> — Zagazig University (Cumulative GPA: 3.040) · <strong>NTI AI, Automation &amp; Data Analysis Diplomas</strong> (Beginner &amp; Advanced) · <strong>Google Certified Specialist</strong> in Digital Marketing.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ========================================================================
        FOOTER
@@ -818,6 +1157,7 @@
         <a href="#home" class="footer-link" data-i18n="nav_home">Home</a>
         <a href="#experience" class="footer-link" data-i18n="nav_experience">Experience</a>
         <a href="#case-studies" class="footer-link" data-i18n="nav_work">Work</a>
+        <a href="#playbook" class="footer-link" data-i18n="nav_playbook">Playbook</a>
         <a href="#skills" class="footer-link" data-i18n="nav_skills">Skills</a>
         <a href="#education-certs" class="footer-link" data-i18n="nav_education">Education &amp; Certs</a>
         <a href="#contact" class="footer-link" data-i18n="nav_contact">Contact</a>
