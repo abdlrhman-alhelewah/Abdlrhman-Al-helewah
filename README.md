@@ -1,7 +1,19 @@
 # Portfolio Website — Abdlrhman Al Helewah
-### Digital Marketing Specialist | Performance Marketing · Content Strategy · AI & Automation
+### Digital Marketing Specialist | Performance Marketing · Paid Acquisition · Marketing Analytics · AI & Automation
 
-A production-ready personal portfolio website built with **100% Vanilla HTML5, CSS3, and JavaScript**. Zero external build dependencies, frameworks, or database requirements. 100% static and compatible with **GitHub Pages** free hosting.
+Professional portfolio website for **Abdlrhman Al Helewah**, Digital Marketing Specialist. Built with semantic HTML5, modern CSS3, and Vanilla JavaScript with zero external runtime dependencies. Fully responsive, lightweight (60fps performance), bilingual (English & Arabic with full RTL/LTR dynamics), and ready for deployment on GitHub Pages or custom domain hosting.
+
+---
+
+## 🎯 Professional Positioning & Background
+
+- **Primary Title:** Digital Marketing Specialist
+- **Specialization:** Performance Marketing | Paid Acquisition | Marketing Analytics | AI & Marketing Automation
+- **Primary Focus:** Planning, managing, analyzing, and optimizing digital advertising campaigns across Meta Ads, Google Ads, and Snapchat Ads in Egypt and GCC markets.
+- **Current Full-Time Role:** Digital Marketing Specialist at **eMarketing Egypt** (Dokki, Giza, Egypt — August 2026 to Present).
+- **Instructional Roles:** Digital Marketing Instructor (Current) & Digital Marketing Mentor (Previous) at **Adham Hossam**.
+- **Independent Practice:** Freelance Digital Marketing Specialist delivering campaign management, creative testing, and Conversion Rate Optimization (CRO) audits.
+- **Education:** Bachelor's Degree in Marketing Technology & E-Commerce — Zagazig University, Faculty of Commerce (Cumulative GPA: 3.040).
 
 ---
 
@@ -9,86 +21,66 @@ A production-ready personal portfolio website built with **100% Vanilla HTML5, C
 
 ```text
 /
-├── index.html            # Main semantic markup & content architecture
-├── style.css             # Vanilla CSS3 styling, design tokens & dark premium theme
-├── script.js             # Vanilla JS data architecture, case studies modal & interactivity
+├── index.html            # Semantic markup, meta tags, and content architecture
+├── style.css             # Vanilla CSS3, custom properties, light/dark themes, and responsive rules
+├── script.js             # Vanilla JS data architecture, case studies modal, scenario planner & i18n
+├── metadata.json         # Project metadata and capability definitions
+├── README.md             # Project documentation and deployment guide
 └── assets/
-    └── icons/            # Scalable vector graphics (SVGs) for channels & tools
+    ├── aistudio/         # Verified telemetry screenshots, portraits, and data architecture
+    └── icons/            # SVG vector assets for marketing platforms and contact links
 ```
 
 ---
 
-## 🚀 How to Run Locally (No Installation Required)
+## 📊 Documented Campaign Telemetry & Case Studies
 
-Because this website uses pure HTML, CSS, and JavaScript:
-
-1. **Download or clone** the project folder to your computer.
-2. Ensure the files (`index.html`, `style.css`, `script.js`, and `assets/`) are in the same folder.
-3. **Double-click `index.html`** or right-click and choose **"Open With" → Chrome, Safari, Edge, or Firefox**.
-4. That's it! The portfolio runs immediately in your browser with zero terminal commands or setup.
-
----
-
-## ✏️ How to Edit & Customize Your Information
-
-### 1. Update Case Studies
-Open `script.js` in any text editor (VS Code, Notepad, Sublime Text). Near the top, you will find the `CASE_STUDIES` array:
-- Update the client name, industry, challenge, strategy, and verified numbers.
-- Replace bracketed placeholders like `[XX%]` or `[XX,XXX]` with your verified statistics as client NDAs permit.
-- To add a new case study, duplicate one of the objects inside the array and fill in your details.
-
-### 2. Update Experience & Dates
-Open `index.html` and search for:
-- `<!-- EXPERIENCE SECTION -->`
-- Replace `[START DATE]` with your start date (e.g., `Jan 2024 — Present`).
-- Fill in your verified impact numbers inside `<span class="placeholder-badge">[X]</span>`.
-
-### 3. Contact & Social Channels
-Your contact details are integrated across the hero bar and contact cards:
-- LinkedIn: `https://www.linkedin.com/in/abdlrhman-al-helewah`
-- WhatsApp: `+20 155 340 4607` (`https://wa.me/201553404607`)
-- Email: `abdlrhmanmahmoud@gmail.com`
-- The contact form is configured to send emails directly to `abdlrhmanmahmoud@gmail.com` via `mailto:`, with a built-in one-click "Copy Message" button for visitors.
-
-### 4. Update Certifications
-In `index.html`, search for `<!-- CERTIFICATIONS -->` and replace `[CREDENTIAL_ID]` and `[COMPLETION_DATE]` with your real credentials and dates.
+1. **Kitchen Bazaar (Saudi Arabia — E-Commerce Performance Marketing):**
+   - **Snapchat Ads:** Managed $24,352.55 spend driving $169,455.17 in attributed purchase revenue at 6.95x ROAS (1,643 purchases, 26,955 add-to-carts at $0.90 CPA).
+   - **Google Ads Search:** Monitored SAR 38,300 spend delivering 78.4K clicks and 1,310 conversions (account window Dec 2025 – Oct 2026; eMarketing tenure active from August 2026).
+2. **IJADAH Education (UAE — B2B Lead Generation & Inquiry Systems):**
+   - **Meta Ads Telemetry:** 980 tracked inquiry actions (352 native lead form submissions and 628 WhatsApp messaging conversations) across 28 multi-cohort ad flights.
+   - Total campaign spend: $8,514.67 (1,437,356 impressions, 394,532 reach).
+   - Lowest campaign-level CPL achieved: $4.14 (test cohort); account average CPL: $24.19; average cost per messaging conversation: $13.56.
+3. **Cardip (Saudi Arabia — Automotive XPEL PPF Audit):**
+   - Audited approximately 50 Instagram Reels and 35 ad campaigns across SAR 15,800 spend, analyzing 436 WhatsApp inquiries at an average SAR 36.24 CPL.
+4. **3shwaee_ (@3shwaee_ — Personal Brand & Organic Content Growth):**
+   - Grew personal content page organically from 0 to a historical peak of ~20,000 followers between May 2022 and March 2024, generating individual Reels with 1.4M–1.8M views.
+5. **Hookify (AI-Assisted Content Ideation Platform):**
+   - Prototype developed with Google AI Studio & Gemini API for structured direct-response copywriting and hook ideation (AIDA, PAS, Curiosity Gap).
 
 ---
 
-## 🌐 How to Publish for Free on GitHub Pages
+## 📬 Verified Contact Information
 
-You can host this website completely free of charge with a custom `.github.io` link:
+- **WhatsApp (Fastest Response):** [+20 155 340 4607](https://wa.me/201553404607)
+- **Email:** [abdlrhmanmahmoud69@gmail.com](mailto:abdlrhmanmahmoud69@gmail.com)
+- **LinkedIn:** [linkedin.com/in/abdlrhman-al-helewah](https://www.linkedin.com/in/abdlrhman-al-helewah/)
+- **Live Portfolio (GitHub Pages):** [https://abdlrhman-alhelewah.github.io/Abdlrhman-Al-helewah/](https://abdlrhman-alhelewah.github.io/Abdlrhman-Al-helewah/)
 
-### Step 1: Create a GitHub Account
-If you don't already have one, sign up for free at [github.com](https://github.com).
+---
 
-### Step 2: Create a New Repository
-1. Click the **"+"** icon in the top-right corner of GitHub and select **"New repository"**.
-2. Name your repository:
-   - For a personal root domain, name it: `<your-username>.github.io` (e.g., `abdlrhman.github.io`).
-   - Or name it any project name you prefer (e.g., `portfolio`).
-3. Make sure the repository visibility is set to **Public**.
-4. Leave other options unchecked and click **"Create repository"**.
+## 🚀 How to Run Locally
 
-### Step 3: Upload Your Files
-1. On your new repository page, click **"uploading an existing file"**.
-2. Drag and drop all project files (`index.html`, `style.css`, `script.js`, `README.md`, and the `assets` folder).
-3. Under "Commit changes", type `Initial portfolio release` and click **"Commit changes"**.
+Because this project is built with 100% standard web technologies:
 
-### Step 4: Enable GitHub Pages
-1. Go to your repository's **Settings** tab.
-2. On the left sidebar under "Code and automation", click **Pages**.
-3. Under **Build and deployment**:
-   - **Source**: Select `Deploy from a branch`.
-   - **Branch**: Select `main` (or `master`) and folder `/ (root)`.
-4. Click **Save**.
+1. Clone or download the repository files.
+2. Open `index.html` directly in any modern browser (Chrome, Edge, Safari, Firefox).
+3. For development with live reloading, run:
+   ```bash
+   npm install
+   npm run dev
+   ```
+4. To test the production build:
+   ```bash
+   npm run build
+   ```
 
-### Step 5: Access Your Live Website
-- Within 1–2 minutes, GitHub Pages will deploy your site and provide your live URL (e.g., `https://<your-username>.github.io/` or `https://<your-username>.github.io/portfolio/`).
-- Test the link on your phone, laptop, or share it directly with recruiters and clients.
+---
 
-### Step 6: Updating Your Website Later
-Whenever you want to add new case studies or update metrics:
-1. Edit the file on your computer (or directly on GitHub by clicking the pencil icon on any file).
-2. Save/commit your changes.
-3. GitHub Pages will automatically update your live site within seconds!
+## 🌐 Deploying to GitHub Pages
+
+1. Push the repository to GitHub: `git push origin main`.
+2. Navigate to repository **Settings** → **Pages**.
+3. Under **Build and deployment**, select **Deploy from a branch**, set branch to `main`, and folder to `/ (root)`.
+4. Click **Save**. GitHub Pages will deploy the live site automatically at `https://<username>.github.io/<repo-name>/`.

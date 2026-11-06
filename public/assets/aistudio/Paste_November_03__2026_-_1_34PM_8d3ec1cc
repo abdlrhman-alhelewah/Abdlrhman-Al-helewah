@@ -1,0 +1,1032 @@
+# MASTER PROMPT — PROFESSIONAL PORTFOLIO AUDIT, REFINEMENT & OPTIMIZATION
+
+## ROLE & OBJECTIVE
+
+Act as a Senior Portfolio Strategist, UX/UI Designer, Conversion Rate Optimization Specialist, Technical SEO Consultant, Senior Front-End Developer, and Professional Personal Branding Consultant.
+
+Your task is to comprehensively audit, refine, and optimize my existing personal portfolio website:
+
+Website:
+https://abdlrhman-alhelewah.github.io/Abdlrhman-Al-helewah/
+
+This is an existing, published portfolio. I do NOT want a complete redesign, a new template, or a different visual identity.
+
+I want you to improve the existing website to a premium professional standard while preserving its current design language, visual identity, structure, interactions, and recognizable character.
+
+The objective is to transform it into a credible, evidence-based, conversion-focused professional portfolio that serves three purposes:
+
+1. Attract recruiters and hiring managers for Digital Marketing, Performance Marketing, and Media Buying positions.
+2. Attract potential freelance clients and demonstrate my practical marketing capabilities.
+3. Establish a professional foundation for my future digital marketing agency and AI-powered marketing solutions.
+
+The final result must feel like a professionally developed portfolio belonging to a real marketing professional, not an AI-generated template.
+
+---
+
+# 1. CRITICAL EXECUTION RULES
+
+These instructions are mandatory.
+
+### 1.1 Preserve the Existing Website
+
+- Maintain the current visual identity, color palette, typography, general layout, and design direction.
+- Preserve the existing navigation system, animations, interactive components, and functional features wherever they work correctly.
+- Do not replace the entire website with a new design.
+- Do not unnecessarily restructure the existing codebase.
+- Do not remove existing sections simply because they require improvement.
+- Do not remove useful functionality to simplify implementation.
+- Do not introduce unnecessary libraries, frameworks, dependencies, or technologies.
+- Make targeted improvements rather than rebuilding everything.
+
+### 1.2 Accuracy Over Marketing Exaggeration
+
+This is a real professional portfolio.
+
+Never invent:
+- Campaign results.
+- Client names.
+- Budgets.
+- Revenue figures.
+- Conversion rates.
+- ROAS.
+- Certifications.
+- Job titles.
+- Employment dates.
+- Technical capabilities.
+- Product features.
+- Customer testimonials.
+- Performance improvements.
+- Business relationships.
+
+If information cannot be verified from the existing website, project files, screenshots, or provided documentation, do not present it as a confirmed fact.
+
+Use accurate wording and distinguish between:
+- Personally executed work.
+- Collaborative work.
+- Account-level performance.
+- Historical account results.
+- Personal projects.
+- Prototypes.
+- Concepts.
+- Proposed solutions.
+- Results achieved during my actual involvement.
+
+Do not automatically attribute every result of an account to my personal contribution.
+
+### 1.3 Preserve Existing Information
+
+Before making changes:
+1. Inspect the entire existing project.
+2. Review all HTML, CSS, JavaScript, assets, project data, README files, and available documentation.
+3. Identify all existing sections and their dependencies.
+4. Map the current website structure.
+5. Identify existing features that must be preserved.
+6. Create an internal checklist of every requested modification.
+
+Do not start deleting or rewriting content before understanding its purpose.
+
+---
+
+# 2. PROFESSIONAL BRAND POSITIONING
+
+My professional positioning must be consistent across the entire website.
+
+### Primary Professional Title
+
+Digital Marketing Specialist
+
+### Professional Specialization
+
+Performance Marketing | Paid Acquisition | Data Analytics | AI & Marketing Automation
+
+### Professional Description
+
+I specialize in planning, managing, analyzing, and optimizing digital advertising campaigns across Meta Ads, Google Ads, and Snapchat Ads.
+
+My work focuses on measurable customer acquisition, campaign performance, creative testing, conversion optimization, and data-driven marketing strategies across Egyptian and GCC markets.
+
+I also explore AI-powered workflows, marketing automation, and data analytics to improve marketing operations and decision-making.
+
+### Positioning Requirements
+
+- Keep Digital Marketing Specialist as the primary professional identity.
+- Present Performance Marketing and Media Buying as core specializations.
+- Do not incorrectly replace my official employment title with a different job title.
+- Avoid positioning me as an established agency or enterprise-level technology company.
+- Do not claim seniority or expertise that is not supported by my experience.
+- Present AI and Automation as complementary capabilities that strengthen my marketing expertise.
+
+The tone must be confident, professional, technically informed, and realistic.
+
+---
+
+# 3. HERO SECTION REFINEMENT
+
+Keep the existing Hero design and improve its messaging.
+
+Use the following content direction:
+
+Primary Title:
+Digital Marketing Specialist
+
+Specialization:
+Performance Marketing | Paid Acquisition | Marketing Automation
+
+Suggested Description:
+
+"I specialize in building and optimizing performance-driven digital marketing campaigns across Meta, Google, and Snapchat. My approach combines strategic planning, data analysis, creative testing, and continuous optimization to improve acquisition efficiency and measurable business outcomes across Egypt and GCC markets."
+
+Requirements:
+
+- Make the primary message immediately understandable.
+- Avoid excessively long introductory paragraphs.
+- Remove unnecessary marketing buzzwords.
+- Keep the most important professional information above the fold.
+- Maintain the existing CTA buttons and improve their labels if necessary.
+- Keep Download CV, LinkedIn, and Contact actions accessible.
+- Only display verified performance metrics.
+- Do not display misleading combined metrics.
+
+The Hero must answer three questions immediately:
+
+1. Who am I?
+2. What do I specialize in?
+3. What evidence demonstrates my capabilities?
+
+---
+
+# 4. PERFORMANCE METRICS — DATA ACCURACY
+
+This is one of the most important parts of the entire task.
+
+Review every KPI displayed across:
+- Hero.
+- Executive Summary.
+- Project Cards.
+- Case Studies.
+- Reports.
+- Downloadable documents.
+- Any other section.
+
+Make sure the same metric has the same value and definition everywhere.
+
+## IJADAH
+
+The available Meta Ads evidence includes:
+
+- Total Spend: $8,514.67
+- Impressions: 1,437,356
+- Reach: 394,532
+- Lead Form Submissions: 352
+- Account Average Cost per Lead: $24.19
+- Messaging Conversations: 628
+- Average Cost per Messaging Conversation: $13.56
+
+Important distinctions:
+
+- $4.14 is a lowest campaign-level CPL, not the account-wide average CPL.
+- 352 Lead Form Submissions and 628 Messaging Conversations are different result types.
+- Their combined total of 980 must never be described as 980 unique qualified leads or 980 confirmed customers.
+- Do not mix historical campaign results with current campaign results.
+- An existing project description also references 330 conversations at $6.22. Treat this as a separate historical or campaign-specific figure until its reporting period and scope are verified.
+
+Recommended presentation:
+
+980 Tracked Inquiry Actions
+
+352 Lead Form Submissions
+628 Messaging Conversations
+
+Lowest Campaign-Level CPL: $4.14
+Account Average CPL: $24.19
+
+Account Average Cost per Messaging Conversation: $13.56
+
+Only use this presentation if the source screenshots confirm the corresponding reporting scope.
+
+Also review the campaign naming and targeting descriptions carefully.
+
+The IJADAH business strategy should be presented in accordance with the actual B2B-focused work. Do not describe parent-facing B2C acquisition as the client's intended primary strategy.
+
+Clearly distinguish campaign testing, historical campaigns, and the actual B2B strategy.
+
+## KITCHEN BAZAAR
+
+Available Snapchat performance data:
+
+- Snapchat Spend: $24,352.55
+- Snapchat Attributed Revenue: $169,455.17
+- Snapchat ROAS: 6.95x
+- Snapchat Purchases: 1,643
+
+Available Google Ads data:
+
+- Google Ads Spend: SAR 38,300
+- Google Clicks: 78.4K
+- Google Conversions: 1,310
+
+Important requirements:
+
+- The 6.95x ROAS belongs to Snapchat, not automatically to the entire marketing operation.
+- Do not label the result as Blended or Omnichannel ROAS unless the combined revenue, spend, currencies, attribution methodology, and reporting periods have been verified.
+- Present Snapchat and Google results separately.
+- Distinguish historical account results from results achieved during my personal involvement.
+- The available Google Ads reporting period extends from December 29, 2025 to October 26, 2026. My eMarketing employment began in August 2026. Do not attribute the entire reporting period to my work.
+- Clearly explain the period and scope of my contribution where documentation supports it.
+
+Recommended case study title:
+
+Kitchen Bazaar — E-Commerce Performance Marketing
+
+Separate the results into:
+1. Snapchat Ads Performance.
+2. Google Ads Search Performance.
+
+Do not combine their results into a misleading overall performance claim.
+
+## GENERAL KPI RULES
+
+For every major metric:
+
+- Identify its source.
+- Identify its reporting period.
+- Identify its measurement definition.
+- Identify whether it is campaign-level or account-level.
+- Identify whether it represents personal contribution or collective performance.
+
+Do not calculate new performance claims without sufficient source data.
+
+If a number cannot be verified, remove it from prominent marketing claims and flag it for manual review.
+
+---
+
+# 5. PROFESSIONAL EXPERIENCE
+
+Review and refine the entire Experience section.
+
+My professional experience includes:
+
+### eMarketing Egypt
+Official Title: Digital Marketing Specialist
+
+Employment: August 2026 – Present
+
+Present my responsibilities accurately, focusing on:
+- Campaign planning and execution.
+- Paid advertising management.
+- Performance monitoring.
+- Campaign optimization.
+- Data analysis and reporting.
+- Creative testing.
+- Marketing strategy.
+- AI and automation initiatives where applicable.
+
+Do not change my official job title to Performance Media Buyer.
+
+### Adham Hossam
+
+I currently work as a Digital Marketing Instructor.
+
+I previously worked as a Digital Marketing Mentor.
+
+Present this progression accurately.
+
+Do not invent employment dates. Use available documented dates or flag missing dates for confirmation.
+
+### Freelance Digital Marketing
+
+Present my freelance work as an independent professional practice.
+
+Clearly distinguish:
+- Direct client management.
+- Campaign execution.
+- Strategic consulting.
+- Collaborative projects.
+
+Do not invent a number of clients or years of experience.
+
+### Experience Formatting
+
+Each role should include:
+
+- Position.
+- Organization.
+- Employment period.
+- Main responsibilities.
+- Relevant achievements.
+- Supporting evidence when available.
+
+Improve readability and eliminate repetitive descriptions.
+
+---
+
+# 6. CASE STUDIES — COMPLETE REFINEMENT
+
+Review all existing project cards and their detailed case studies.
+
+Do not delete existing projects automatically.
+
+Reorganize them into three categories.
+
+## Category A — Featured Professional Case Studies
+
+Prioritize:
+
+1. Kitchen Bazaar.
+2. IJADAH.
+3. Cardip.
+4. 3shwaee_.
+
+These projects should receive the strongest presentation.
+
+For each case study, use the following structure:
+
+1. Project Overview.
+2. Client or Project Background.
+3. Business Objective.
+4. My Role and Responsibilities.
+5. Campaign Period.
+6. Advertising Platforms.
+7. Strategy and Approach.
+8. Execution.
+9. Performance Results.
+10. Key Insights.
+11. Supporting Evidence.
+
+Clearly separate my personal contribution from team achievements.
+
+### Cardip
+
+Clarify whether my involvement consisted of:
+- Account auditing.
+- Campaign analysis.
+- Campaign management.
+- Performance optimization.
+
+Do not present analysis as direct execution unless verified.
+
+### 3shwaee_
+
+This is my personal content project.
+
+Present it as a personal brand and organic content growth case study.
+
+Preserve the historical achievement of approximately 20,000 organic followers, subject to the existing evidence.
+
+Clearly identify historical peak followers versus current followers.
+
+Present relevant historical content performance, including high-performing reels, only when the numbers are supported by available evidence.
+
+Explain:
+- Content strategy.
+- Audience development.
+- Organic growth.
+- Content experimentation.
+- Lessons learned.
+
+Do not imply that historical follower numbers represent the current audience size.
+
+### Qalb Al-Hayah
+
+Keep this project.
+
+Present it as an active marketing campaign or ongoing project, depending on its actual status.
+
+Its context is a speech and communication institution offering pediatric motor rehabilitation and visual-motor perception development services.
+
+Do not fabricate campaign results or claim business impact before results are available.
+
+## Category B — AI & Technical Projects
+
+Move the following projects into a dedicated section:
+
+- Hookify.
+- KPI Dashboard.
+- AI Marketing Agent.
+- Nyckel Porsche vs BMW experiment.
+
+Do not give them the same positioning as completed client case studies.
+
+### Hookify
+
+Correct the current contradictions.
+
+The existing materials describe Hookify both as a production SaaS platform and as a Google AI Studio prototype.
+
+Determine the actual implementation status from the project files.
+
+Use the appropriate classification:
+
+- Concept.
+- Prototype.
+- MVP.
+- Production Product.
+
+Do not claim production status without evidence.
+
+Remove unsupported claims such as:
+- 99.9% uptime.
+- Production-grade infrastructure.
+- Full-stack engineering ownership.
+- Advanced API reliability guarantees.
+
+Only mention technologies actually used in the implementation.
+
+Clearly separate:
+- Implemented features.
+- Planned features.
+- Future roadmap.
+
+Recommended title:
+
+Hookify — AI-Powered Content Ideation Platform.
+
+### AI Marketing Agent
+
+Present this as an AI-powered marketing operations initiative or system architecture project, depending on its current implementation.
+
+Its potential scope includes:
+
+- Campaign planning.
+- Performance analysis.
+- Reporting.
+- Optimization recommendations.
+- Creative idea generation.
+- Marketing automation.
+- Dashboard-based monitoring.
+
+Do not claim autonomous campaign execution or production readiness unless those capabilities are actually implemented and tested.
+
+### KPI Dashboard
+
+Show the actual dashboard, data structure, metrics, and analytical functionality.
+
+Distinguish working functionality from conceptual features.
+
+### Nyckel Experiment
+
+Keep it as a smaller technical experiment demonstrating practical experimentation with AI and data classification.
+
+## Category C — Supporting Projects
+
+Retain:
+
+- CRO Audit.
+- Other smaller technical or marketing experiments.
+
+For the CRO Audit:
+
+- Preserve the existing findings.
+- Do not invent an e-commerce client or business results.
+- If evidence is unavailable, classify it as an independent audit or practical exercise.
+- Add screenshots or a sample report if available.
+
+Use clear visual hierarchy so that featured client work receives more attention than experimental projects.
+
+---
+
+# 7. CORE COMPETENCIES & SKILLS
+
+Reorganize the existing skills section into four groups.
+
+## Performance Marketing
+
+- Meta Ads.
+- Google Ads.
+- Snapchat Ads.
+- Campaign Management.
+- Media Buying.
+- Paid Acquisition.
+- Audience Targeting.
+- Campaign Optimization.
+- Budget Management.
+- Creative Testing.
+- Retargeting.
+- Conversion Optimization.
+
+## Marketing Strategy & Creative
+
+- Marketing Strategy.
+- Content Strategy.
+- Creative Strategy.
+- Audience Research.
+- Competitor Analysis.
+- Funnel Development.
+- Customer Acquisition.
+
+## Data Analytics & Reporting
+
+- Marketing Analytics.
+- KPI Monitoring.
+- Performance Reporting.
+- Excel / Google Sheets.
+- Dashboard Development.
+- Data Interpretation.
+- Campaign Performance Analysis.
+- Attribution Fundamentals.
+
+## AI & Automation
+
+- Generative AI Tools.
+- AI-Assisted Marketing Workflows.
+- Workflow Automation.
+- AI-Powered Content Ideation.
+- Data Analysis.
+- Automation Experiments.
+
+Requirements:
+
+- Preserve additional existing skills when they are relevant and supported.
+- Correct incomplete text such as "Campaign Scaling & CPA Opt" to "Campaign Scaling & CPA Optimization".
+- Remove duplicated skills.
+- Avoid listing advanced skills as expert-level capabilities without evidence.
+- Do not imply professional expertise in every listed tool.
+- Distinguish Core Skills, Working Knowledge, and Experimental Capabilities where useful.
+
+Only list Python, advanced attribution, API integrations, or advanced automation as practical skills if the existing projects demonstrate actual implementation.
+
+---
+
+# 8. EDUCATION & CERTIFICATIONS
+
+Preserve my actual educational background.
+
+Education:
+
+Bachelor's Degree in Marketing Technology & E-Commerce.
+
+Review all existing certifications and organize them professionally.
+
+The available training background includes:
+
+- National Telecommunication Institute (NTI) — AI, Automation & Data Analysis Diploma (Beginner).
+- National Telecommunication Institute (NTI) — AI, Automation & Data Analysis Diploma (Advanced).
+- Adham Hossam — Digital Marketing Diploma.
+- IMP Digital Marketing Courses.
+- Google Digital Marketing Training.
+- Digital Advertising Certifications.
+- AI Ambassadors Program.
+- Other documented professional training.
+
+IMPORTANT:
+
+Use the actual certificate names whenever available.
+
+Do not invent official accreditation, certificate titles, or issuing organizations.
+
+Correct generic descriptions.
+
+Remove vague headings such as "Additional Professional Courses" if they add no meaningful information.
+
+The GPA is optional. Do not give it unnecessary prominence.
+
+Add:
+- Certification date.
+- Issuing organization.
+- Certificate link or image when available.
+
+Do not fabricate missing certificate links.
+
+---
+
+# 9. PLAYBOOK & ROI SIMULATOR
+
+Keep the existing Playbook section but reduce exaggerated or overly rigid claims.
+
+Rename the section:
+
+How I Approach Performance Growth
+
+Retain useful content such as:
+
+- Campaign Research.
+- Account Structure.
+- Testing Framework.
+- Budget Pacing.
+- Creative Optimization.
+- Performance Monitoring.
+- Reporting.
+- Scaling Decisions.
+- 30-60-90 Day Roadmap.
+
+Remove rigid universal rules that imply every campaign should be optimized identically.
+
+For example:
+
+- Do not automatically recommend 15–20% budget increases every 48–72 hours.
+- Do not use universal CPA stopping thresholds without considering campaign data.
+- Do not imply that three days of positive ROAS guarantee sustainable profitability.
+- Do not prescribe identical optimization decisions for different campaign objectives.
+
+Explain that optimization decisions depend on:
+- Conversion volume.
+- Data quality.
+- Conversion lag.
+- Budget.
+- Campaign objective.
+- Audience size.
+- Attribution.
+- Business economics.
+
+## ROI Simulator
+
+Keep the interactive calculator if it works.
+
+Rename it:
+
+Performance Scenario Planner
+
+Requirements:
+
+- Make all assumptions visible.
+- Allow users to change the assumptions.
+- Clearly distinguish estimates from actual performance.
+- Never present example CPL or ROAS values as guaranteed results.
+- Explain that projections are illustrative.
+- Use appropriate calculations for the selected business model.
+- Avoid mixing currencies.
+- Include error handling and sensible input validation.
+- Preserve the existing functionality and visual style.
+
+---
+
+# 10. ABOUT ME SECTION
+
+Add or refine a concise About Me section.
+
+The section should communicate:
+
+- My educational background in Marketing Technology & E-Commerce.
+- My practical experience in digital marketing.
+- My specialization in performance marketing.
+- My interest in data-driven decision-making.
+- My work with AI and automation.
+- My experience in both professional marketing environments and training.
+
+Avoid generic statements such as:
+
+"I am passionate about marketing and always seeking new opportunities."
+
+Use specific, meaningful language.
+
+Do not invent personal stories, motivations, or achievements.
+
+The section should feel human and professional rather than excessively promotional.
+
+---
+
+# 11. TESTIMONIALS & PROOF OF WORK
+
+If there are no verified testimonials, do not create fake ones.
+
+Prepare the website structure to support future testimonials.
+
+Do not use fabricated names, job titles, company logos, or quotations.
+
+Improve the presentation of available proof:
+
+- Meta Ads screenshots.
+- Google Ads reports.
+- Snapchat Ads reports.
+- Analytics dashboards.
+- Project screenshots.
+- Creative samples.
+- Campaign structures.
+- Audits.
+- Actual working prototypes.
+
+Protect confidential client information.
+
+Do not expose:
+- Personal customer information.
+- Private account identifiers.
+- Sensitive financial data.
+- Internal business information without authorization.
+
+Use redacted evidence where appropriate.
+
+---
+
+# 12. CONTACT & CONVERSION OPTIMIZATION
+
+Keep the existing contact functionality and improve its clarity.
+
+Separate the two primary visitor intentions.
+
+## For Recruiters
+
+- View LinkedIn.
+- Download CV.
+- Contact by Email.
+
+## For Potential Clients
+
+- Discuss a Project.
+- Contact via WhatsApp.
+- Send an Inquiry.
+
+Use clear CTA labels.
+
+Verify that:
+- All links work.
+- WhatsApp opens the correct destination.
+- Email links use the correct address.
+- LinkedIn points to the correct profile.
+- The CV download works.
+- Contact forms actually submit or provide an appropriate alternative.
+
+There is an inconsistency between the email address shown in the website and the README.
+
+Use the existing website's verified professional contact information as the primary source, and flag any conflicting address rather than guessing.
+
+Do not invent a replacement email address.
+
+---
+
+# 13. TECHNICAL SEO & CODE QUALITY
+
+Perform a careful technical audit without unnecessary restructuring.
+
+Review:
+
+### SEO
+
+- Page title.
+- Meta description.
+- Canonical URL.
+- Open Graph metadata.
+- Twitter Card metadata.
+- Social sharing image.
+- Favicon.
+- Heading hierarchy.
+- Image alt attributes.
+- Internal navigation.
+- Semantic HTML.
+- Search engine indexing settings.
+
+Important:
+
+The current published URL is a GitHub Pages URL.
+
+The existing canonical metadata references a different custom domain.
+
+Only use a custom domain as the canonical URL if it is correctly configured and intended as the primary domain.
+
+Otherwise, correct the canonical URL to the actual published website.
+
+Create appropriate Open Graph and Twitter preview metadata.
+
+Use an actual portfolio preview image if one exists. Do not reference a nonexistent image.
+
+### Technical Cleanup
+
+Review:
+
+- README.md.
+- package.json.
+- Unused dependencies.
+- Unused JavaScript.
+- Unused CSS.
+- Broken selectors.
+- Incorrect asset paths.
+- Duplicate code.
+- Console errors.
+- Contact form logic.
+- Broken navigation.
+- Responsive behavior.
+- Image loading.
+- Accessibility.
+
+The README currently contains generic template instructions and inconsistent project/contact information.
+
+Replace it with a professional project README describing:
+- Portfolio purpose.
+- Technologies actually used.
+- Project structure.
+- Deployment information.
+- Features.
+- Maintenance instructions.
+
+Review package.json for outdated template information such as "react-example".
+
+Do not remove dependencies until you verify they are not used by the project.
+
+The current JavaScript includes contact form logic that must be checked against the actual HTML structure.
+
+If the corresponding form does not exist, either implement a real working form or remove the unused logic.
+
+Do not leave nonfunctional UI elements.
+
+---
+
+# 14. RESPONSIVE DESIGN & USER EXPERIENCE
+
+Test the existing website on:
+
+- Desktop.
+- Laptop.
+- Tablet.
+- Mobile.
+
+Pay particular attention to mobile.
+
+Verify:
+
+- Navigation works correctly.
+- Text does not overflow.
+- Cards fit the viewport.
+- Buttons remain accessible.
+- Interactive components work with touch.
+- Images preserve their proportions.
+- Typography remains readable.
+- No horizontal scrolling occurs unintentionally.
+- Modals and expandable sections remain usable.
+- All important information is accessible without awkward scrolling.
+
+Maintain the current visual identity.
+
+Do not introduce a completely new color palette or typography system.
+
+Avoid excessive animations, unnecessary effects, and decorative elements that reduce usability.
+
+---
+
+# 15. CONTENT & WRITING QUALITY
+
+The website is primarily written in English.
+
+Maintain professional, natural, fluent business English.
+
+Writing standards:
+
+- Concise but informative.
+- Clear terminology.
+- No exaggerated claims.
+- No repetitive descriptions.
+- No unnecessary buzzwords.
+- No awkward AI-generated language.
+- No grammatical errors.
+- No inconsistent capitalization.
+- No incomplete labels.
+- No inconsistent metric formatting.
+
+Use consistent terminology across the website.
+
+Examples:
+
+Performance Marketing
+Paid Acquisition
+Campaign Optimization
+Marketing Analytics
+Conversion Rate Optimization
+Marketing Automation
+Case Study
+Professional Experience
+
+Make the content easy to scan for recruiters and clients.
+
+---
+
+# 16. DESIGN QUALITY REQUIREMENTS
+
+The existing design should be refined, not replaced.
+
+Improve where necessary:
+
+- Spacing consistency.
+- Visual hierarchy.
+- Typography hierarchy.
+- Card alignment.
+- Section transitions.
+- Button consistency.
+- Information density.
+- Readability.
+- Image positioning.
+- Mobile layout.
+
+Maintain the existing professional dark/navy visual direction and established brand identity.
+
+Do not make the website visually heavier.
+
+Do not add unnecessary gradients, glowing effects, excessive animations, or decorative UI elements.
+
+The design should communicate:
+
+Professionalism.
+Technical competence.
+Trust.
+Clarity.
+Measurable performance.
+Strategic thinking.
+
+---
+
+# 17. FINAL QUALITY ASSURANCE — MANDATORY
+
+After implementing all changes, perform a complete final review.
+
+Do not consider the task complete simply because the code was modified.
+
+Verify every item below.
+
+## Content Verification
+
+- [ ] Professional title is consistent.
+- [ ] Professional description is accurate.
+- [ ] Official employment titles are correct.
+- [ ] Employment dates are verified.
+- [ ] IJADAH metrics are accurate.
+- [ ] Kitchen Bazaar metrics are correctly attributed.
+- [ ] Campaign-level and account-level metrics are distinguished.
+- [ ] Historical results are not presented as current results.
+- [ ] Personal contributions are separated from team achievements.
+- [ ] Hookify implementation status is accurately described.
+- [ ] AI projects are classified correctly.
+- [ ] Skills reflect actual capabilities.
+- [ ] Certifications use verified names.
+- [ ] No fabricated testimonials or achievements exist.
+
+## Website Functionality
+
+- [ ] All navigation links work.
+- [ ] All CTA buttons work.
+- [ ] CV download works.
+- [ ] LinkedIn link works.
+- [ ] WhatsApp link works.
+- [ ] Email link works.
+- [ ] Interactive calculator works.
+- [ ] Contact functionality works.
+- [ ] Existing useful animations are preserved.
+- [ ] No broken images.
+- [ ] No broken internal links.
+- [ ] No console errors.
+
+## Technical Quality
+
+- [ ] Responsive on desktop and mobile.
+- [ ] SEO metadata is correct.
+- [ ] Canonical URL is correct.
+- [ ] Open Graph image works.
+- [ ] README is updated.
+- [ ] package.json is cleaned up where necessary.
+- [ ] No unnecessary dependencies were introduced.
+- [ ] No unused or contradictory code remains.
+- [ ] No accidental information disclosure.
+
+## Final Review
+
+Compare the finished website against the original.
+
+Confirm that:
+
+1. The existing visual identity remains recognizable.
+2. No important existing functionality has been lost.
+3. No useful projects have been deleted without justification.
+4. The website is more credible and easier to navigate.
+5. All modifications are consistent across the entire project.
+6. The published version is ready for professional use.
+
+---
+
+# 18. EXECUTION INSTRUCTIONS
+
+Execute this task directly in the existing project.
+
+Do not respond with a list of suggestions only.
+
+Do not stop after auditing.
+
+Do not provide a proposed redesign instead of implementing the requested improvements.
+
+Work through the entire project systematically and make the necessary changes.
+
+If a critical fact cannot be verified, do not invent an answer. Preserve the relevant section in a neutral state and add it to a clearly documented list of items requiring my confirmation.
+
+Do not interrupt implementation to ask questions about nonessential preferences.
+
+Prioritize accuracy, consistency, maintainability, and professional presentation.
+
+Do not overwrite or delete original assets unnecessarily.
+
+If possible, preserve a recoverable version of the original project before making significant modifications.
+
+After implementation, provide a detailed completion report containing:
+
+1. Summary of all modifications.
+2. Sections rewritten or improved.
+3. Metrics corrected.
+4. Projects reorganized.
+5. Technical fixes.
+6. Features preserved.
+7. Items requiring my confirmation.
+8. Remaining limitations.
+9. Final QA results.
+10. Exact deployment instructions.
+
+IMPORTANT:
+
+Do not claim that the website is successfully deployed unless the deployment has actually been completed and verified.
+
+The final deliverable must be the improved, working version of my existing portfolio, not merely a design proposal or a collection of code snippets.
+
+**Final Principle: Preserve the identity. Improve the substance. Verify every claim. Deliver a genuinely professional portfolio.**

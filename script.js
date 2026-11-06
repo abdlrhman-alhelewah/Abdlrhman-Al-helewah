@@ -76,27 +76,27 @@ const CASE_STUDIES = [
     client: 'Kitchen Bazaar',
     industry: 'Retail, Home Living & E-Commerce',
     region: 'Saudi Arabia (KSA)',
-    category: 'paid-media',
+    category: 'featured',
     status: 'completed',
     statusLabel: 'Completed Client Work',
     services: 'Snapchat Ads · Google Ads · TikTok Promotion · ROAS Optimization',
     headline: 'Omnichannel E-Commerce Scaling: $169,455 Revenue at 6.95x ROAS',
-    teaser: 'Managed $24,352.55 Snapchat Ads spend generating $169,455.17 in purchases at 6.95x average ROAS (1,643 orders, 26,955 add-to-carts at $0.90) and SAR 38.3K Google Ads delivering 78.4K clicks and 1,310 conversions.',
+    teaser: 'Direct acquisition across Snapchat Ads ($24,352.55 spend, $169,455.17 revenue, 6.95x ROAS, 1,643 purchases, 26,955 add-to-carts at $0.90) and Google Ads (SAR 38.3K spend, 78.4K clicks, 1,310 conversions; Dec 2025 – Oct 2026 window; eMarketing tenure began Apr 2026).',
     challenge: 'Scaling an e-commerce brand in the competitive Saudi household and kitchen retail niche, where high-season CPMs spike significantly and broad audience targeting frequently causes cart abandonment without purchase completion.',
-    objective: 'Maximize e-commerce purchase transactions and gross revenue, sustain return on ad spend (ROAS) well above 5x, keep add-to-cart acquisition costs below $1.00, and capture intent-driven search traffic across Saudi Arabia.',
+    objective: 'Maximize e-commerce purchase transactions and gross revenue, sustain return on ad spend (ROAS) well above 5x on Snapchat, keep add-to-cart acquisition costs below $1.00, and capture intent-driven search traffic across Saudi Arabia.',
     strategy: 'Orchestrated a dual-engine acquisition funnel: 1) Snapchat Ads dynamic catalog prospecting, targeted female 25-44 cohorts, and urgent discount creative angles scaling top ad sets up to 15.43x ROAS; 2) Google Ads Search & Performance campaigns capturing high-intent search keywords at SAR 29.23 per conversion.',
-    execution: 'Managed 20+ ad sets with disciplined efficiency thresholds: rapidly sunset fatigued creative angles while scaling top-performing sets (such as Ramadan and seasonal kitchenware flights) to over $4,300 per flight. Captured 26,955 add-to-carts at an average cost of only $0.90, closing 1,643 verified purchase transactions at $14.54 CPA.',
+    execution: 'Managed 20+ ad sets with disciplined efficiency thresholds: rapidly sunset fatigued creative angles while scaling top-performing sets (such as Ramadan and seasonal kitchenware flights) to over $4,300 per flight. Captured 26,955 add-to-carts at an average cost of only $0.90, closing 1,643 verified purchase transactions at $14.54 CPA on Snapchat.',
     results: [
-      { label: 'Purchases Value (Revenue)', value: '$169,455.17' },
-      { label: 'Overall Purchase ROAS', value: '6.95x Avg ROAS' },
-      { label: 'Total Managed Snapchat Spend', value: '$24,352.55' },
-      { label: 'Completed Purchases', value: '1,643 Orders' },
+      { label: 'Snapchat Purchases Revenue', value: '$169,455.17' },
+      { label: 'Snapchat Purchase ROAS', value: '6.95x Avg ROAS' },
+      { label: 'Snapchat Managed Spend', value: '$24,352.55' },
+      { label: 'Snapchat Completed Orders', value: '1,643 Purchases' },
       { label: 'Google High-Intent Clicks', value: '78.4K Clicks' },
       { label: 'Google Search Conversions', value: '1,310 Conversions' },
       { label: 'Google Media Spend', value: 'SAR 38.3K ($10.2K USD)' },
-      { label: 'Total Adds to Cart', value: '26,955 ($0.90 CPA)' }
+      { label: 'Snapchat Adds to Cart', value: '26,955 ($0.90 CPA)' }
     ],
-    takeaway: 'Omnichannel synergy between Snapchat visual discovery and Google high-intent search delivered $169,455.17 in purchases at 6.95x ROAS. Disciplined ad set pruning kept the average purchase acquisition cost down to $14.54 across 1,643 e-commerce orders.',
+    takeaway: 'Omnichannel synergy between Snapchat visual discovery and Google high-intent search delivered $169,455.17 in Snapchat purchases at 6.95x ROAS. Disciplined ad set pruning kept the average purchase acquisition cost down to $14.54 across 1,643 e-commerce orders.',
     proofs: [
       {
         key: 'kitchen-snapchat-ecommerce',
@@ -108,7 +108,7 @@ const CASE_STUDIES = [
         key: 'kitchen-google-ads',
         title: 'Google Ads · Search & Performance',
         highlight: '78.4K Clicks · 1,310 Conversions',
-        desc: 'SAR 38.3K spend, SAR 29.23 cost per conversion'
+        desc: 'SAR 38.3K spend, SAR 29.23 cost per conversion (Dec 2025 – Oct 2026)'
       }
     ]
   },
@@ -117,29 +117,31 @@ const CASE_STUDIES = [
     client: 'IJADAH Education',
     industry: 'Education & Professional Training',
     region: 'United Arab Emirates (UAE)',
-    category: 'paid-media',
+    category: 'featured',
     status: 'completed',
     statusLabel: 'Completed Client Work',
     services: 'Lead Gen · Meta Ads · B2B Audience Architecture · Reporting',
-    headline: 'Multi-Stage Inbound Lead Generation & WhatsApp Qualification System',
-    teaser: 'Deployed 28 multi-cohort Meta ad flights capturing 980 verified inquiries across parent & school segments, achieving an 83% CPL reduction to $4.14.',
+    headline: 'B2B & Parent Inbound Inquiries: 980 Tracked Actions at $4.14 Lowest CPL',
+    teaser: 'Deployed 28 multi-cohort Meta ad flights capturing 980 tracked inquiry actions (352 verified lead form submissions + 628 WhatsApp messaging conversations) across parent & institutional school cohorts with an 83% CPL reduction to $4.14 (vs $24.19 account average).',
     challenge: 'High advertising fatigue across competitive UAE expat demographics, causing inflated cost-per-click and unqualified conversational messages that overburdened the admissions and advisory team.',
     objective: 'Generate verified, high-intent prospective student leads and school stakeholder inquiries with complete contact credentials while reducing wasted spend on unqualified conversational clicks.',
     strategy: 'Segmented the account into distinct psychological cohorts: top-of-funnel educational credibility video creatives, retargeting engaged viewers with native Meta Instant Forms containing qualification screening questions, plus dedicated B2B messaging for schools and educators.',
     execution: 'Deployed multi-variant creative sets testing curriculum credibility against professional growth angles. Excluded unengaged traffic, deployed custom Lookalike audiences from historical verified students, and optimized for completed high-intent inquiries.',
     results: [
-      { label: 'Total Inbound Inquiries', value: '980 Verified Contacts' },
-      { label: 'Record Low CPL (Parents)', value: '$4.14 (vs $24.19 Avg)' },
-      { label: 'Total Managed Media Spend', value: '$8,514.67 (28 Flights)' },
+      { label: 'Total Tracked Inquiry Actions', value: '980 Actions' },
+      { label: 'Lead Form Submissions', value: '352 Leads' },
+      { label: 'WhatsApp Conversations', value: '628 Inquiries' },
+      { label: 'Lowest Campaign CPL (Parents)', value: '$4.14 (vs $24.19 Avg)' },
+      { label: 'Total Spend (28 Flights)', value: '$8,514.67' },
       { label: 'Verified Impressions & Reach', value: '1.43M Imp / 394.5K Reach' }
     ],
-    takeaway: 'Separating educational messaging into dedicated psychological cohorts (parents vs. school administrators vs. teachers) dropped lead acquisition cost by 83% to $4.14, while direct click-to-WhatsApp generated 330 parent consultations at $6.22 each.',
+    takeaway: 'Separating educational messaging into dedicated psychological cohorts (parents vs. school administrators vs. teachers) dropped test lead acquisition cost by 83% to $4.14, while direct click-to-WhatsApp generated 330 parent consultations at $6.22 each.',
     proofImage: './assets/aistudio/Screenshot_2026-10-19_092823_ca68f816.png',
     proofs: [
       {
         key: 'ijadah-leadgen',
         title: 'Meta Ads Manager · Lead Gen Telemetry',
-        highlight: '980 Leads · $4.14 Lowest CPL',
+        highlight: '980 Inquiries · $4.14 Lowest CPL',
         desc: '$8,514.67 spend across 28 multi-cohort flights'
       }
     ]
@@ -149,9 +151,9 @@ const CASE_STUDIES = [
     client: 'Cardip',
     industry: 'Automotive & Luxury XPEL PPF Protection',
     region: 'Saudi Arabia (KSA)',
-    category: 'paid-media',
+    category: 'featured',
     status: 'completed',
-    statusLabel: 'Completed Client Work',
+    statusLabel: 'Completed Audit & Strategy',
     services: 'XPEL PPF · Instagram Ad Audit · WhatsApp Inbound Leads',
     headline: 'High-Ticket Paint Protection Film (PPF) Audit & WhatsApp Lead Acquisition',
     teaser: 'Audited ~50 Instagram Reels & ~35 campaigns across SAR 15,800 spend, securing 436 qualified WhatsApp leads at an average SAR 36.24 per inquiry.',
@@ -172,76 +174,30 @@ const CASE_STUDIES = [
     client: '3shwaee_ (عشوائي)',
     industry: 'Personal Brand & Social Media Growth',
     region: 'Middle East / Organic Growth',
-    category: 'growth',
+    category: 'featured',
     status: 'completed',
-    statusLabel: 'Completed Growth',
+    statusLabel: 'Completed Organic Growth',
     services: 'Content Strategy · Organic Reach · Account Insights Analysis',
-    headline: 'Organic Instagram Scaling: 0 to 20,000+ Followers & 1.8M Reels Views',
-    teaser: 'Grew an Instagram account from zero to 20,000+ followers organically through a systematic content strategy centered on reach, viral hooks, and data-informed iteration.',
+    headline: 'Organic Instagram Scaling: 0 to ~20,000 Followers Peak & 1.8M Reels Views',
+    teaser: 'Grew personal content project (@3shwaee_) from zero to a historical organic peak of ~20,000 followers (May 2022 – March 2024) without paid ad budget through viral opening hooks, retention analytics, and data-informed iteration.',
     challenge: 'Building an active, engaged audience on Instagram from complete scratch without paid advertising budget, standing out amid dense content saturation.',
-    objective: 'Establish a sustainable organic content engine, identify high-engagement content pillars, and scale followers past 20,000 using video Reels.',
+    objective: 'Establish a sustainable organic content engine, identify high-engagement content pillars, and scale followers to over 20,000 using video Reels.',
     strategy: 'Formulated content direction focused on high-curiosity opening hooks, emotional resonance, and strong shareability. Used built-in Instagram Professional Insights to analyze retention curves and double down on winning themes.',
     execution: 'Consistently produced and published short-form video reels between May 2022 and March 2024. Monitored watch time and completion rates, refining pacing and typography hooks.',
     results: [
-      { label: 'Follower Growth', value: '0 → 20,000+ Followers' },
+      { label: 'Historical Peak Followers', value: '0 → ~20,000 Peak' },
       { label: 'Peak Reel Views', value: '1.8M, 1.5M, 1.4M Views' },
       { label: 'Acquisition Cost', value: '$0 (100% Organic)' },
-      { label: 'Active Strategy Window', value: 'May 2022 — Mar 2024' }
+      { label: 'Active Project Window', value: 'May 2022 — Mar 2024' }
     ],
     takeaway: 'Disciplined retention analysis and curiosity-driven opening hooks can scale an account from zero to over 20,000 followers organically, generating multiple viral hits exceeding 1.4M views.'
   },
   {
-    id: 'heart-of-life-rehabilitation',
-    client: 'Muasasat Qalb Al-Hayah for Speech Therapy',
-    industry: 'Pediatric Healthcare & Speech Rehabilitation',
-    region: 'Egypt',
-    category: 'strategy-audit',
-    status: 'in-progress',
-    statusLabel: 'In Progress',
-    services: 'Campaign Messaging · Egyptian Arabic Copy · Keyword Research',
-    headline: 'Children’s Motor Rehabilitation & Visual-Motor Perception Awareness',
-    teaser: 'Developing campaign messaging and audience-targeting direction for a specialized children’s motor rehabilitation service in Egypt, communicating the developmental value of visual-motor perception support to parents.',
-    challenge: 'Reaching concerned parents with empathetic, medically accurate, and culturally resonant messaging about early childhood motor development without triggering undue fear.',
-    objective: 'Build an empathetic, high-trust campaign framework for October 2026, articulating the importance of visual-motor perception exercises for children with speech and developmental delays.',
-    strategy: 'Drafting warm, approachable Egyptian Arabic captions, headlines, and parent-focused descriptions. Conducting keyword research to map common parental queries on motor-visual coordination.',
-    execution: 'Structuring campaign communication pillars addressing parent observations (e.g. hand-eye coordination, balance, motor reflexes) and pairing them with clear calls-to-action for developmental evaluations.',
-    results: [
-      { label: 'Campaign Status', value: 'Active Development (In Progress)' },
-      { label: 'Target Audience', value: 'Parents of Toddlers & Kids (Egypt)' },
-      { label: 'Tone & Style', value: 'Warm Egyptian Arabic' },
-      { label: 'Launch Window', value: 'October 2026' }
-    ],
-    takeaway: 'In specialized healthcare marketing, empathetic communication that educates parents on developmental indicators builds genuine trust and inbound inquiries far better than generic promotional appeals.'
-  },
-  {
-    id: 'cro-audit',
-    client: 'E-Commerce Storefront',
-    industry: 'Conversion Rate Optimization (CRO)',
-    region: 'E-Commerce Web',
-    category: 'strategy-audit',
-    status: 'completed',
-    statusLabel: 'Audit & Strategy',
-    services: 'Funnel Diagnostics · Checkout Flow · Trust Signals & UX',
-    headline: 'E-Commerce Website Conversion Rate Optimization (CRO) Audit',
-    teaser: 'Conducted an in-depth CRO evaluation across an e-commerce storefront, identifying drop-off bottlenecks in product presentation, mobile cart flow, and trust signals to lift sales conversion.',
-    challenge: 'The storefront was driving steady traffic from paid ads, but mobile conversion rates lagged behind industry benchmarks due to subtle user friction points along the buyer journey.',
-    objective: 'Diagnose conversion leaks across product detail pages (PDP), cart page, and checkout funnel, providing prioritized, testable recommendations to improve purchase velocity.',
-    strategy: 'Analyzed user navigation paths from landing to purchase. Identified friction points in product variant selection, cart summary clarity, mobile sticky CTAs, and shipping transparency.',
-    execution: 'Delivered an actionable audit matrix categorizing fixes by impact vs. effort: highlighted missing payment trust badges, simplified mobile checkout fields, and refined value proposition headlines above the fold.',
-    results: [
-      { label: 'Audit Scope', value: 'Full Storefront Funnel' },
-      { label: 'Friction Points Mapped', value: '18 Actionable Findings' },
-      { label: 'Primary Focus', value: 'Mobile Cart & PDP Flow' },
-      { label: 'Objective Frame', value: 'Online Sales Velocity' }
-    ],
-    takeaway: 'Even high-performing ad campaigns fail to achieve optimal ROAS if website checkout friction is neglected; systematic CRO audits unlock immediate revenue gains from existing traffic.'
-  },
-  {
     id: 'hookify-ai-saas',
-    client: 'Hookify (AI Experiment & Prototype)',
+    client: 'Hookify (AI Prototype & Tool)',
     industry: 'MarTech & Generative AI',
     region: 'Google AI Studio Prototype',
-    category: 'ai-experiments',
+    category: 'ai-tech',
     status: 'experiment',
     statusLabel: 'AI Prototype & Tool',
     services: 'Google AI Studio · Gemini API · Full-Stack Copy Engine',
@@ -252,7 +208,7 @@ const CASE_STUDIES = [
     strategy: 'Leveraged Google AI Studio and Gemini API (@google/genai) to design prompt matrices for hooks, 30-second reels scripts (Hook, Body, CTA), and virality scoring algorithms.',
     execution: 'Built an interactive full-stack interface featuring smart API pooling, multi-format generators, Arabic/English bilingual capability, and real-time retention score simulations.',
     results: [
-      { label: 'Architecture Uptime', value: '99.9% Resilient Pooling' },
+      { label: 'Technology Stack', value: 'Google AI Studio · Gemini API' },
       { label: 'Copy Frameworks', value: 'AIDA, PAS, Curiosity Gap' },
       { label: 'Supported Platforms', value: 'TikTok, IG, LinkedIn, X' },
       { label: 'Bilingual Support', value: 'Arabic & English (RTL/LTR)' }
@@ -260,34 +216,11 @@ const CASE_STUDIES = [
     takeaway: 'Hookify demonstrates how combining structured direct-response copywriting principles with modern LLM prompt engineering elevates ad creative production and creative ideation speed.'
   },
   {
-    id: 'nyckel-porsche-bmw',
-    client: 'Computer Vision Experiment',
-    industry: 'Machine Learning / Image Classification',
-    region: 'Nyckel ML Platform',
-    category: 'ai-experiments',
-    status: 'experiment',
-    statusLabel: 'AI Experiment',
-    services: 'Nyckel Platform · Computer Vision · Category Classification',
-    headline: 'Porsche vs. BMW — Image Classification Machine Learning Experiment',
-    teaser: 'Trained and evaluated a specialized image classification model on Nyckel to test computer vision model precision and feature recognition between luxury sports car brands.',
-    challenge: 'Evaluating no-code / low-code machine learning platforms to understand practical computer vision workflows, dataset curation requirements, and classification accuracy.',
-    objective: 'Train a supervised visual classification model capable of distinguishing between subtle vehicle styling cues of two iconic automotive brands (Porsche vs. BMW).',
-    strategy: 'Curated balanced image training sets covering various angles, vehicle models, lighting conditions, and exterior colors. Evaluated confidence thresholds and misclassification edge cases.',
-    execution: 'Utilized Nyckel’s quick-training classification pipeline, tested against validation images, and analyzed how model confidence varies with perspective and vehicle occlusion.',
-    results: [
-      { label: 'Tool Utilized', value: 'Nyckel Platform' },
-      { label: 'Classification Task', value: 'Porsche vs. BMW Recognition' },
-      { label: 'Domain', value: 'Computer Vision Experiment' },
-      { label: 'Status', value: 'Completed Experiment' }
-    ],
-    takeaway: 'Hands-on experimentation with machine learning platforms like Nyckel builds practical intuition for how computer vision categorizes visual assets, directly informing AI-assisted creative workflows.'
-  },
-  {
     id: 'marketing-kpi-dashboard',
     client: 'Analytics & Media Buying Framework',
     industry: 'Marketing Analytics & Reporting',
     region: 'Cross-Platform Framework',
-    category: 'strategy-audit',
+    category: 'ai-tech',
     status: 'concept',
     statusLabel: 'Analytics Framework',
     services: 'Performance Reporting · Pacing Tracking · Conversion Funnels',
@@ -310,7 +243,7 @@ const CASE_STUDIES = [
     client: 'AI Product Architecture',
     industry: 'MarTech Automation & Agentic Systems',
     region: 'Proposed Scope & Architecture',
-    category: 'ai-experiments',
+    category: 'ai-tech',
     status: 'concept',
     statusLabel: 'Concept in Planning',
     services: 'Agentic Systems · GEO Exploration · Media Buying Workflows',
@@ -327,6 +260,75 @@ const CASE_STUDIES = [
       { label: 'Status', value: 'Proposed Concept' }
     ],
     takeaway: 'Designing agentic marketing systems requires rigorous boundary definitions: prioritizing human control and explainability over fully autonomous black-box ad execution.'
+  },
+  {
+    id: 'nyckel-porsche-bmw',
+    client: 'Computer Vision Experiment',
+    industry: 'Machine Learning / Image Classification',
+    region: 'Nyckel ML Platform',
+    category: 'ai-tech',
+    status: 'experiment',
+    statusLabel: 'AI Experiment',
+    services: 'Nyckel Platform · Computer Vision · Category Classification',
+    headline: 'Porsche vs. BMW — Image Classification Machine Learning Experiment',
+    teaser: 'Trained and evaluated a specialized image classification model on Nyckel to test computer vision model precision and feature recognition between luxury sports car brands.',
+    challenge: 'Evaluating no-code / low-code machine learning platforms to understand practical computer vision workflows, dataset curation requirements, and classification accuracy.',
+    objective: 'Train a supervised visual classification model capable of distinguishing between subtle vehicle styling cues of two iconic automotive brands (Porsche vs. BMW).',
+    strategy: 'Curated balanced image training sets covering various angles, vehicle models, lighting conditions, and exterior colors. Evaluated confidence thresholds and misclassification edge cases.',
+    execution: 'Utilized Nyckel’s quick-training classification pipeline, tested against validation images, and analyzed how model confidence varies with perspective and vehicle occlusion.',
+    results: [
+      { label: 'Tool Utilized', value: 'Nyckel Platform' },
+      { label: 'Classification Task', value: 'Porsche vs. BMW Recognition' },
+      { label: 'Domain', value: 'Computer Vision Experiment' },
+      { label: 'Status', value: 'Completed Experiment' }
+    ],
+    takeaway: 'Hands-on experimentation with machine learning platforms like Nyckel builds practical intuition for how computer vision categorizes visual assets, directly informing AI-assisted creative workflows.'
+  },
+  {
+    id: 'cro-audit',
+    client: 'E-Commerce Storefront',
+    industry: 'Conversion Rate Optimization (CRO)',
+    region: 'E-Commerce Web',
+    category: 'supporting',
+    status: 'completed',
+    statusLabel: 'Audit & Strategy',
+    services: 'Funnel Diagnostics · Checkout Flow · Trust Signals & UX',
+    headline: 'E-Commerce Website Conversion Rate Optimization (CRO) Audit',
+    teaser: 'Conducted an in-depth CRO evaluation across an e-commerce storefront, identifying drop-off bottlenecks in product presentation, mobile cart flow, and trust signals to lift sales conversion.',
+    challenge: 'The storefront was driving steady traffic from paid ads, but mobile conversion rates lagged behind industry benchmarks due to subtle user friction points along the buyer journey.',
+    objective: 'Diagnose conversion leaks across product detail pages (PDP), cart page, and checkout funnel, providing prioritized, testable recommendations to improve purchase velocity.',
+    strategy: 'Analyzed user navigation paths from landing to purchase. Identified friction points in product variant selection, cart summary clarity, mobile sticky CTAs, and shipping transparency.',
+    execution: 'Delivered an actionable audit matrix categorizing fixes by impact vs. effort: highlighted missing payment trust badges, simplified mobile checkout fields, and refined value proposition headlines above the fold.',
+    results: [
+      { label: 'Audit Scope', value: 'Full Storefront Funnel' },
+      { label: 'Friction Points Mapped', value: '18 Actionable Findings' },
+      { label: 'Primary Focus', value: 'Mobile Cart & PDP Flow' },
+      { label: 'Objective Frame', value: 'Online Sales Velocity' }
+    ],
+    takeaway: 'Even high-performing ad campaigns fail to achieve optimal ROAS if website checkout friction is neglected; systematic CRO audits unlock immediate revenue gains from existing traffic.'
+  },
+  {
+    id: 'heart-of-life-rehabilitation',
+    client: 'Muasasat Qalb Al-Hayah for Speech Therapy',
+    industry: 'Pediatric Healthcare & Speech Rehabilitation',
+    region: 'Egypt',
+    category: 'supporting',
+    status: 'in-progress',
+    statusLabel: 'In Progress',
+    services: 'Campaign Messaging · Egyptian Arabic Copy · Keyword Research',
+    headline: 'Children’s Motor Rehabilitation & Visual-Motor Perception Awareness',
+    teaser: 'Developing campaign messaging and audience-targeting direction for a specialized children’s motor rehabilitation service in Egypt, communicating the developmental value of visual-motor perception support to parents.',
+    challenge: 'Reaching concerned parents with empathetic, medically accurate, and culturally resonant messaging about early childhood motor development without triggering undue fear.',
+    objective: 'Build an empathetic, high-trust campaign framework for October 2026, articulating the importance of visual-motor perception exercises for children with speech and developmental delays.',
+    strategy: 'Drafting warm, approachable Egyptian Arabic captions, headlines, and parent-focused descriptions. Conducting keyword research to map common parental queries on motor-visual coordination.',
+    execution: 'Structuring campaign communication pillars addressing parent observations (e.g. hand-eye coordination, balance, motor reflexes) and pairing them with clear calls-to-action for developmental evaluations.',
+    results: [
+      { label: 'Campaign Status', value: 'Active Development (In Progress)' },
+      { label: 'Target Audience', value: 'Parents of Toddlers & Kids (Egypt)' },
+      { label: 'Tone & Style', value: 'Warm Egyptian Arabic' },
+      { label: 'Launch Window', value: 'October 2026' }
+    ],
+    takeaway: 'In specialized healthcare marketing, empathetic communication that educates parents on developmental indicators builds genuine trust and inbound inquiries far better than generic promotional appeals.'
   }
 ];
 
@@ -1669,24 +1671,25 @@ const CASE_STUDIES_AR = {
 
 const I18N_DICTIONARY = {
   ar: {
-    // Navigation
+    // Navigation (Concise 1-word labels to prevent header collision)
     nav_home: 'الرئيسية',
-    nav_experience: 'الخبرات المهنية',
-    nav_work: 'سوابق الأعمال',
-    nav_playbook: 'منظومة التشغيل',
-    nav_skills: 'المهارات والقدرات',
-    nav_education: 'التعليم والشهادات',
-    nav_contact: 'تواصل معي',
+    nav_about: 'عني',
+    nav_experience: 'الخبرات',
+    nav_work: 'الأعمال',
+    nav_playbook: 'المنهجية',
+    nav_skills: 'المهارات',
+    nav_education: 'الشهادات',
+    nav_contact: 'تواصل',
     cta_whatsapp: 'واتساب',
-    drawer_role: 'مختص إعلانات ممولة ومضاعفة المبيعات',
+    drawer_role: 'أخصائي تسويق رقمي وإعلانات ممولة',
     toggle_theme: 'تبديل الوضع الليلي / الفاتح',
     chat_whatsapp: 'تواصل عبر واتساب',
 
     // Hero
-    hero_status: 'متاح لإدارة وتوسيع الحملات الإعلانية · دول الخليج وعن بُعد',
+    hero_status: 'متاح للتوظيف وإدارة وتوسيع الحملات · دول الخليج وعن بُعد',
     hero_name: 'عبدالرحمن الحليوة',
-    hero_role: 'مختص إعلانات ممولة ومضاعفة المبيعات (Performance Media Buyer)',
-    hero_pitch: 'مختص إعلانات ممولة (Performance Media Buyer) يركز على إدارة وتوسيع الحملات الإعلانية عالية الربحية عبر <strong>سناب شات، إعلانات بحث جوجل، وميتا (فيسبوك وإنستجرام)</strong> في أسواق الخليج العربي ومصر. حققت <strong>169,455$ مبيعات موثقة في التجارة الإلكترونية بعائد استثمار 6.95x ROAS</strong> واستقطاب <strong>980 عميلاً محتملاً عالي الجودة</strong> (بأقل تكلفة استحواذ 4.14$). أستثمر أدوات الذكاء الاصطناعي، الأتمتة، وتحليل البيانات كميزة داعمة لاختبار الزوايا الإعلانية بمرونة فائقة ورفع كفاءة النتائج.',
+    hero_role: 'أخصائي تسويق رقمي وإعلانات ممولة (Digital Marketing Specialist)',
+    hero_pitch: 'أخصائي تسويق رقمي (Digital Marketing Specialist) متخصص في إعلانات الأداء المباشر والنمو المربح عبر <strong>سناب شات، إعلانات بحث جوجل، وميتا (فيسبوك وإنستجرام)</strong> في أسواق الخليج العربي ومصر. حققت <strong>169,455$ مبيعات موثقة في التجارة الإلكترونية بعائد 6.95x ROAS</strong> عبر سناب شات واستقطاب <strong>980 استفساراً مؤكداً</strong> (بأقل تكلفة 4.14$). أستثمر أدوات الذكاء الاصطناعي وهندسة الأوامر وتحليل البيانات لاختبار الزوايا الإعلانية بمرونة فائقة ورفع كفاءة النتائج.',
 
     // KPIs
     kpi_1_label: 'إيرادات مبيعات التجارة الإلكترونية',
@@ -1706,14 +1709,39 @@ const I18N_DICTIONARY = {
     hero_cta_proof: 'معاينة إثبات ميتا المباشر',
     hero_cta_onepager: 'الملخص التنفيذي',
 
+    // About Section
+    about_eyebrow: 'الخلفية الأكاديمية والمهنية',
+    about_title: 'التسويق الرقمي القائم على الأرقام، الإبداع والتقنية.',
+    about_desc: 'تخرجت بمرتبة الشرف وحصلت على بكالوريوس تكنولوجيا التسويق والتجارة الإلكترونية من جامعة الزقازيق بمعدل 3.040، وأعمل كـ Digital Marketing Specialist في إي ماركتنج إيجيبت (eMarketing Egypt).',
+    about_lead: 'أجمع بين الفهم الأكاديمي المتخصص في تكنولوجيا التجارة الإلكترونية وبين التنفيذ الميداني المباشر لميزانيات إعلانية تتجاوز 32,800$ دولار في أسواق السعودية والإمارات ومصر.',
+    about_sub: 'تدرجت مع أدهم حسام من مرشد وموجّه إعلاني إلى مدرب تسويق رقمي، وأدير مشاريع خاصة في الاستحواذ المدفوع وتدقيق معدلات التحويل (CRO) وتنمية المحتوى العضوي.',
+    about_p1: 'حصلت على <strong>بكالوريوس تكنولوجيا التسويق والتجارة الإلكترونية من جامعة الزقازيق</strong> (كلية التجارة، بمعدل تراكمي 3.040). ركزت دراستي على معمارية التجارة الإلكترونية، وأدوات التكنولوجيا التسويقية، وتحليل سلوك المستهلك، وقنوات الاستحواذ والنمو الرقمي.',
+    about_p2: 'في عملي المهني كـ <strong>Digital Marketing Specialist لدى إي ماركتنج إيجيبت (eMarketing Egypt)</strong>، أقوم بتخطيط وإدارة ومراقبة وتحسين الحملات الإعلانية الممولة عبر <strong>إعلانات ميتا، إعلانات جوجل، وإعلانات سناب شات</strong> لعملاء في السعودية والإمارات ومصر لتوسيع مبيعات المتاجر واستقطاب العملاء المحتملين ذوي القيمة العالية.',
+    about_p3: 'إلى جانب إدارة حملات العملاء، أعمل كـ <strong>مدرب تسويق رقمي (Digital Marketing Instructor)</strong> ومرشد سابق مع <strong>أدهم حسام</strong>، حيث أقدم تدريباً عملياً للمسوقين على آليات المنصات الإعلانية، وهندسة مسارات التحويل (Funnels)، وتكتيكات المزايدة، وتشخيص إجهاد وتراجع الإعلانات.',
+    about_p4: 'أنظر إلى <strong>الذكاء الاصطناعي والأتمتة وتحليل البيانات</strong> كأدوات مضاعفة للإنتاجية والسرعة وليست بديلاً عن فهم التسويق الأساسي. ومن خلال نماذج أولية مثل Hookify وأطر ضبط وتيرة الإنفاق، أستثمر هذه الأدوات لتسريع اختبار الزوايا الإعلانية وحماية هوامش الربح.',
+    about_facts_title: 'نظرة عامة على الكفاءات الأساسية',
+    about_f1_label: 'التخصص الأساسي',
+    about_f1_val: 'التسويق الرقمي وإعلانات الأداء المباشر (Performance Marketing)',
+    about_f2_label: 'المنصات الإعلانية',
+    about_f2_val: 'إعلانات سناب شات · إعلانات ميتا · شبكة بحث جوجل',
+    about_f3_label: 'الأسواق المستهدفة',
+    about_f3_val: 'المملكة العربية السعودية (KSA) · الإمارات · مصر',
+    about_f4_label: 'فلسفة اتخاذ القرار',
+    about_f4_val: 'القرارات المبنية على البيانات والاختبار المستمر',
+    about_qf_title: 'حقائق سريعة عن المؤهلات',
+    about_qf_degree: 'بكالوريوس تكنولوجيا التسويق والتجارة الإلكترونية (جامعة الزقازيق · GPA: 3.040)',
+    about_qf_role: 'Digital Marketing Specialist في إي ماركتنج إيجيبت (eMarketing Egypt)',
+    about_qf_trainer: 'مدرب تسويق رقمي وموجّه سابق لدى أدهم حسام',
+    about_qf_ai: 'سفير ذكاء اصطناعي ودبلومات متقدمة من المعهد القومي للاتصالات NTI',
+
     // Experience
     exp_eyebrow: 'الخبرات العملية والأدوار',
     exp_title: 'الخبرة المهنية الميدانية.',
     exp_desc: 'تنفيذ احترافي ومباشر لإعلانات التجارة الإلكترونية الخليجية، استقطاب العملاء المحتملين ذوي القيمة العالية، وتدريب وتأهيل الكوادر التسويقية.',
-    exp_r1_title: 'مختص إعلانات ممولة ومضاعفة المبيعات (Performance Media Buyer)',
+    exp_r1_title: 'أخصائي تسويق رقمي وإعلانات ممولة (Digital Marketing Specialist)',
     exp_r1_badge: 'دوام كامل حالي',
     exp_r1_company: 'إي ماركتنج إيجيبت (eMarketing Egypt) · الدقي، الجيزة، مصر',
-    exp_r1_dates: 'أغسطس 2026 — حتى الآن',
+    exp_r1_dates: 'أبريل 2026 — حتى الآن',
     exp_r1_b1: 'إدارة وتوسيع ميزانيات إعلانية ممولة (+32.8 ألف دولار) عبر <strong>إعلانات سناب شات، شبكة جوجل، وإعلانات ميتا</strong> لعملاء ومتاجر في السعودية والإمارات ومصر.',
     exp_r1_b2: 'توسيع مبيعات <strong>مطبخ بازار (Kitchen Bazaar - متجر سعودي)</strong>: تحقيق <strong>169,455$ مبيعات موثقة بعائد 6.95x ROAS</strong> عبر سناب شات (1,643 طلب شراء، و26,955 إضافة للسلة بتكلفة 0.90$) وإدارة 38.3 ألف ريال إعلانات جوجل (78.4 ألف نقرة، 1,310 تحويل شراء).',
     exp_r1_b3: 'توسيع نتائج <strong>إجادة للتعليم (الإمارات)</strong>: استقطاب <strong>980 استفساراً مؤهلاً</strong> عبر 28 حملة مع خفض تكلفة العميل بنسبة 83% لتصل إلى <strong>4.14$</strong> و628 محادثة واتساب مباشرة.',
@@ -1732,55 +1760,60 @@ const I18N_DICTIONARY = {
     exp_r3_b1: 'متابعة وتقييم فردي وجماعي مباشر لحملات المتدربين وصياغة الرسائل الإعلانية المقنعة.',
     exp_r3_b2: 'إدارة المناهج والورش التدريبية، ودعم مجتمع المتدربين، ومتابعة الدفعات الجديدة خطوة بخطوة.',
 
-    exp_r4_title: 'مختص إعلانات ممولة مستقل (Freelance Performance Media Buyer)',
+    exp_r4_title: 'أخصائي تسويق رقمي وميديا باير مستقل',
     exp_r4_badge: 'مشاريع خاصة',
     exp_r4_company: 'ممارسة مهنية مستقلة · عن بُعد / الخليج ومصر',
     exp_r4_dates: 'ممارسة مستمرة',
     exp_r4_b1: 'إدارة وتخصيص الحملات الممولة، صياغة الإعلانات، وتدقيق تحسين معدل التحويل (CRO) لعملاء ومتاجر خاصة.',
-    exp_r4_b2: 'تدقيق حملات Cardip لأفلام حماية XPEL (إنفاق 15.8 ألف ريال، 436 عميل واتساب مؤهل)؛ وتنمية براند شخصي (@3shwaee_) من الصفر لأكثر من 20 ألف متابع حقيقي بدون إعلانات مدفوعة.',
+    exp_r4_b2: 'تدقيق حملات Cardip لأفلام حماية XPEL (إنفاق 15.8 ألف ريال، 436 عميل واتساب مؤهل)؛ وتنمية براند شخصي (@3shwaee_) من الصفر لأكثر من 20 ألف متابع حقيقي كذروة تاريخية بدون إعلانات مدفوعة.',
 
-    // Case Studies Section Header
+    // Case Studies Section Header & Filters
     cs_eyebrow: 'دراسات الحالة وسوابق الأعمال',
     cs_title: 'مشاريع ونتائج الحملات الإعلانية الموثقة.',
     cs_desc: 'حملات واقعية مبنية على الأرقام والبيانات تثبت القدرة على مضاعفة المبيعات، خفض تكاليف الاستحواذ، وهندسة مسارات الشراء كاملة. اضغط على أي مشروع للاطلاع على التفاصيل والبيانات.',
+    filter_all: 'جميع المشاريع (10)',
+    filter_featured: 'أبرز مشاريع العملاء (4)',
+    filter_aitech: 'مشاريع الذكاء الاصطناعي والتقنية (4)',
+    filter_supporting: 'التدقيق ومشاريع قيد التنفيذ (2)',
 
-    // Enterprise Playbook Section Header & Tabs
-    playbook_eyebrow: 'منظومة العمل وتوسيع الميزانيات',
-    playbook_title: 'بروتوكول التوسع ومحاكي الأرباح.',
-    playbook_desc: 'منهجية منضبطة لإدارة المخاطر وتوسيع الحسابات الكبرى، تجمع بين قواعد إيقاف الخسائر ومحاكاة العائد لاتخاذ قرارات سريعة ومربحة.',
-    pb_tab_scaling: 'قواعد التوسع وإيقاف الخسائر',
-    pb_tab_roi: 'محاكي العائد المتوقع',
+    // Growth Framework Section Header & Tabs
+    playbook_eyebrow: 'إطار ومنظومة النمو',
+    playbook_title: 'منهجية وتطوير الأداء الإعلاني.',
+    playbook_desc: 'منظومة عمل مبنية على البيانات وإدارة المخاطر لتوسيع حسابات التجارة الإلكترونية وجلب العملاء المحتملين ذوي القيمة العالية، مستندة إلى عتبات إحصائية وحماية هامش الربح.',
+    pb_tab_scaling: 'منظومة التوسع وإيقاف الخسائر',
+    pb_tab_roi: 'مخطط سيناريوهات الأداء',
     pb_tab_roadmap: 'خارطة أول 90 يوماً',
     pb_tab_faq: 'الضمانات والأسئلة الشائعة',
 
     // Playbook Tab 1: Rules
-    rule_1_badge: '+15% إلى +20% / كل 48-72 ساعة',
-    rule_1_title: 'التوسع الرأسي المنضبط للميزانيات',
-    rule_1_desc: 'لا نرفع الميزانية عشوائياً؛ الزيادة بنسبة 15%–20% كل يومين إلى ثلاثة فقط عند ثبات العائد (ROAS) فوق الهدف، لتجنب إعادة ضبط خوارزميات المنصة أو ارتفاع تكلفة الظهور CPM.',
+    rule_1_badge: 'توسع منضبط',
+    rule_1_title: 'حجم التحويلات وسرعة التوسع',
+    rule_1_desc: 'توسيع الميزانية تدريجياً (+15% إلى +20% كل 48-72 ساعة) فقط عند استقرار حجم التحويلات إحصائياً وثبات الـ ROAS والـ CPA فوق الهدف لتجنب إعادة ضبط الخوارزميات.',
     rule_1_trigger: 'الشرط الحاكم:',
-    rule_1_trigger_val: 'استقرار الـ ROAS فوق الهدف لـ 3 أيام متتالية',
-    rule_2_badge: 'إيقاف فوري عند 1.5x CPA',
-    rule_2_title: 'قواعد إيقاف الخسائر الصارمة (Stop Loss)',
-    rule_2_desc: 'تجريد كامل من العواطف تجاه الإعلانات. أي زاوية إعلانية يصل إنفاقها إلى 1.5 ضعف تكلفة الاستحواذ المستهدفة دون تحقيق مبيعات أو عملاء مؤهلين يتم إيقافها فوراً لحماية أرباح العميل.',
+    rule_1_trigger_val: 'استقرار خط الأساس عبر نافذة تأخر التحويل',
+    rule_2_badge: 'حماية هامش الربح',
+    rule_2_title: 'إيقاف الخسائر المنضبط (1.5x CPA)',
+    rule_2_desc: 'تجريد كامل من العواطف تجاه الزوايا الإعلانية. أي مجموعة تصل إلى 1.5 ضعف تكلفة التحويل المستهدفة دون تحقيق نتائج يتم إيقافها فوراً لحماية السيولة وهامش الأمان.',
     rule_2_trigger: 'الشرط الحاكم:',
     rule_2_trigger_val: 'بلوغ الإنفاق 1.5x CPA دون أي تحويل',
-    rule_3_badge: 'تدوير واستبدال أسبوعي',
-    rule_3_title: 'المعالجة الاستباقية لتراجع الإعلانات',
-    rule_3_desc: 'مراقبة يومية لمعدل الهوك في أول 3 ثوانٍ ونسبة النقر CTR. بمجرد تراجع التفاعل بنسبة 20%، يتم إطلاق 3 زوايا إعلانية جديدة أسبوعياً قبل أن تتدهور تكلفة العميل.',
+    rule_3_badge: 'سرعة التجديد الإبداعي',
+    rule_3_title: 'مراقبة الإجهاد والتجديد الاستباقي',
+    rule_3_desc: 'مراقبة يومية لمعدل الهوك في أول 3 ثوانٍ ونسبة النقر CTR. بمجرد تراجع التفاعل بنسبة تتجاوز 20%، يتم إطلاق 3 زوايا إعلانية جديدة أسبوعياً قبل تدهور التكلفة.',
     rule_3_trigger: 'الدورة التشغيلية:',
-    rule_3_trigger_val: 'إطلاق 3 زوايا إبداعية جديدة مطلع كل أسبوع',
+    rule_3_trigger_val: 'إطلاق 3 زوايا جديدة أسبوعياً مستندة إلى معدل الاحتفاظ',
 
     // Playbook Tab 2: ROI Simulator
     sim_market_label: 'السوق المستهدف ونوع الحملة',
     sim_spend_label: 'الميزانية الإعلانية الشهرية ($ بالدولار)',
     sim_aov_label: 'متوسط قيمة الطلب أو السلة ($)',
-    sim_res_eyebrow: 'نموذج الأداء المتوقع المخصص',
+    sim_res_eyebrow: 'مخطط سيناريوهات الأداء',
     sim_res_badge: 'محاكاة مبنية على سوابق الأعمال',
     sim_res_conversions: 'عدد طلبات الشراء المتوقعة',
     sim_res_revenue: 'إجمالي المبيعات المتوقعة',
     sim_res_roas: 'العائد الإعلاني المستهدف:',
     sim_res_cpa: 'الحد الأقصى لتكلفة الطلب (CPA):',
     sim_cta_discuss: 'ناقش هذا السيناريو مباشرة عبر واتساب',
+    sim_disclaimer: '* ملاحظة: هذه التقديرات هي سيناريوهات تخطيطية استرشادية مستندة إلى متوسطات سوابق الأعمال في أسواق الخليج؛ وتعتمد النتائج الفعلية على اقتصاديات المنتج، وسرعة تجديد الإعلانات، وظروف السوق.',
 
     // Playbook Tab 3: Roadmap
     stage_1_time: 'الأيام 1 — 30',
@@ -1814,7 +1847,7 @@ const I18N_DICTIONARY = {
 
     // Executive One-Pager Modal
     op_eyebrow: 'ملخص تنفيذي للنمو',
-    op_title: 'عبدالرحمن الحليوة · مختص إعلانات ممولة ومضاعفة المبيعات',
+    op_title: 'عبدالرحمن الحليوة · أخصائي تسويق رقمي وإعلانات ممولة',
     op_print_btn: 'طباعة / حفظ PDF',
     op_kpi_1: 'مبيعات موثقة (عائد 6.95x)',
     op_kpi_2: 'استفسارات مؤهلة (4.14$ للعميل)',
@@ -1837,8 +1870,8 @@ const I18N_DICTIONARY = {
     // Skills
     skills_eyebrow: 'أدوات الميديا باير والقدرات الداعمة',
     skills_title: 'الخبرة الأساسية والميزات التقنية الداعمة.',
-    skills_desc: 'المجال والمهنة الأساسية: إدارة وتوسيع الإعلانات الممولة (Performance Media Buying). وتأتي مهارات أتمتة العمليات، البرمجة بلغة بايثون، وتحليل البيانات كأدوات مساعدة تمنحني سرعة استثنائية في اختبار زوايا الإعلانات، خفض تكلفة الاستحواذ، ومضاعفة العائد الإعلاني.',
-    skills_p1_title: 'إدارة الإعلانات الممولة (التخصص الأساسي)',
+    skills_desc: 'المجال والمهنة الأساسية: إدارة وتوسيع الإعلانات الممولة (Performance Marketing). وتأتي مهارات أتمتة العمليات، البرمجة بلغة بايثون، وتحليل البيانات كأدوات مساعدة تمنحني سرعة استثنائية في اختبار زوايا الإعلانات، خفض تكلفة الاستحواذ، ومضاعفة العائد الإعلاني.',
+    skills_p1_title: 'التسويق الرقمي والإعلانات الممولة',
     skills_p2_title: 'استراتيجية وتصميم الإعلانات الإبداعية',
     skills_p3_title: 'تحليل البيانات وإسناد مسارات التحويل',
     skills_p4_title: 'الذكاء الاصطناعي والأتمتة (أدوات داعمة لتسريع العمل)',
@@ -1848,7 +1881,7 @@ const I18N_DICTIONARY = {
     s_meta: 'إدارة إعلانات ميتا (فيسبوك وإنستجرام)',
     s_tiktok: 'إدارة إعلانات تيك توك (TikTok Ads)',
     s_buying: 'تكتيكات المزايدة والميديا باينج المتقدمة',
-    s_opt: 'توسيع نطاق الحملات وخفض تكلفة الاستحواذ (CPA)',
+    s_opt: 'توسيع الحملات وخفض تكلفة الاستحواذ (CPA Optimization)',
     s_audiences: 'بناء الجماهير المخصصة والشبيهة (Lookalike)',
     s_retarget: 'مسارات إعادة الاستهداف الذكية (Retargeting)',
     s_fatigue: 'تشخيص ومعالجة إجهاد وتراجع الإعلانات (Fatigue)',
@@ -1923,49 +1956,62 @@ const I18N_DICTIONARY = {
     cert_7_title: 'برامج ودورات التسويق الرقمي المتخصصة',
     cert_7_org: 'برامج تدريبية متخصصة',
 
-    cert_8_issuer: 'تطوير مهني مستمر',
-    cert_8_title: 'دورات وبرامج تدريبية تخصصية إضافية في نمو المبيعات',
-    cert_8_org: 'تعلم وتطوير مستمر',
-
     // Contact
     contact_eyebrow: 'تواصل مباشر',
-    contact_title: 'دعنا نناقش حملتك الإعلانية القادمة.',
-    contact_desc: 'متاح لأدوار الميديا باينج، توسيع الحسابات الإعلانية، واستشارات نمو المبيعات. تواصل مباشرة عبر وسيلتك المفضلة:',
+    contact_title: 'دعنا نناقش حملتك القادمة أو الفرصة الوظيفية.',
+    contact_desc: 'متاح لأدوار Digital Marketing Specialist بدوام كامل، عقود الميديا باينج وتوسيع الحسابات، واستشارات النمو. حدد مسار التواصل المفضل لديك أدناه:',
+    contact_for_recruiters: 'لمسؤولي التوظيف والشركات',
+    contact_recruiter_title: 'فرص العمل والتوظيف المباشر',
+    contact_recruiter_desc: 'مراجعة المؤهلات الرسمية، طلب المراجع، فحص شاشات الإعلانات الحية، أو بدء المقابلات الوظيفية.',
+    contact_for_clients: 'لأصحاب المتاجر والمشاريع',
+    contact_client_title: 'إدارة وتوسيع الإعلانات والاستشارات',
+    contact_client_desc: 'إطلاق وتوسيع سريع للحملات عبر سناب شات، جوجل، وميتا في السعودية والإمارات ومصر عبر محادثة واتساب المباشرة.',
     contact_wa_label: 'الرد الأسرع',
-    contact_wa_val: 'محادثة واتساب',
+    contact_wa_val: 'محادثة واتساب (+20 155 340 4607)',
     contact_email_label: 'البريد الإلكتروني المباشر',
     contact_email_val: 'إرسال بريد',
     contact_li_label: 'الشبكة المهنية',
     contact_li_val: 'الملف الشخصي على لينكد إن',
 
+    // Form
+    form_heading: 'نموذج إرسال تفاصيل المشروع أو الوظيفة',
+    form_subheading: 'أدخل بيانات الحملة أو تفاصيل الفرصة أدناه لإرسالها بالبريد أو نسخها فوراً للمحادثة.',
+    form_label_name: 'الاسم أو الجهة *',
+    form_label_email: 'البريد الإلكتروني أو رقم الهاتف / واتساب *',
+    form_label_type: 'الهدف الرئيسي / الخدمة المطلوبة',
+    form_label_message: 'تفاصيل المشروع، السوق المستهدف، والميزانية الشهرية *',
+    form_btn_send: 'إرسال الملخص عبر البريد الإلكتروني',
+    form_btn_copy: 'نسخ الملخص إلى الحافظة',
+
     // Footer
     footer_name: 'عبدالرحمن الحليوة',
-    footer_role: 'مختص إعلانات ممولة ومضاعفة المبيعات (Performance Media Buyer)'
+    footer_role: 'أخصائي تسويق رقمي وإعلانات ممولة (Digital Marketing Specialist)'
   },
   en: {
-    // Navigation
+    // Navigation (Concise 1-word labels to prevent header collision)
     nav_home: 'Home',
+    nav_about: 'About',
     nav_experience: 'Experience',
     nav_work: 'Work',
-    nav_playbook: 'Playbook',
+    nav_playbook: 'Approach',
     nav_skills: 'Skills',
-    nav_education: 'Education & Certs',
+    nav_education: 'Credentials',
     nav_contact: 'Contact',
     cta_whatsapp: 'WhatsApp',
-    drawer_role: 'Performance Media Buyer',
+    drawer_role: 'Digital Marketing Specialist · Performance Media Buying',
     toggle_theme: 'Toggle Light / Dark Mode',
     chat_whatsapp: 'Chat on WhatsApp',
 
     // Hero
-    hero_status: 'Available for Scaling & Media Buying · GCC & Remote',
+    hero_status: 'Available for Growth & Paid Acquisition · Remote & GCC',
     hero_name: 'Abdlrhman Al Helewah',
-    hero_role: 'Performance Media Buyer · Paid Acquisition & Scaled Growth',
-    hero_pitch: 'Performance Media Buyer managing high-growth acquisition across <strong>Snapchat, Google & Meta Ads</strong> in the GCC and Egypt. Generated <strong>$169,455 in verified e-commerce revenue at 6.95x ROAS</strong> and <strong>980 qualified leads</strong> ($4.14 lowest CPL). Leverages custom AI automation & deep data analytics as power tools to test angles faster and maximize client profit.',
+    hero_role: 'Digital Marketing Specialist · Performance Media Buying & Acquisition',
+    hero_pitch: 'Digital Marketing Specialist focused on high-growth performance media buying across <strong>Snapchat, Google & Meta Ads</strong> in the GCC and Egypt. Generated <strong>$169,455 in verified e-commerce revenue at 6.95x ROAS</strong> on Snapchat and captured <strong>980 qualified inquiries</strong> ($4.14 lowest CPL). Leverages custom AI workflows, prompt engineering, and deep data analytics to test creative angles rapidly and maximize acquisition profit.',
 
     // KPIs
     kpi_1_label: 'E-Com Purchases Revenue',
     kpi_1_sub: '1,643 Orders · Saudi Arabia (Snapchat Ads)',
-    kpi_2_label: 'Qualified Leads Captured',
+    kpi_2_label: 'Qualified Inquiries & Leads',
     kpi_2_sub: '$4.14 Lowest CPL · UAE (28 Meta Flights)',
     kpi_3_label: 'Managed Ad Spend',
     kpi_3_badge: 'Multi-Channel',
@@ -1980,14 +2026,39 @@ const I18N_DICTIONARY = {
     hero_cta_proof: 'Inspect Meta Proof',
     hero_cta_onepager: 'Executive One-Pager',
 
+    // About Section
+    about_eyebrow: 'Background & Philosophy',
+    about_title: 'Performance Marketing Driven by Data, Creative & Tech.',
+    about_desc: 'Graduated with honors holding a Bachelor\'s in Marketing Technology & E-Commerce from Zagazig University (GPA 3.040), currently serving as Digital Marketing Specialist at eMarketing Egypt.',
+    about_lead: 'Combining formal e-commerce technology rigor with hands-on multi-channel performance execution across $32.8K+ in managed ad spend across Saudi Arabia, UAE, and Egypt.',
+    about_sub: 'Promoted from Adham Hossam\'s Digital Marketing Mentor to Instructor, alongside managing specialized paid acquisition engagements, conversion rate optimization (CRO) audits, and organic social growth.',
+    about_p1: 'I hold a <strong>Bachelor\'s degree in Marketing Technology & E-Commerce from Zagazig University</strong> (Faculty of Commerce, Cumulative GPA: 3.040). My academic foundation centered on modern e-commerce architectures, marketing technology stacks, consumer data analytics, and digital acquisition channels.',
+    about_p2: 'In my professional work as a <strong>Digital Marketing Specialist at eMarketing Egypt</strong>, I plan, manage, monitor, and optimize paid advertising campaigns across <strong>Meta Ads, Google Ads, and Snapchat Ads</strong>. My hands-on execution covers regional accounts in Saudi Arabia, the UAE, and Egypt—spanning e-commerce sales scaling and high-intent inbound lead generation.',
+    about_p3: 'Alongside agency client management, I serve as a <strong>Digital Marketing Instructor</strong> (and formerly Digital Marketing Mentor) with <strong>Adham Hossam</strong>, training practitioners in ad platform mechanics, conversion funnel architecture, bidding tactics, and creative fatigue diagnostics.',
+    about_p4: 'I view <strong>AI, automation, and analytics</strong> not as standalone replacements for marketing fundamentals, but as practical multipliers. Through hands-on prototypes like Hookify and data pacing frameworks, I explore ways to accelerate creative testing cycles, safeguard campaign margins, and support informed marketing decisions.',
+    about_facts_title: 'Core Competencies Overview',
+    about_f1_label: 'Primary Specialization',
+    about_f1_val: 'Performance Marketing · Paid Acquisition',
+    about_f2_label: 'Advertising Platforms',
+    about_f2_val: 'Snapchat Ads · Meta Ads · Google Search',
+    about_f3_label: 'Target Markets',
+    about_f3_val: 'Saudi Arabia (KSA) · UAE · Egypt',
+    about_f4_label: 'Decision-Making Philosophy',
+    about_f4_val: 'Data-Backed Telemetry & Continuous Testing',
+    about_qf_title: 'Quick Qualification Highlights',
+    about_qf_degree: 'B.Sc. in Marketing Technology & E-Commerce (Zagazig University · GPA: 3.040)',
+    about_qf_role: 'Digital Marketing Specialist at eMarketing Egypt',
+    about_qf_trainer: 'Digital Marketing Instructor & former Mentor at Adham Hossam',
+    about_qf_ai: 'AI Ambassador & Advanced Diplomas from National Telecommunication Institute (NTI)',
+
     // Experience
     exp_eyebrow: 'Work History & Roles',
     exp_title: 'Professional Experience.',
     exp_desc: 'Hands-on performance media buying execution across GCC e-commerce, high-ticket lead generation, instructional training, and client scaling engagements.',
-    exp_r1_title: 'Performance Media Buyer',
+    exp_r1_title: 'Digital Marketing Specialist',
     exp_r1_badge: 'Current Full-Time',
     exp_r1_company: 'eMarketing Egypt · Dokki, Giza, Egypt',
-    exp_r1_dates: 'Aug 2026 — Present',
+    exp_r1_dates: 'Apr 2026 — Present',
     exp_r1_b1: 'Direct and scale multi-channel performance media spend ($32.8K+) across <strong>Snapchat Ads, Google Ads, and Meta Ads</strong> for regional clients in Saudi Arabia, UAE, and Egypt.',
     exp_r1_b2: 'Scaled <strong>Kitchen Bazaar (Saudi E-Com)</strong>: generated <strong>$169,455 in verified purchases at 6.95x ROAS</strong> via Snapchat Ads (1,643 orders, 26,955 add-to-carts at $0.90) and managed SAR 38.3K Google Ads (78.4K clicks, 1,310 conversions).',
     exp_r1_b3: 'Scaled <strong>IJADAH Education (UAE)</strong>: captured <strong>980 verified inquiries</strong> across 28 flights with an 83% reduction in CPL to a record <strong>$4.14</strong> and 628 direct WhatsApp chats.',
@@ -2006,55 +2077,60 @@ const I18N_DICTIONARY = {
     exp_r3_b1: 'Provided direct 1-on-1 and group feedback on trainee campaign builds and ad copywriting assignments.',
     exp_r3_b2: 'Managed learning resources, recap schedules, community engagement, and new cohort onboarding.',
 
-    exp_r4_title: 'Independent Performance Media Buyer',
+    exp_r4_title: 'Digital Marketing Specialist & Independent Media Buyer',
     exp_r4_badge: 'Independent Practice',
     exp_r4_company: 'Independent Practice · Remote / GCC & Egypt',
     exp_r4_dates: 'Ongoing Practice',
     exp_r4_b1: 'Delivers tailored paid advertising, ad copywriting, and conversion rate optimization (CRO) audits for private clients.',
-    exp_r4_b2: 'Audited Cardip XPEL PPF (SAR 15.8K spend, 436 qualified WhatsApp leads); grew personal brand (@3shwaee_) from 0 to 20,000+ organic followers.',
+    exp_r4_b2: 'Audited Cardip XPEL PPF (SAR 15.8K spend, 436 qualified WhatsApp leads); grew personal brand (@3shwaee_) from 0 to 20,000+ organic peak followers.',
 
-    // Case Studies Section Header
+    // Case Studies Section Header & Filters
     cs_eyebrow: 'Selected Case Studies',
     cs_title: 'Verified Client Projects & Results.',
     cs_desc: 'Data-backed campaigns demonstrating scalable revenue, low acquisition costs, and full-funnel execution. Click any project for the full strategic audit.',
+    filter_all: 'All Projects (10)',
+    filter_featured: 'Featured Client Work (4)',
+    filter_aitech: 'AI & Technical Projects (4)',
+    filter_supporting: 'Supporting Audits & In Progress (2)',
 
     // Enterprise Playbook Section Header & Tabs
-    playbook_eyebrow: 'Enterprise Operating System',
-    playbook_title: 'Scaling Protocol & ROI Simulator.',
-    playbook_desc: 'A disciplined, risk-managed operating system designed for enterprise brands and high-ticket clients. Fast decision-making without guesswork.',
-    pb_tab_scaling: 'Scaling & Kill Rules',
-    pb_tab_roi: 'Instant ROI Simulator',
+    playbook_eyebrow: 'Growth Framework',
+    playbook_title: 'How I Approach Performance Growth.',
+    playbook_desc: 'A disciplined, data-backed growth framework built on statistical thresholds and margin protection to scale e-commerce accounts and generate high-intent inquiries.',
+    pb_tab_scaling: 'Scaling & Stop-Loss Framework',
+    pb_tab_roi: 'Performance Scenario Planner',
     pb_tab_roadmap: '30-60-90 Day Roadmap',
     pb_tab_faq: 'Guarantees & FAQ',
 
     // Playbook Tab 1: Rules
-    rule_1_badge: '+15% to +20% / 48-72h',
-    rule_1_title: 'Controlled Vertical Scaling',
-    rule_1_desc: 'Budget is only scaled by 15%–20% every 48–72 hours when verified ROAS consistently exceeds account baseline. Prevents algorithm learning reset and auction CPM spikes.',
-    rule_1_trigger: 'Condition:',
-    rule_1_trigger_val: 'ROAS > Target for 3 consecutive days',
-    rule_2_badge: 'Hard Stop at 1.5x CPA',
-    rule_2_title: 'Disciplined Kill Rules (Stop Loss)',
-    rule_2_desc: 'Zero emotional attachment to creative angles. Any ad set reaching 1.5x of target CPA without generating verified purchases or leads is sunset immediately to protect margin.',
-    rule_2_trigger: 'Condition:',
+    rule_1_badge: 'Disciplined Scaling',
+    rule_1_title: 'Conversion Volume & Scaling Velocity',
+    rule_1_desc: 'Budget is scaled gradually (+15% to +20% every 48–72h) only when conversion volumes stabilize statistically and ROAS/CPA hold above targets to avoid resetting platform algorithms.',
+    rule_1_trigger: 'Governing Rule:',
+    rule_1_trigger_val: 'Baseline holds steady across attribution lag window',
+    rule_2_badge: 'Margin Defense',
+    rule_2_title: 'Disciplined Stop-Loss (1.5x CPA)',
+    rule_2_desc: 'Zero emotional attachment to creative angles. Any ad set reaching 1.5x of target CPA without generating verified conversions is sunset immediately to protect liquidity and margin.',
+    rule_2_trigger: 'Governing Rule:',
     rule_2_trigger_val: 'Spend ≥ 1.5x Target CPA with 0 conversions',
-    rule_3_badge: 'Weekly Rotation',
-    rule_3_title: 'Proactive Fatigue Refresh',
+    rule_3_badge: 'Creative Velocity',
+    rule_3_title: 'Fatigue Monitoring & Creative Velocity',
     rule_3_desc: 'Tracking 3-second Hook Rate and Outbound CTR daily. When creative engagement dips >20% below baseline, 3 fresh hook variants are deployed before CPA degradation occurs.',
-    rule_3_trigger: 'Cycle:',
-    rule_3_trigger_val: '3 new angles deployed every Monday',
+    rule_3_trigger: 'Operating Cadence:',
+    rule_3_trigger_val: '3 fresh angles deployed weekly based on retention curves',
 
     // Playbook Tab 2: ROI Simulator
     sim_market_label: 'Target Market & Goal',
     sim_spend_label: 'Monthly Media Spend ($ USD)',
     sim_aov_label: 'Average Order Value (AOV in $)',
-    sim_res_eyebrow: 'Projected Performance Model',
+    sim_res_eyebrow: 'Performance Scenario Planner',
     sim_res_badge: 'Data-Backed Simulation',
     sim_res_conversions: 'Projected Completed Orders',
     sim_res_revenue: 'Projected Gross Revenue',
     sim_res_roas: 'Expected ROAS:',
     sim_res_cpa: 'Target CPA Limit:',
     sim_cta_discuss: 'Discuss This Scenario on WhatsApp',
+    sim_disclaimer: '* Note: These figures are illustrative planning scenarios based on historical performance averages across GCC markets; actual outcomes vary depending on product economics, creative refresh velocity, and market conditions.',
 
     // Playbook Tab 3: Roadmap
     stage_1_time: 'Days 1 — 30',
@@ -2088,10 +2164,10 @@ const I18N_DICTIONARY = {
 
     // Executive One-Pager Modal
     op_eyebrow: 'Executive Growth Brief',
-    op_title: 'Abdlrhman Al Helewah · Performance Media Buyer',
+    op_title: 'Abdlrhman Al Helewah · Digital Marketing Specialist',
     op_print_btn: 'Print / Save PDF',
     op_kpi_1: 'E-Com Purchases (6.95x ROAS)',
-    op_kpi_2: 'Qualified Leads ($4.14 CPL)',
+    op_kpi_2: 'Qualified Inquiries ($4.14 CPL)',
     op_kpi_3: 'Managed GCC Spend',
     op_kpi_4: 'Margin & ROI Priority',
     op_sec_summary: 'Executive Summary',
@@ -2111,10 +2187,10 @@ const I18N_DICTIONARY = {
     // Skills
     skills_eyebrow: 'Media Buying Toolkit & Multipliers',
     skills_title: 'Core Competencies & Technical Edge.',
-    skills_desc: 'Primary Trade: Performance Media Buying & Paid Scaling. AI automation, custom Python scripts, and deep data analysis act as unfair speed levers to test creative hooks, diagnose fatigue, and maximize ROAS.',
-    skills_p1_title: 'Performance Media Buying',
-    skills_p2_title: 'Paid Creative Strategy',
-    skills_p3_title: 'Data Analytics & Attribution',
+    skills_desc: 'Primary Trade: Performance Marketing & Paid Acquisition. AI automation, custom Python scripts, and deep data analysis act as unfair speed levers to test creative hooks, diagnose fatigue, and maximize ROAS.',
+    skills_p1_title: 'Performance Marketing',
+    skills_p2_title: 'Marketing Strategy & Creative',
+    skills_p3_title: 'Data Analytics & Reporting',
     skills_p4_title: 'AI & Automation (The Edge)',
 
     s_snap: 'Snapchat Ads Manager',
@@ -2122,7 +2198,7 @@ const I18N_DICTIONARY = {
     s_meta: 'Meta Ads Manager',
     s_tiktok: 'TikTok Ads Manager',
     s_buying: 'Media Buying & Bidding',
-    s_opt: 'Campaign Scaling & CPA Opt',
+    s_opt: 'Campaign Scaling & CPA Optimization',
     s_audiences: 'Lookalike & Custom Audiences',
     s_retarget: 'Retargeting Funnels',
     s_fatigue: 'Ad Fatigue Diagnostics',
@@ -2165,24 +2241,24 @@ const I18N_DICTIONARY = {
     degree_desc: 'Rigorous undergraduate program focused on the intersection of modern e-commerce architectures, marketing technology stacks, consumer data analytics, and digital acquisition channels.',
 
     cert_completed: 'Completed',
-    cert_ongoing: 'Ongoing',
+    cert_ongoing: 'Ongoing / Professional Development',
 
     cert_1_issuer: 'NTI / ESE',
     cert_1_title: 'Artificial Intelligence Ambassadors Program',
     cert_1_org: 'National Telecommunication Institute',
     cert_1_date: 'Jul 2026',
 
-    cert_2_issuer: 'National Telecommunication Institute',
+    cert_2_issuer: 'National Telecommunication Institute (NTI)',
     cert_2_title: 'AI, Automation & Data Analysis Diploma (Beginner Level)',
     cert_2_org: 'NTI Professional Diploma',
 
-    cert_3_issuer: 'National Telecommunication Institute',
+    cert_3_issuer: 'National Telecommunication Institute (NTI)',
     cert_3_title: 'AI, Automation & Data Analysis Diploma (Advanced Level)',
     cert_3_org: 'NTI Advanced Diploma',
 
     cert_4_issuer: 'Adham Hossam',
-    cert_4_title: 'Digital Marketing Diploma',
-    cert_4_org: 'Comprehensive Diploma',
+    cert_4_title: 'Digital Marketing & Media Buying Diploma',
+    cert_4_org: 'Comprehensive Advanced Diploma',
 
     cert_5_issuer: 'Google',
     cert_5_title: 'Fundamentals of Digital Marketing',
@@ -2193,28 +2269,40 @@ const I18N_DICTIONARY = {
     cert_6_title: 'Digital Ad Certificate – Digital Marketing',
     cert_6_date: 'Jul 2024',
 
-    cert_7_issuer: 'IMP',
-    cert_7_title: 'IMP Digital Marketing Courses',
-    cert_7_org: 'Specialized Programs',
-
-    cert_8_issuer: 'Professional Development',
-    cert_8_title: 'Additional Professional Courses & Specialized Training',
-    cert_8_org: 'Continuous Learning',
+    cert_7_issuer: 'IMP Academy',
+    cert_7_title: 'IMP Digital Marketing Specialized Programs',
+    cert_7_org: 'Specialized Training Programs',
 
     // Contact
-    contact_eyebrow: 'Get In Touch',
-    contact_title: 'Let’s Discuss Your Next Campaign.',
-    contact_desc: 'Available for performance media buying roles, ad account scaling, and growth consultations. Connect directly via your preferred channel:',
+    contact_eyebrow: 'Direct Contact',
+    contact_title: 'Let’s Discuss Your Next Campaign or Role.',
+    contact_desc: 'Available for full-time Digital Marketing Specialist roles, performance media buying contracts, and growth advisory. Select your preferred contact path below:',
+    contact_for_recruiters: 'For Recruiters & Enterprise Hiring',
+    contact_recruiter_title: 'Direct Hiring & Career Opportunities',
+    contact_recruiter_desc: 'Review official credentials, request professional references, inspect live ad screens, or schedule an interview.',
+    contact_for_clients: 'For Store Owners & Growth Clients',
+    contact_client_title: 'Media Buying & Growth Advisory',
+    contact_client_desc: 'Rapid campaign launch and scaling across Snapchat, Google, and Meta Ads in Saudi Arabia, UAE, and Egypt via direct WhatsApp chat.',
     contact_wa_label: 'Fastest Response',
-    contact_wa_val: 'WhatsApp Chat',
+    contact_wa_val: 'WhatsApp Chat (+20 155 340 4607)',
     contact_email_label: 'Direct Inbox',
     contact_email_val: 'Send Email',
     contact_li_label: 'Professional Network',
     contact_li_val: 'LinkedIn Profile',
 
+    // Form
+    form_heading: 'Project or Opportunity Brief Form',
+    form_subheading: 'Enter campaign metrics or role details below to dispatch via email or copy directly to clipboard.',
+    form_label_name: 'Your Name or Organization *',
+    form_label_email: 'Email Address or Phone / WhatsApp *',
+    form_label_type: 'Primary Goal / Required Service',
+    form_label_message: 'Project Details, Target Market, and Monthly Budget *',
+    form_btn_send: 'Dispatch Brief via Email',
+    form_btn_copy: 'Copy Brief to Clipboard',
+
     // Footer
     footer_name: 'Abdlrhman Al Helewah',
-    footer_role: 'Performance Media Buyer'
+    footer_role: 'Digital Marketing Specialist · Performance Media Buying'
   }
 };
 
@@ -2300,10 +2388,9 @@ function initLanguageToggle() {
     // 6. Update Case Study Filter Button Labels
     const filterLabels = {
       'all': isAr ? 'جميع المشاريع (10)' : 'All Projects (10)',
-      'paid-media': isAr ? 'الإعلانات الممولة والنتائج' : 'Paid Media & Performance',
-      'growth': isAr ? 'النمو والمحتوى العضوي' : 'Organic & Social Growth',
-      'ai-experiments': isAr ? 'الذكاء الاصطناعي والأتمتة' : 'AI & Automation',
-      'strategy-audit': isAr ? 'التدقيق والحملات الحالية' : 'Audits & In Progress'
+      'featured': isAr ? 'أبرز مشاريع العملاء (4)' : 'Featured Client Work (4)',
+      'ai-tech': isAr ? 'مشاريع الذكاء الاصطناعي والتقنية (4)' : 'AI & Technical Projects (4)',
+      'supporting': isAr ? 'التدقيق ومشاريع قيد التنفيذ (2)' : 'Supporting Audits & In Progress (2)'
     };
 
     document.querySelectorAll('.case-studies-filter .filter-btn').forEach(btn => {
